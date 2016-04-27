@@ -55,6 +55,10 @@
 
 &lt;p&gt;Den &lt;strong&gt;betingade sannolikheten&lt;/strong&gt; uttrycks $P(B|A)=\frac{P(A \cap B)}{P(A)}$ som ger sannolikheten för $B$ givet att $A$ har inträffat&lt;/p&gt;
 
+&lt;p&gt;$P(A \cap B)=P(A)P(B|A)=P(B)P(A|B)$&lt;/p&gt;
+
+&lt;p&gt;$P(A \cap B \cap C)=P(A)P(B|A)P(C|A \cap B)$&lt;/p&gt;
+
 &lt;h2 id=&#34;kapitel-3-endimensionella-stokastiska-variabler&#34;&gt;Kapitel 3 - Endimensionella stokastiska variabler&lt;/h2&gt;
 
 &lt;p&gt;$p_X(x)$ kallas &lt;strong&gt;sannolikhetsfunktionen&lt;/strong&gt;&lt;/p&gt;
