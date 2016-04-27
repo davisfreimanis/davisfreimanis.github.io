@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Davis Freimanis</title>
-    <link>http://davisfreimanis.github.io/</link>
+    <link>https://davisfreimanis.github.io/</link>
     <description>Recent content on Davis Freimanis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 27 Apr 2016 11:21:28 +0200</lastBuildDate>
-    <atom:link href="http://davisfreimanis.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://davisfreimanis.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Formulas for KS</title>
-      <link>http://davisfreimanis.github.io/kth/sf1901/ks/</link>
+      <link>https://davisfreimanis.github.io/kth/sf1901/ks/</link>
       <pubDate>Wed, 27 Apr 2016 11:21:28 +0200</pubDate>
       
-      <guid>http://davisfreimanis.github.io/kth/sf1901/ks/</guid>
+      <guid>https://davisfreimanis.github.io/kth/sf1901/ks/</guid>
       <description>
 
 &lt;h2 id=&#34;kapitel-2-sannolikhetsteorins-grunder&#34;&gt;Kapitel 2 - Sannolikhetsteorins grunder&lt;/h2&gt;
