@@ -1,0 +1,4 @@
+*.sublime-project
+public/
+.idea/
+.sass-cache/

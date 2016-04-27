@@ -1,7 +1,11 @@
 baseurl = "http://davisfreimanis.github.io/"
 languageCode = "en-us"
 title = "Davis Freimanis"
-theme = "test"
+theme = "purehugo"
 publishdir = "public"
 contentdir = "content"
 canonifyurls = true 
+
+[params]
+	githubName = "davisfreimanis"
+	twitterName = "Davis_Freimanis"
