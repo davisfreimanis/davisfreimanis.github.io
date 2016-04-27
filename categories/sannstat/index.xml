@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Davis Freimanis</title>
-    <link>http://davisfreimanis.github.io/</link>
-    <description>Recent content on Davis Freimanis</description>
+    <title>Sannstat on Davis Freimanis</title>
+    <link>http://davisfreimanis.github.io/categories/sannstat/</link>
+    <description>Recent content in Sannstat on Davis Freimanis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 27 Apr 2016 11:21:28 +0200</lastBuildDate>
-    <atom:link href="http://davisfreimanis.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://davisfreimanis.github.io/categories/sannstat/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Formulas for KS</title>
