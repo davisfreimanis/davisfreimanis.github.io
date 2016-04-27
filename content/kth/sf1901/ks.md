@@ -41,6 +41,9 @@ $\binom{n}{k}=\frac{n(n-1)\cdots (n-k+1)}{k!}$ på miniräknaren `n nCr k`
 ### Betingad sannolikhet
 Den **betingade sannolikheten** uttrycks $P(B|A)=\frac{P(A \cap B)}{P(A)}$ som ger sannolikheten för $B$ givet att $A$ har inträffat
 
+$P(A \cap B)=P(A)P(B|A)=P(B)P(A|B)$
+
+$P(A \cap B \cap C)=P(A)P(B|A)P(C|A \cap B)$
 
 ## Kapitel 3 - Endimensionella stokastiska variabler
 $p_X(x)$ kallas **sannolikhetsfunktionen**
