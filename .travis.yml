@@ -13,7 +13,6 @@ before_install:
   -in travis_key.enc -out travis_key -d
 - chmod +x deploy.sh
 script:
-- git clone https://github.com/dplesca/purehugo ./themes/purehugo
 - hugo version
 - hugo
 - ls
