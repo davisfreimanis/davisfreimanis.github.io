@@ -1,7 +1,7 @@
 +++
 date = "2016-04-27T11:21:28+02:00"
-title = "Formulas for KS"
-description = "Useful formulas for the midterm exam in probability and statistics"
+title = "Formler för sannolikhet"
+description = "Bra formler för kapitel 1 till 7"
 author = "Davis"
 categories = ["Sannstat", "KTH"]
 
