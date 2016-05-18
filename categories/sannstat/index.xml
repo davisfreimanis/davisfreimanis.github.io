@@ -6,15 +6,65 @@
     <description>Recent content in Sannstat on Davis Freimanis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Apr 2016 11:21:28 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 17 May 2016 13:17:49 +0200</lastBuildDate>
     <atom:link href="https://davisfreimanis.github.io/categories/sannstat/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Formulas for KS</title>
-      <link>https://davisfreimanis.github.io/kth/sf1901/ks/</link>
+      <title>Formler för statistik</title>
+      <link>https://davisfreimanis.github.io/kth/sf1901/statistik/</link>
+      <pubDate>Tue, 17 May 2016 13:17:49 +0200</pubDate>
+      
+      <guid>https://davisfreimanis.github.io/kth/sf1901/statistik/</guid>
+      <description>
+
+&lt;h2 id=&#34;kapitel-10-beskrivande-statistik&#34;&gt;Kapitel 10 - Beskrivande statistik&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Aritmetiska medelvärdet&lt;/strong&gt; kallas medelvärdet och betecknas $\bar{x}=\frac{1}{n} \sum_{j=1}^{n}x_j = \frac{x_1+x_2+\dots + x_n}{n}$&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Stickprovets standardavvikelse&lt;/strong&gt; är kvadratroten ur variansen. $s=\sqrt{\frac{1}{n-1} \sum_{j=1}^{n}(x_j-\bar{x})^2}$&lt;/p&gt;
+
+&lt;h2 id=&#34;kapitel-11-punktskattning&#34;&gt;Kapitel 11 - Punktskattning&lt;/h2&gt;
+
+&lt;h3 id=&#34;begrepp&#34;&gt;Begrepp&lt;/h3&gt;
+
+&lt;p&gt;$\theta$ är det riktiga värdet&lt;/p&gt;
+
+&lt;p&gt;$\theta^*_{obs}$ är utfallet av s.v. (en gissning)&lt;/p&gt;
+
+&lt;p&gt;$\theta^*$ är stickprovsvariabeln och också s.v.&lt;/p&gt;
+
+&lt;p&gt;En &lt;strong&gt;Väntevärdesriktig skattning&lt;/strong&gt; förkortas ibland &lt;em&gt;vvr&lt;/em&gt; skattning. En punktskattning sägs vara väntevärdesriktig om $E(\theta^*)=\theta$. D.v.s. om stickprovsvariabeln $\theta^*$ har väntevärde $\theta$.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Konsistent skattning&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Medelkvadratfel&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Effektivitet&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;maximum-likelihood-skattning&#34;&gt;Maximum-likelihood-skattning&lt;/h3&gt;
+
+&lt;h3 id=&#34;minsta-kvadrat-skattning&#34;&gt;Minsta-kvadrat-skattning&lt;/h3&gt;
+
+&lt;h2 id=&#34;kapitel-12-intervallskattning&#34;&gt;Kapitel 12 - Intervallskattning&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Konfidensintervall&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Konfidensintervall för väntevärde&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Konfidensintervall för standardavvikelse&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;kapitel-13-hypotesprövning&#34;&gt;Kapitel 13 - Hypotesprövning&lt;/h2&gt;
+
+&lt;h2 id=&#34;kapitel-14-regressionsanalys&#34;&gt;Kapitel 14 - Regressionsanalys&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Formler för sannolikhet</title>
+      <link>https://davisfreimanis.github.io/kth/sf1901/sannolikhet/</link>
       <pubDate>Wed, 27 Apr 2016 11:21:28 +0200</pubDate>
       
-      <guid>https://davisfreimanis.github.io/kth/sf1901/ks/</guid>
+      <guid>https://davisfreimanis.github.io/kth/sf1901/sannolikhet/</guid>
       <description>
 
 &lt;h2 id=&#34;kapitel-2-sannolikhetsteorins-grunder&#34;&gt;Kapitel 2 - Sannolikhetsteorins grunder&lt;/h2&gt;
