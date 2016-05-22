@@ -19,5 +19,4 @@ script:
 install:
 - go get -v github.com/spf13/hugo
 after_success:
-- echo "davisfreimanis.github.io" > ./public/CNAME
 - "./deploy.sh"
