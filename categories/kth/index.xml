@@ -43,7 +43,11 @@
 
 &lt;h3 id=&#34;maximum-likelihood-skattning&#34;&gt;Maximum-likelihood-skattning&lt;/h3&gt;
 
+&lt;p&gt;Använd formel 9.1 och logaritmera sedan. Derivera och sätt uttrycket till 0 för att få ut Maximum-likelihood-skattningen.&lt;/p&gt;
+
 &lt;h3 id=&#34;minsta-kvadrat-skattning&#34;&gt;Minsta-kvadrat-skattning&lt;/h3&gt;
+
+&lt;p&gt;Använd formel 9.2 och derivera.&lt;/p&gt;
 
 &lt;h2 id=&#34;kapitel-12-intervallskattning&#34;&gt;Kapitel 12 - Intervallskattning&lt;/h2&gt;
 
@@ -54,6 +58,16 @@
 &lt;p&gt;&lt;strong&gt;Konfidensintervall för standardavvikelse&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;kapitel-13-hypotesprövning&#34;&gt;Kapitel 13 - Hypotesprövning&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Begrepp&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Styrkefunktion&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;$\chi^2$-test&lt;/strong&gt; för given fördelning&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;$\chi^2$-test&lt;/strong&gt; för test av föredelning med skattade parametrar&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;$\chi^2$-test&lt;/strong&gt; (homogenitetstest). Använd formel 14.3 eller &lt;code&gt;X-Test...&lt;/code&gt; på miniräknaren&lt;/p&gt;
 
 &lt;h2 id=&#34;kapitel-14-regressionsanalys&#34;&gt;Kapitel 14 - Regressionsanalys&lt;/h2&gt;
 </description>
