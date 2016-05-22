@@ -29,8 +29,10 @@ En **Väntevärdesriktig skattning** förkortas ibland *vvr* skattning. En punkt
 **Effektivitet**
 
 ### Maximum-likelihood-skattning
+Använd formel 9.1 och logaritmera sedan. Derivera och sätt uttrycket till 0 för att få ut Maximum-likelihood-skattningen.
 
 ### Minsta-kvadrat-skattning
+Använd formel 9.2 och derivera.
 
 ## Kapitel 12 - Intervallskattning
 **Konfidensintervall**
@@ -40,4 +42,15 @@ En **Väntevärdesriktig skattning** förkortas ibland *vvr* skattning. En punkt
 **Konfidensintervall för standardavvikelse**
 
 ## Kapitel 13 - Hypotesprövning
+
+**Begrepp**
+
+**Styrkefunktion**
+
+**$\chi^2$-test** för given fördelning
+
+**$\chi^2$-test** för test av föredelning med skattade parametrar
+
+**$\chi^2$-test** (homogenitetstest). Använd formel 14.3 eller `X-Test...` på miniräknaren
+
 ## Kapitel 14 - Regressionsanalys
