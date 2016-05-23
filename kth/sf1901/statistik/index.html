@@ -103,7 +103,7 @@ MathJax.Hub.Config({
 
 <h2 id="kapitel-11-punktskattning">Kapitel 11 - Punktskattning</h2>
 
-<h3 id="begrepp">Begrepp</h3>
+<p><strong>Begrepp</strong></p>
 
 <p>$\theta$ är det riktiga värdet</p>
 
@@ -113,19 +113,23 @@ MathJax.Hub.Config({
 
 <p>En <strong>Väntevärdesriktig skattning</strong> förkortas ibland <em>vvr</em> skattning. En punktskattning sägs vara väntevärdesriktig om $E(\theta^*)=\theta$. D.v.s. om stickprovsvariabeln $\theta^*$ har väntevärde $\theta$.</p>
 
-<p><strong>Konsistent skattning</strong></p>
+<p><strong>Medelkvadratfelet</strong> för en punktskattning $\theta^*_{obs}$ är $E((\theta^*-\theta)^2)$.</p>
 
-<p><strong>Medelkvadratfel</strong></p>
+<p><strong>Effektivitet</strong>. Om man har två väntevärdesriktiga skattningar så är den som har den som har lägst varians effektivast.</p>
 
-<p><strong>Effektivitet</strong></p>
+<p><strong>Maximum-likelihood-skattning</strong>.
+Om man har oberoende observationer från stokastiska variabler så använder man formel 9.1. Man räknar ut Maximum-likelihood-funktionen:
+$$
+L(\theta) =
+\begin{cases}
+p_{X_1}(x_1;\theta)\cdots p_{X_n}(x_n;\theta) \<br />
+f_{X_1}(x_1;\theta)\cdots f_{X_n}(x_n;\theta)
+\end{cases}
+$$
+för det kontinuerliga respektive diskreta fallet. Logaritmera sedan produkten och använd logaritmlagarna för att förenkla uttrycket. Derivera sedan och sätt derivatan till 0. Lös sedan ut $\theta$.</p>
 
-<h3 id="maximum-likelihood-skattning">Maximum-likelihood-skattning</h3>
-
-<p>Använd formel 9.1 och logaritmera sedan. Derivera och sätt uttrycket till 0 för att få ut Maximum-likelihood-skattningen.</p>
-
-<h3 id="minsta-kvadrat-skattning">Minsta-kvadrat-skattning</h3>
-
-<p>Använd formel 9.2 och derivera.</p>
+<p><strong>Minsta-kvadrat-skattning</strong>.
+Om man har oberoende observationer från stokastiska variabler så använder man formel 9.2. Man summerar differansen mellan skattningens värde med det förväntade väntevärdet som sedan kvadreras. Derivera sedan för att lösa ut variabeln $\theta$ som minimerar kvadratsumman. $$Q(\theta)=\sum_{i=1}^{n}(x_i - \mu_i(\theta_1,\theta_2,&hellip;,\theta_k))^2$$</p>
 
 <h2 id="kapitel-12-intervallskattning">Kapitel 12 - Intervallskattning</h2>
 
@@ -145,7 +149,8 @@ MathJax.Hub.Config({
 
 <p><strong>$\chi^2$-test</strong> för test av föredelning med skattade parametrar</p>
 
-<p><strong>$\chi^2$-test</strong> (homogenitetstest). Använd formel 14.3 eller <code>X-Test...</code> på miniräknaren</p>
+<p><strong>$\chi^2$-test</strong> (homogenitetstest). Det enklaste sättet att lösa dessa uppgifter är att man sätter in alla värden i en matris på miniräknaren och använder funktionen <code>X-Test...</code> på miniräknaren. Om p-värdet är mindre än 0.05 så förkastar man nollhypotesen. Man kan även jämföra om Q-värdet är större än $\chi^2_{\alpha}(t-1)$ och i så fall förkastas nollhypotesen. Om man gör det för hand så tar man hjälp av formeln för homogenitetstest i paragraf 14.3: $$Q=\sum^s_{i=1} \sum^r_{j=1} \frac{(x_{ij}-\frac{n_i m_j}{N})^2}{\frac{n_i m_j}{N}}$$
+där s är antalet rader i matrisen och r är antalet columnet. Q blir ett utfall av en approximativt $\chi^2((r-1)(s-1))$-fördelad stokastisk variabel.</p>
 
 <h2 id="kapitel-14-regressionsanalys">Kapitel 14 - Regressionsanalys</h2>
 

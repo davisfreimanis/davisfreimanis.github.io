@@ -25,7 +25,7 @@
 
 &lt;h2 id=&#34;kapitel-11-punktskattning&#34;&gt;Kapitel 11 - Punktskattning&lt;/h2&gt;
 
-&lt;h3 id=&#34;begrepp&#34;&gt;Begrepp&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Begrepp&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;$\theta$ är det riktiga värdet&lt;/p&gt;
 
@@ -35,19 +35,23 @@
 
 &lt;p&gt;En &lt;strong&gt;Väntevärdesriktig skattning&lt;/strong&gt; förkortas ibland &lt;em&gt;vvr&lt;/em&gt; skattning. En punktskattning sägs vara väntevärdesriktig om $E(\theta^*)=\theta$. D.v.s. om stickprovsvariabeln $\theta^*$ har väntevärde $\theta$.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Konsistent skattning&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Medelkvadratfelet&lt;/strong&gt; för en punktskattning $\theta^*_{obs}$ är $E((\theta^*-\theta)^2)$.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Medelkvadratfel&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Effektivitet&lt;/strong&gt;. Om man har två väntevärdesriktiga skattningar så är den som har den som har lägst varians effektivast.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Effektivitet&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Maximum-likelihood-skattning&lt;/strong&gt;.
+Om man har oberoende observationer från stokastiska variabler så använder man formel 9.1. Man räknar ut Maximum-likelihood-funktionen:
+$$
+L(\theta) =
+\begin{cases}
+p_{X_1}(x_1;\theta)\cdots p_{X_n}(x_n;\theta) \&lt;br /&gt;
+f_{X_1}(x_1;\theta)\cdots f_{X_n}(x_n;\theta)
+\end{cases}
+$$
+för det kontinuerliga respektive diskreta fallet. Logaritmera sedan produkten och använd logaritmlagarna för att förenkla uttrycket. Derivera sedan och sätt derivatan till 0. Lös sedan ut $\theta$.&lt;/p&gt;
 
-&lt;h3 id=&#34;maximum-likelihood-skattning&#34;&gt;Maximum-likelihood-skattning&lt;/h3&gt;
-
-&lt;p&gt;Använd formel 9.1 och logaritmera sedan. Derivera och sätt uttrycket till 0 för att få ut Maximum-likelihood-skattningen.&lt;/p&gt;
-
-&lt;h3 id=&#34;minsta-kvadrat-skattning&#34;&gt;Minsta-kvadrat-skattning&lt;/h3&gt;
-
-&lt;p&gt;Använd formel 9.2 och derivera.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Minsta-kvadrat-skattning&lt;/strong&gt;.
+Om man har oberoende observationer från stokastiska variabler så använder man formel 9.2. Man summerar differansen mellan skattningens värde med det förväntade väntevärdet som sedan kvadreras. Derivera sedan för att lösa ut variabeln $\theta$ som minimerar kvadratsumman. $$Q(\theta)=\sum_{i=1}^{n}(x_i - \mu_i(\theta_1,\theta_2,&amp;hellip;,\theta_k))^2$$&lt;/p&gt;
 
 &lt;h2 id=&#34;kapitel-12-intervallskattning&#34;&gt;Kapitel 12 - Intervallskattning&lt;/h2&gt;
 
@@ -67,7 +71,8 @@
 
 &lt;p&gt;&lt;strong&gt;$\chi^2$-test&lt;/strong&gt; för test av föredelning med skattade parametrar&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;$\chi^2$-test&lt;/strong&gt; (homogenitetstest). Använd formel 14.3 eller &lt;code&gt;X-Test...&lt;/code&gt; på miniräknaren&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;$\chi^2$-test&lt;/strong&gt; (homogenitetstest). Det enklaste sättet att lösa dessa uppgifter är att man sätter in alla värden i en matris på miniräknaren och använder funktionen &lt;code&gt;X-Test...&lt;/code&gt; på miniräknaren. Om p-värdet är mindre än 0.05 så förkastar man nollhypotesen. Man kan även jämföra om Q-värdet är större än $\chi^2_{\alpha}(t-1)$ och i så fall förkastas nollhypotesen. Om man gör det för hand så tar man hjälp av formeln för homogenitetstest i paragraf 14.3: $$Q=\sum^s_{i=1} \sum^r_{j=1} \frac{(x_{ij}-\frac{n_i m_j}{N})^2}{\frac{n_i m_j}{N}}$$
+där s är antalet rader i matrisen och r är antalet columnet. Q blir ett utfall av en approximativt $\chi^2((r-1)(s-1))$-fördelad stokastisk variabel.&lt;/p&gt;
 
 &lt;h2 id=&#34;kapitel-14-regressionsanalys&#34;&gt;Kapitel 14 - Regressionsanalys&lt;/h2&gt;
 </description>
