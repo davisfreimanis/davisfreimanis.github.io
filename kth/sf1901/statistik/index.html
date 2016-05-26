@@ -133,26 +133,32 @@ Om man har oberoende observationer från stokastiska variabler så använder man
 
 <h2 id="kapitel-12-intervallskattning">Kapitel 12 - Intervallskattning</h2>
 
-<p><strong>Konfidensintervall</strong></p>
+<p><strong>Konfidensintervall</strong> ($\lambda$-metoden) används när standardavvikelsen är känd. Man låter $\theta^*$ vara $N(\theta, D)$.
+$$I_{\theta}=\theta^*_{obs}±D\cdot \lambda_{\alpha/2}$$
+är då ett konfidensintervall för $\theta$ med konfidensgraden $1-\alpha$.</p>
 
-<p><strong>Konfidensintervall för väntevärde</strong></p>
+<p><strong>Konfidensintervall för väntevärde</strong> ($t$-metoden)
+$$I_{\theta}=\theta^*_{obs}±D^*_{obs}\cdot t_{\alpha/2}(f)$$
+där f brukar vara $n-1$ enligt §11.1d.</p>
 
-<p><strong>Konfidensintervall för standardavvikelse</strong></p>
+<p><strong>Konfidensintervall för standardavvikelse</strong> (baserad på $\chi^2$-fördelning)
+$$I_{\theta}=\theta^*_{obs}±D^*_{obs}\cdot \lambda_{\alpha/2}$$</p>
 
 <h2 id="kapitel-13-hypotesprövning">Kapitel 13 - Hypotesprövning</h2>
 
 <p><strong>Begrepp</strong></p>
 
-<p><strong>Styrkefunktion</strong></p>
+<p><strong>Styrkefunktionen</strong> $h(\theta) = P(förkasta \ H_0)$ då $\theta$ är rätt parametervärde.</p>
 
-<p><strong>$\chi^2$-test</strong> för given fördelning</p>
+<p><strong>Konfidensmetoden</strong> innebär att man skapar ett konfidensintervall. Man förkastar $H_0: \theta = \theta_0$ på nivån $\alpha$ om värdet $\theta_0$ inte tillför konfidensintervallet med konfidensgraden $1-\alpha$.</p>
 
-<p><strong>$\chi^2$-test</strong> för test av föredelning med skattade parametrar</p>
+<p><strong>$\chi^2$-test</strong> för given fördelning löses med formeln: $$Q=\sum_{j=1}^{r}\frac{(x_{j}-np_{j})^2}{np_{j}}$$ och man kan förkasta nollhypotesen om $Q&gt;\chi^2_{\alpha(r-1)}$ och alla $np_{j}\geq 5$</p>
+
+<p><strong>$\chi^2$-test</strong> för test av föredelning med skattade parametrar löses genom att jämföra det riktiga väntevärdet med det skattade.
+$\chi^2_{\alpha}(r-k-1)$-fördelad, där r är antalet termer i summan och k är antalet okända parametrar man vill hitta.</p>
 
 <p><strong>$\chi^2$-test</strong> (homogenitetstest). Det enklaste sättet att lösa dessa uppgifter är att man sätter in alla värden i en matris på miniräknaren och använder funktionen <code>X-Test...</code> på miniräknaren. Om p-värdet är mindre än 0.05 så förkastar man nollhypotesen. Man kan även jämföra om Q-värdet är större än $\chi^2_{\alpha}(t-1)$ och i så fall förkastas nollhypotesen. Om man gör det för hand så tar man hjälp av formeln för homogenitetstest i paragraf 14.3: $$Q=\sum^s_{i=1} \sum^r_{j=1} \frac{(x_{ij}-\frac{n_i m_j}{N})^2}{\frac{n_i m_j}{N}}$$
 där s är antalet rader i matrisen och r är antalet columnet. Q blir ett utfall av en approximativt $\chi^2((r-1)(s-1))$-fördelad stokastisk variabel.</p>
-
-<h2 id="kapitel-14-regressionsanalys">Kapitel 14 - Regressionsanalys</h2>
 
                     </div>
                     
