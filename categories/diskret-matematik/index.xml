@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Diskret Matematik on Davis Freimanis</title>
+    <link>https://davisfreimanis.github.io/categories/diskret-matematik/</link>
+    <description>Recent content in Diskret Matematik on Davis Freimanis</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 27 Apr 2016 11:21:28 +0200</lastBuildDate>
+    <atom:link href="https://davisfreimanis.github.io/categories/diskret-matematik/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Grafteori</title>
+      <link>https://davisfreimanis.github.io/kth/sf1630/grafer/</link>
+      <pubDate>Wed, 27 Apr 2016 11:21:28 +0200</pubDate>
+      
+      <guid>https://davisfreimanis.github.io/kth/sf1630/grafer/</guid>
+      <description>
+
+&lt;h2 id=&#34;kapitel-15-grafer&#34;&gt;Kapitel 15 - Grafer&lt;/h2&gt;
+
+&lt;h3 id=&#34;hamiltoncykel&#34;&gt;Hamiltoncykel&lt;/h3&gt;
+
+&lt;h3 id=&#34;hamiltonstig&#34;&gt;Hamiltonstig&lt;/h3&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
