@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Sannstat on Davis Freimanis</title>
-    <link>https://davisfreimanis.github.io/categories/sannstat/</link>
-    <description>Recent content in Sannstat on Davis Freimanis</description>
+    <title>Davis Freimanis</title>
+    <link>https://davisfreimanis.github.io/categories/sannstat/index.xml</link>
+    <description>Recent content on Davis Freimanis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 May 2016 13:17:49 +0200</lastBuildDate>
     <atom:link href="https://davisfreimanis.github.io/categories/sannstat/index.xml" rel="self" type="application/rss+xml" />
     
     <item>

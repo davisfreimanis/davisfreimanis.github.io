@@ -95,11 +95,145 @@ MathJax.Hub.Config({
                     <div class="post-description">
                         
 
-<h2 id="kapitel-15-grafer">Kapitel 15 - Grafer</h2>
+<h1 id="kapitel-15-grafer">Kapitel 15 - Grafer</h1>
 
-<h3 id="hamiltoncykel">Hamiltoncykel</h3>
+<h2 id="grafer-och-dess-representation">Grafer och dess representation</h2>
 
-<h3 id="hamiltonstig">Hamiltonstig</h3>
+<p>En <strong>Graf</strong> betecknas $G=(V,E)$ där V motsvarar hörnen och E kanterna.</p>
+
+<p><strong>Fullständig graf</strong>. Alla hörn har en kant till de andra hörnen i grafen. Betecknas $K_n$</p>
+
+<p><strong>Cyklisk graf</strong>. Alla hörn har valens 2. Betecknas $C_n$</p>
+
+<h2 id="isomorfism">Isomorfism</h2>
+
+<p><strong>Isomorfism</strong> betyder att två grafer är samma. Graferna är isomorfa om det finns en bijektion (en funktion som är 1-1).</p>
+
+<p>Tre nödvändiga vilkor för isomorfi:</p>
+
+<ul>
+<li>Lika många hörn och kanter</li>
+<li>$\delta(v) = \delta(\alpha(v))$</li>
+<li>Lika många trianglar</li>
+</ul>
+
+<h2 id="valens">Valens</h2>
+
+<p><strong>Valens</strong> är antalet kanter som gränsar till hörnet. Kallas även grad. Betecknas $\delta(x)$ för hörnet x. En graf är <strong>k-reguljär</strong> om alla hörn har valensen k.</p>
+
+<p>Summan av alla valenser över alla hörn i en graf är $\sum_{v \in V} \delta(v) = 2|E|$.</p>
+
+<h2 id="stigar-och-cykler">Stigar och cykler</h2>
+
+<ul>
+<li><strong>Vandring</strong> (walk) $v_1, v_2,&hellip;,v_n$</li>
+<li><strong>Väg</strong> (trail) samma som vandring fast en kant får inte upprepas</li>
+<li><strong>Krets</strong> (circuit) en väg som är sluten</li>
+<li><strong>Stig</strong> (path) inget hörn upprepas</li>
+<li><strong>Cykel</strong> (cycle) inget hörn upprepas förutom första och sista</li>
+</ul>
+
+<p><strong>Hamiltoncykel</strong> i en graf är en cykel där alla hörn passeras och avslutas vid samma hörn. <em>Det finns inget lätt sätt att avgöra om en graf är hamiltonsk (har en hamiltoncykel)</em></p>
+
+<p><strong>Hamiltonstig</strong> är samma som en <em>hamiltoncykel</em>, men kan istället sluta på vilket hörn som helst.</p>
+
+<p><strong>Eulerkrets</strong> i en graf är en krets som innehåller varje kant exakt en gång. Kretsen avslutas i samma hörn som den började.</p>
+
+<p><strong>Eulerväg</strong> är samma som en <em>eulerkrets</em>, men kan istället sulta i vilket hörn som helst.</p>
+
+<p>En graf $G=(V, E)$ har en <em>eulerkrets/väg</em> om och endast om:</p>
+
+<ul>
+<li>G är sammanhängande förutom ensamma hörn</li>
+<li>G har inga/två hörn med udda valens</li>
+</ul>
+
+<p>Om det finns två udda hörn i grafen så måste vägen börja och sluta i respektive hörn.</p>
+
+<h2 id="träd">Träd</h2>
+
+<p>Ett <strong>träd</strong> T har två egenskaper:</p>
+
+<ul>
+<li>T är sammanhängande</li>
+<li>Det finns inga cykler i T</li>
+</ul>
+
+<p>Om $T=(V,E)$ är ett träd med $|V| \geq 2$ så gäller även:</p>
+
+<ul>
+<li>För varje par $x,y$ av hörn så finns det en unik väg i T från x till y</li>
+<li>Grafen man får från T när man tar bort en kant har två komponenter vilka i sin tur är träd</li>
+<li>$|E|=|V|-1$</li>
+</ul>
+
+<h2 id="hörnfärgning">Hörnfärgning</h2>
+
+<p>Hörnen på en graf kan färgläggas så att en kant går mellan två olika färgade hörn.</p>
+
+<p><strong>Kromatiska talet</strong> betecknas $\chi(G)$ och är det minsta antalet färger som behövs för att färglägga hörnet på en graf G. Det kan vara svårt och tidskrävande att räkna ut det kromatiska talet och därför används giriga algoritmer som får ut ett tillräckligt bra närmevärde till det kromatiska talet och ibland även det minsta.</p>
+
+<h1 id="kapitel-17-bipartita-grafer">Kapitel 17 - Bipartita grafer</h1>
+
+<h2 id="bipartita-grafer">Bipartita grafer</h2>
+
+<p>En <strong>bipartit</strong> grafs hörn kan delas upp i två mängder $X$ och $Y$ där varje hörn i $X$ endast har kanter till hörn i $Y$ och vice versa. En bipartit graf kan alltid färgläggas med två färger.</p>
+
+<p>$$\sum_x \delta(x) = \sum_y \delta(y) = |E|$$</p>
+
+<h2 id="kantfärgning">Kantfärgning</h2>
+
+<p>Kanterna i en graf kan färgläggas så att inget hörn har två kanter med samma färg. Det minsta antalet färger kallas för det <strong>kromatiska indexet</strong> och betecknas $\chi&rsquo;(G)$</p>
+
+<p>I en <em>bipartit graf</em> så är det minsta antalet färger den största valensen i grafen.</p>
+
+<h2 id="latinska-kvadrater">Latinska kvadrater</h2>
+
+<p>En <strong>latinsk kvadrat</strong> är en $n \times n$ matris där det finns n olika symboler i varje rad och kolumn.</p>
+
+<p>Man kan alltid göra klart en $n \times m$ latinsk rektangel till en $n \times n$ latinsk kvadrat.</p>
+
+<h2 id="matchningar">Matchningar</h2>
+
+<p>En <strong>matchning</strong> i en graf $G=(X \cap Y, E)$ är när ett hörn i mängd X har en disjunkt kant till ett hörn i mängd Y. En <em>fullständig matchning</em> är när alla hörn i X har en kant till Y. En <em>maximal matchning</em> är när maximalt antal hörn i X har en matchning till Y.</p>
+
+<p><strong>Halls vilkor</strong> i en graf $G=(X \cap Y, E)$ så gäller: $$|N(A)| \geq |A|$$ där $N(A)$ är mängden unika grannar till A och där A är alla delmängder av X. Vilkoret måste vara uppfyllt för att det ska kunna finnas en fullständig matchning i G.</p>
+
+<h2 id="maximala-matchningar">Maximala matchningar</h2>
+
+<p><strong>Theorem 17.5.2</strong></p>
+
+<p><strong>Alternerande stig</strong></p>
+
+<h2 id="transversaler">Transversaler</h2>
+
+<p>En <strong>transversal</strong> är en mängd element från ett ändligt antal familjer. Man får en <em>transversal</em> genom att ta ett element från varje familj utan att något av de elementen är samma.</p>
+
+<p>$$\tau = \{S_i|i \in I\}$$</p>
+
+<p>har en transversal endast om</p>
+
+<p>$$|\cup_{i \in H}| \geq |H|$$</p>
+
+<p>för alla $H \subseteq I$ gäller.</p>
+
+<h1 id="planära-grafer">Planära grafer</h1>
+
+<p>En <strong>plan graf</strong> ritad i planet har inga korsande kanter. En <strong>planär graf</strong> är isomorf med en plan graf, men kan vara ritad med korsande kanter.</p>
+
+<p>Den plana grafen delar in planet i ytor som betecknas <strong>r</strong>.</p>
+
+<p>För att räkna ut kanter <strong>e</strong>, hörn <strong>v</strong>, ytor <strong>r</strong> eller komponenter <strong>c</strong> så kan man använda sig av formeln:</p>
+
+<p>$$v-e+r-c=1$$</p>
+
+<p>eller om grafen är sammanhängande:</p>
+
+<p>$$v-e+r=2$$</p>
+
+<p><strong>Duala grafer</strong></p>
+
+<p><strong>Platonska kroppar</strong></p>
 
                     </div>
                     
