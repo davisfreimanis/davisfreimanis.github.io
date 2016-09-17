@@ -1,5 +1,5 @@
 +++
-date = "2016-04-27T11:21:28+02:00"
+date = "2016-09-14T11:21:28+02:00"
 title = "Grafteori"
 description = "Grafteori i diskret matematik"
 author = "Davis"
@@ -82,7 +82,7 @@ Hörnen på en graf kan färgläggas så att en kant går mellan två olika fär
 ## Bipartita grafer
 En **bipartit** grafs hörn kan delas upp i två mängder $X$ och $Y$ där varje hörn i $X$ endast har kanter till hörn i $Y$ och vice versa. En bipartit graf kan alltid färgläggas med två färger.
 
-$$\sum_x \delta(x) = \sum_y \delta(y) = |E|$$
+$$\sum\_{x \in X} \delta(x) = \sum\_{y \in Y} \delta(y) = |E|$$
 
 ## Kantfärgning
 Kanterna i en graf kan färgläggas så att inget hörn har två kanter med samma färg. Det minsta antalet färger kallas för det **kromatiska indexet** och betecknas $\chi'(G)$
@@ -112,7 +112,7 @@ $$\tau = \\{S_i|i \in I\\}$$
 
 har en transversal endast om 
 
-$$|\cup_{i \in H}| \geq |H|$$
+$$|\cup\_{i \in H} S_i| \geq |H|$$
 
 för alla $H \subseteq I$ gäller.
 
@@ -122,17 +122,37 @@ för alla $H \subseteq I$ gäller.
 
 En **plan graf** ritad i planet har inga korsande kanter. En **planär graf** är isomorf med en plan graf, men kan vara ritad med korsande kanter.
 
+En plan graf har $\chi \leq 4$.
+
 Den plana grafen delar in planet i ytor som betecknas **r**.
 
 För att räkna ut kanter **e**, hörn **v**, ytor **r** eller komponenter **c** så kan man använda sig av formeln:
 
 $$v-e+r-c=1$$
 
-eller om grafen är sammanhängande:
+eller om grafen är sammanhängande (Eulers polyederformel):
 
 $$v-e+r=2$$
 
-**Duala grafer**
+För en *sammanhängande* graf så gäller:
 
-**Platonska kroppar**
+$$3v \geq e+6$$
+
+För en *bipartit* och *sammanhängande* graf så gäller:
+
+$$2v \geq e+4$$
+
+**Kuratowskis sats** säger att grafen G är icke-planär om och endast om en graf som är isomorf med $K_5$ eller $K\_{3,3}$ kan får från G genom att sugga ut hörn med valens 2.
+
+**Wagners sats** säger att grafen G är icke-planär om man istället tar bort kanter genom att sammanfoga två hörn.
+
+**Duala grafen** av $G$ betecknas $G^{\bot}$. Man får en dual graf om man:
+
+* Lägger ett hörn i varje yta
+* Drar en kant mellan de nya hörnen
+* De nya kanterna går igenom endast en G kant
+
+Om $G$ är sammanhängande så är $G$ och $G^{\top}$ varandras dualgrafer.
+
+En **platonska kropp** är en dubbelt reguljär graf vilket innebär att varje hörn har samma valens **$n \geq 3$** och varje yta har lika många gränsande kanter **$m \geq 3$**. Det finns totalt 5 *platonska kroppar* där dualgrafen är en *platonsk kropp* med $n$ och $m$ omvänt.
 
