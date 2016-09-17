@@ -9,10 +9,180 @@
     <atom:link href="https://davisfreimanis.github.io/categories/kth/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Grafteori</title>
+      <link>https://davisfreimanis.github.io/kth/sf1630/grafer/</link>
+      <pubDate>Wed, 14 Sep 2016 11:21:28 +0200</pubDate>
+      <guid>https://davisfreimanis.github.io/kth/sf1630/grafer/</guid>
+      <description>
+
+&lt;h1 id=&#34;kapitel-15-grafer&#34;&gt;Kapitel 15 - Grafer&lt;/h1&gt;
+
+&lt;h2 id=&#34;grafer-och-dess-representation&#34;&gt;Grafer och dess representation&lt;/h2&gt;
+
+&lt;p&gt;En &lt;strong&gt;Graf&lt;/strong&gt; betecknas $G=(V,E)$ där V motsvarar hörnen och E kanterna.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Fullständig graf&lt;/strong&gt;. Alla hörn har en kant till de andra hörnen i grafen. Betecknas $K_n$&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Cyklisk graf&lt;/strong&gt;. Alla hörn har valens 2. Betecknas $C_n$&lt;/p&gt;
+
+&lt;h2 id=&#34;isomorfism&#34;&gt;Isomorfism&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Isomorfism&lt;/strong&gt; betyder att två grafer är samma. Graferna är isomorfa om det finns en bijektion (en funktion som är 1-1).&lt;/p&gt;
+
+&lt;p&gt;Tre nödvändiga vilkor för isomorfi:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Lika många hörn och kanter&lt;/li&gt;
+&lt;li&gt;$\delta(v) = \delta(\alpha(v))$&lt;/li&gt;
+&lt;li&gt;Lika många trianglar&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;valens&#34;&gt;Valens&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Valens&lt;/strong&gt; är antalet kanter som gränsar till hörnet. Kallas även grad. Betecknas $\delta(x)$ för hörnet x. En graf är &lt;strong&gt;k-reguljär&lt;/strong&gt; om alla hörn har valensen k.&lt;/p&gt;
+
+&lt;p&gt;Summan av alla valenser över alla hörn i en graf är $\sum_{v \in V} \delta(v) = 2|E|$.&lt;/p&gt;
+
+&lt;h2 id=&#34;stigar-och-cykler&#34;&gt;Stigar och cykler&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Vandring&lt;/strong&gt; (walk) $v_1, v_2,&amp;hellip;,v_n$&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Väg&lt;/strong&gt; (trail) samma som vandring fast en kant får inte upprepas&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Krets&lt;/strong&gt; (circuit) en väg som är sluten&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stig&lt;/strong&gt; (path) inget hörn upprepas&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cykel&lt;/strong&gt; (cycle) inget hörn upprepas förutom första och sista&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Hamiltoncykel&lt;/strong&gt; i en graf är en cykel där alla hörn passeras och avslutas vid samma hörn. &lt;em&gt;Det finns inget lätt sätt att avgöra om en graf är hamiltonsk (har en hamiltoncykel)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Hamiltonstig&lt;/strong&gt; är samma som en &lt;em&gt;hamiltoncykel&lt;/em&gt;, men kan istället sluta på vilket hörn som helst.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Eulerkrets&lt;/strong&gt; i en graf är en krets som innehåller varje kant exakt en gång. Kretsen avslutas i samma hörn som den började.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Eulerväg&lt;/strong&gt; är samma som en &lt;em&gt;eulerkrets&lt;/em&gt;, men kan istället sulta i vilket hörn som helst.&lt;/p&gt;
+
+&lt;p&gt;En graf $G=(V, E)$ har en &lt;em&gt;eulerkrets/väg&lt;/em&gt; om och endast om:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;G är sammanhängande förutom ensamma hörn&lt;/li&gt;
+&lt;li&gt;G har inga/två hörn med udda valens&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Om det finns två udda hörn i grafen så måste vägen börja och sluta i respektive hörn.&lt;/p&gt;
+
+&lt;h2 id=&#34;träd&#34;&gt;Träd&lt;/h2&gt;
+
+&lt;p&gt;Ett &lt;strong&gt;träd&lt;/strong&gt; T har två egenskaper:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;T är sammanhängande&lt;/li&gt;
+&lt;li&gt;Det finns inga cykler i T&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Om $T=(V,E)$ är ett träd med $|V| \geq 2$ så gäller även:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;För varje par $x,y$ av hörn så finns det en unik väg i T från x till y&lt;/li&gt;
+&lt;li&gt;Grafen man får från T när man tar bort en kant har två komponenter vilka i sin tur är träd&lt;/li&gt;
+&lt;li&gt;$|E|=|V|-1$&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;hörnfärgning&#34;&gt;Hörnfärgning&lt;/h2&gt;
+
+&lt;p&gt;Hörnen på en graf kan färgläggas så att en kant går mellan två olika färgade hörn.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Kromatiska talet&lt;/strong&gt; betecknas $\chi(G)$ och är det minsta antalet färger som behövs för att färglägga hörnet på en graf G. Det kan vara svårt och tidskrävande att räkna ut det kromatiska talet och därför används giriga algoritmer som får ut ett tillräckligt bra närmevärde till det kromatiska talet och ibland även det minsta.&lt;/p&gt;
+
+&lt;h1 id=&#34;kapitel-17-bipartita-grafer&#34;&gt;Kapitel 17 - Bipartita grafer&lt;/h1&gt;
+
+&lt;h2 id=&#34;bipartita-grafer&#34;&gt;Bipartita grafer&lt;/h2&gt;
+
+&lt;p&gt;En &lt;strong&gt;bipartit&lt;/strong&gt; grafs hörn kan delas upp i två mängder $X$ och $Y$ där varje hörn i $X$ endast har kanter till hörn i $Y$ och vice versa. En bipartit graf kan alltid färgläggas med två färger.&lt;/p&gt;
+
+&lt;p&gt;$$\sum_{x \in X} \delta(x) = \sum_{y \in Y} \delta(y) = |E|$$&lt;/p&gt;
+
+&lt;h2 id=&#34;kantfärgning&#34;&gt;Kantfärgning&lt;/h2&gt;
+
+&lt;p&gt;Kanterna i en graf kan färgläggas så att inget hörn har två kanter med samma färg. Det minsta antalet färger kallas för det &lt;strong&gt;kromatiska indexet&lt;/strong&gt; och betecknas $\chi&amp;rsquo;(G)$&lt;/p&gt;
+
+&lt;p&gt;I en &lt;em&gt;bipartit graf&lt;/em&gt; så är det minsta antalet färger den största valensen i grafen.&lt;/p&gt;
+
+&lt;h2 id=&#34;latinska-kvadrater&#34;&gt;Latinska kvadrater&lt;/h2&gt;
+
+&lt;p&gt;En &lt;strong&gt;latinsk kvadrat&lt;/strong&gt; är en $n \times n$ matris där det finns n olika symboler i varje rad och kolumn.&lt;/p&gt;
+
+&lt;p&gt;Man kan alltid göra klart en $n \times m$ latinsk rektangel till en $n \times n$ latinsk kvadrat.&lt;/p&gt;
+
+&lt;h2 id=&#34;matchningar&#34;&gt;Matchningar&lt;/h2&gt;
+
+&lt;p&gt;En &lt;strong&gt;matchning&lt;/strong&gt; i en graf $G=(X \cap Y, E)$ är när ett hörn i mängd X har en disjunkt kant till ett hörn i mängd Y. En &lt;em&gt;fullständig matchning&lt;/em&gt; är när alla hörn i X har en kant till Y. En &lt;em&gt;maximal matchning&lt;/em&gt; är när maximalt antal hörn i X har en matchning till Y.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Halls vilkor&lt;/strong&gt; i en graf $G=(X \cap Y, E)$ så gäller: $$|N(A)| \geq |A|$$ där $N(A)$ är mängden unika grannar till A och där A är alla delmängder av X. Vilkoret måste vara uppfyllt för att det ska kunna finnas en fullständig matchning i G.&lt;/p&gt;
+
+&lt;h2 id=&#34;maximala-matchningar&#34;&gt;Maximala matchningar&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Theorem 17.5.2&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Alternerande stig&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;transversaler&#34;&gt;Transversaler&lt;/h2&gt;
+
+&lt;p&gt;En &lt;strong&gt;transversal&lt;/strong&gt; är en mängd element från ett ändligt antal familjer. Man får en &lt;em&gt;transversal&lt;/em&gt; genom att ta ett element från varje familj utan att något av de elementen är samma.&lt;/p&gt;
+
+&lt;p&gt;$$\tau = \{S_i|i \in I\}$$&lt;/p&gt;
+
+&lt;p&gt;har en transversal endast om&lt;/p&gt;
+
+&lt;p&gt;$$|\cup_{i \in H} S_i| \geq |H|$$&lt;/p&gt;
+
+&lt;p&gt;för alla $H \subseteq I$ gäller.&lt;/p&gt;
+
+&lt;h1 id=&#34;planära-grafer&#34;&gt;Planära grafer&lt;/h1&gt;
+
+&lt;p&gt;En &lt;strong&gt;plan graf&lt;/strong&gt; ritad i planet har inga korsande kanter. En &lt;strong&gt;planär graf&lt;/strong&gt; är isomorf med en plan graf, men kan vara ritad med korsande kanter.&lt;/p&gt;
+
+&lt;p&gt;En plan graf har $\chi \leq 4$.&lt;/p&gt;
+
+&lt;p&gt;Den plana grafen delar in planet i ytor som betecknas &lt;strong&gt;r&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;För att räkna ut kanter &lt;strong&gt;e&lt;/strong&gt;, hörn &lt;strong&gt;v&lt;/strong&gt;, ytor &lt;strong&gt;r&lt;/strong&gt; eller komponenter &lt;strong&gt;c&lt;/strong&gt; så kan man använda sig av formeln:&lt;/p&gt;
+
+&lt;p&gt;$$v-e+r-c=1$$&lt;/p&gt;
+
+&lt;p&gt;eller om grafen är sammanhängande (Eulers polyederformel):&lt;/p&gt;
+
+&lt;p&gt;$$v-e+r=2$$&lt;/p&gt;
+
+&lt;p&gt;För en &lt;em&gt;sammanhängande&lt;/em&gt; graf så gäller:&lt;/p&gt;
+
+&lt;p&gt;$$3v \geq e+6$$&lt;/p&gt;
+
+&lt;p&gt;För en &lt;em&gt;bipartit&lt;/em&gt; och &lt;em&gt;sammanhängande&lt;/em&gt; graf så gäller:&lt;/p&gt;
+
+&lt;p&gt;$$2v \geq e+4$$&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Kuratowskis sats&lt;/strong&gt; säger att grafen G är icke-planär om och endast om en graf som är isomorf med $K_5$ eller $K_{3,3}$ kan får från G genom att sugga ut hörn med valens 2.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Wagners sats&lt;/strong&gt; säger att grafen G är icke-planär om man istället tar bort kanter genom att sammanfoga två hörn.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Duala grafen&lt;/strong&gt; av $G$ betecknas $G^{\bot}$. Man får en dual graf om man:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Lägger ett hörn i varje yta&lt;/li&gt;
+&lt;li&gt;Drar en kant mellan de nya hörnen&lt;/li&gt;
+&lt;li&gt;De nya kanterna går igenom endast en G kant&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Om $G$ är sammanhängande så är $G$ och $G^{\top}$ varandras dualgrafer.&lt;/p&gt;
+
+&lt;p&gt;En &lt;strong&gt;platonska kropp&lt;/strong&gt; är en dubbelt reguljär graf vilket innebär att varje hörn har samma valens &lt;strong&gt;$n \geq 3$&lt;/strong&gt; och varje yta har lika många gränsande kanter &lt;strong&gt;$m \geq 3$&lt;/strong&gt;. Det finns totalt 5 &lt;em&gt;platonska kroppar&lt;/em&gt; där dualgrafen är en &lt;em&gt;platonsk kropp&lt;/em&gt; med $n$ och $m$ omvänt.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Formler för statistik</title>
       <link>https://davisfreimanis.github.io/kth/sf1901/statistik/</link>
       <pubDate>Tue, 17 May 2016 13:17:49 +0200</pubDate>
-      
       <guid>https://davisfreimanis.github.io/kth/sf1901/statistik/</guid>
       <description>
 
@@ -87,7 +257,6 @@ där s är antalet rader i matrisen och r är antalet columnet. Q blir ett utfal
       <title>Formler för sannolikhet</title>
       <link>https://davisfreimanis.github.io/kth/sf1901/sannolikhet/</link>
       <pubDate>Wed, 27 Apr 2016 11:21:28 +0200</pubDate>
-      
       <guid>https://davisfreimanis.github.io/kth/sf1901/sannolikhet/</guid>
       <description>
 
@@ -192,160 +361,9 @@ $\rho(X,Y)=\frac{C(X,Y)}{D(X)D(Y)}$ och är alltid $-1 \leq \rho \leq 1$&lt;/p&g
     </item>
     
     <item>
-      <title>Grafteori</title>
-      <link>https://davisfreimanis.github.io/kth/sf1630/grafer/</link>
-      <pubDate>Wed, 27 Apr 2016 11:21:28 +0200</pubDate>
-      
-      <guid>https://davisfreimanis.github.io/kth/sf1630/grafer/</guid>
-      <description>
-
-&lt;h1 id=&#34;kapitel-15-grafer&#34;&gt;Kapitel 15 - Grafer&lt;/h1&gt;
-
-&lt;h2 id=&#34;grafer-och-dess-representation&#34;&gt;Grafer och dess representation&lt;/h2&gt;
-
-&lt;p&gt;En &lt;strong&gt;Graf&lt;/strong&gt; betecknas $G=(V,E)$ där V motsvarar hörnen och E kanterna.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Fullständig graf&lt;/strong&gt;. Alla hörn har en kant till de andra hörnen i grafen. Betecknas $K_n$&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Cyklisk graf&lt;/strong&gt;. Alla hörn har valens 2. Betecknas $C_n$&lt;/p&gt;
-
-&lt;h2 id=&#34;isomorfism&#34;&gt;Isomorfism&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Isomorfism&lt;/strong&gt; betyder att två grafer är samma. Graferna är isomorfa om det finns en bijektion (en funktion som är 1-1).&lt;/p&gt;
-
-&lt;p&gt;Tre nödvändiga vilkor för isomorfi:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Lika många hörn och kanter&lt;/li&gt;
-&lt;li&gt;$\delta(v) = \delta(\alpha(v))$&lt;/li&gt;
-&lt;li&gt;Lika många trianglar&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;valens&#34;&gt;Valens&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Valens&lt;/strong&gt; är antalet kanter som gränsar till hörnet. Kallas även grad. Betecknas $\delta(x)$ för hörnet x. En graf är &lt;strong&gt;k-reguljär&lt;/strong&gt; om alla hörn har valensen k.&lt;/p&gt;
-
-&lt;p&gt;Summan av alla valenser över alla hörn i en graf är $\sum_{v \in V} \delta(v) = 2|E|$.&lt;/p&gt;
-
-&lt;h2 id=&#34;stigar-och-cykler&#34;&gt;Stigar och cykler&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Vandring&lt;/strong&gt; (walk) $v_1, v_2,&amp;hellip;,v_n$&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Väg&lt;/strong&gt; (trail) samma som vandring fast en kant får inte upprepas&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Krets&lt;/strong&gt; (circuit) en väg som är sluten&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Stig&lt;/strong&gt; (path) inget hörn upprepas&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Cykel&lt;/strong&gt; (cycle) inget hörn upprepas förutom första och sista&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Hamiltoncykel&lt;/strong&gt; i en graf är en cykel där alla hörn passeras och avslutas vid samma hörn. &lt;em&gt;Det finns inget lätt sätt att avgöra om en graf är hamiltonsk (har en hamiltoncykel)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Hamiltonstig&lt;/strong&gt; är samma som en &lt;em&gt;hamiltoncykel&lt;/em&gt;, men kan istället sluta på vilket hörn som helst.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Eulerkrets&lt;/strong&gt; i en graf är en krets som innehåller varje kant exakt en gång. Kretsen avslutas i samma hörn som den började.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Eulerväg&lt;/strong&gt; är samma som en &lt;em&gt;eulerkrets&lt;/em&gt;, men kan istället sulta i vilket hörn som helst.&lt;/p&gt;
-
-&lt;p&gt;En graf $G=(V, E)$ har en &lt;em&gt;eulerkrets/väg&lt;/em&gt; om och endast om:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;G är sammanhängande förutom ensamma hörn&lt;/li&gt;
-&lt;li&gt;G har inga/två hörn med udda valens&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Om det finns två udda hörn i grafen så måste vägen börja och sluta i respektive hörn.&lt;/p&gt;
-
-&lt;h2 id=&#34;träd&#34;&gt;Träd&lt;/h2&gt;
-
-&lt;p&gt;Ett &lt;strong&gt;träd&lt;/strong&gt; T har två egenskaper:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;T är sammanhängande&lt;/li&gt;
-&lt;li&gt;Det finns inga cykler i T&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Om $T=(V,E)$ är ett träd med $|V| \geq 2$ så gäller även:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;För varje par $x,y$ av hörn så finns det en unik väg i T från x till y&lt;/li&gt;
-&lt;li&gt;Grafen man får från T när man tar bort en kant har två komponenter vilka i sin tur är träd&lt;/li&gt;
-&lt;li&gt;$|E|=|V|-1$&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;hörnfärgning&#34;&gt;Hörnfärgning&lt;/h2&gt;
-
-&lt;p&gt;Hörnen på en graf kan färgläggas så att en kant går mellan två olika färgade hörn.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Kromatiska talet&lt;/strong&gt; betecknas $\chi(G)$ och är det minsta antalet färger som behövs för att färglägga hörnet på en graf G. Det kan vara svårt och tidskrävande att räkna ut det kromatiska talet och därför används giriga algoritmer som får ut ett tillräckligt bra närmevärde till det kromatiska talet och ibland även det minsta.&lt;/p&gt;
-
-&lt;h1 id=&#34;kapitel-17-bipartita-grafer&#34;&gt;Kapitel 17 - Bipartita grafer&lt;/h1&gt;
-
-&lt;h2 id=&#34;bipartita-grafer&#34;&gt;Bipartita grafer&lt;/h2&gt;
-
-&lt;p&gt;En &lt;strong&gt;bipartit&lt;/strong&gt; grafs hörn kan delas upp i två mängder $X$ och $Y$ där varje hörn i $X$ endast har kanter till hörn i $Y$ och vice versa. En bipartit graf kan alltid färgläggas med två färger.&lt;/p&gt;
-
-&lt;p&gt;$$\sum_x \delta(x) = \sum_y \delta(y) = |E|$$&lt;/p&gt;
-
-&lt;h2 id=&#34;kantfärgning&#34;&gt;Kantfärgning&lt;/h2&gt;
-
-&lt;p&gt;Kanterna i en graf kan färgläggas så att inget hörn har två kanter med samma färg. Det minsta antalet färger kallas för det &lt;strong&gt;kromatiska indexet&lt;/strong&gt; och betecknas $\chi&amp;rsquo;(G)$&lt;/p&gt;
-
-&lt;p&gt;I en &lt;em&gt;bipartit graf&lt;/em&gt; så är det minsta antalet färger den största valensen i grafen.&lt;/p&gt;
-
-&lt;h2 id=&#34;latinska-kvadrater&#34;&gt;Latinska kvadrater&lt;/h2&gt;
-
-&lt;p&gt;En &lt;strong&gt;latinsk kvadrat&lt;/strong&gt; är en $n \times n$ matris där det finns n olika symboler i varje rad och kolumn.&lt;/p&gt;
-
-&lt;p&gt;Man kan alltid göra klart en $n \times m$ latinsk rektangel till en $n \times n$ latinsk kvadrat.&lt;/p&gt;
-
-&lt;h2 id=&#34;matchningar&#34;&gt;Matchningar&lt;/h2&gt;
-
-&lt;p&gt;En &lt;strong&gt;matchning&lt;/strong&gt; i en graf $G=(X \cap Y, E)$ är när ett hörn i mängd X har en disjunkt kant till ett hörn i mängd Y. En &lt;em&gt;fullständig matchning&lt;/em&gt; är när alla hörn i X har en kant till Y. En &lt;em&gt;maximal matchning&lt;/em&gt; är när maximalt antal hörn i X har en matchning till Y.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Halls vilkor&lt;/strong&gt; i en graf $G=(X \cap Y, E)$ så gäller: $$|N(A)| \geq |A|$$ där $N(A)$ är mängden unika grannar till A och där A är alla delmängder av X. Vilkoret måste vara uppfyllt för att det ska kunna finnas en fullständig matchning i G.&lt;/p&gt;
-
-&lt;h2 id=&#34;maximala-matchningar&#34;&gt;Maximala matchningar&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Theorem 17.5.2&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Alternerande stig&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;transversaler&#34;&gt;Transversaler&lt;/h2&gt;
-
-&lt;p&gt;En &lt;strong&gt;transversal&lt;/strong&gt; är en mängd element från ett ändligt antal familjer. Man får en &lt;em&gt;transversal&lt;/em&gt; genom att ta ett element från varje familj utan att något av de elementen är samma.&lt;/p&gt;
-
-&lt;p&gt;$$\tau = \{S_i|i \in I\}$$&lt;/p&gt;
-
-&lt;p&gt;har en transversal endast om&lt;/p&gt;
-
-&lt;p&gt;$$|\cup_{i \in H}| \geq |H|$$&lt;/p&gt;
-
-&lt;p&gt;för alla $H \subseteq I$ gäller.&lt;/p&gt;
-
-&lt;h1 id=&#34;planära-grafer&#34;&gt;Planära grafer&lt;/h1&gt;
-
-&lt;p&gt;En &lt;strong&gt;plan graf&lt;/strong&gt; ritad i planet har inga korsande kanter. En &lt;strong&gt;planär graf&lt;/strong&gt; är isomorf med en plan graf, men kan vara ritad med korsande kanter.&lt;/p&gt;
-
-&lt;p&gt;Den plana grafen delar in planet i ytor som betecknas &lt;strong&gt;r&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;För att räkna ut kanter &lt;strong&gt;e&lt;/strong&gt;, hörn &lt;strong&gt;v&lt;/strong&gt;, ytor &lt;strong&gt;r&lt;/strong&gt; eller komponenter &lt;strong&gt;c&lt;/strong&gt; så kan man använda sig av formeln:&lt;/p&gt;
-
-&lt;p&gt;$$v-e+r-c=1$$&lt;/p&gt;
-
-&lt;p&gt;eller om grafen är sammanhängande:&lt;/p&gt;
-
-&lt;p&gt;$$v-e+r=2$$&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Duala grafer&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Platonska kroppar&lt;/strong&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Övning 1</title>
       <link>https://davisfreimanis.github.io/kth/dd1387/ovning1/</link>
       <pubDate>Wed, 27 Apr 2016 11:21:28 +0200</pubDate>
-      
       <guid>https://davisfreimanis.github.io/kth/dd1387/ovning1/</guid>
       <description>
 

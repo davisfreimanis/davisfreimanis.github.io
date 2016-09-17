@@ -72,7 +72,7 @@ MathJax.Hub.Config({
         <div>
             
             <div class="posts">
-                <h1 class="content-subhead">27 Apr 2016, 11:21</h1>
+                <h1 class="content-subhead">14 Sep 2016, 11:21</h1>
                 <section class="post">
                     <header class="post-header">
 
@@ -179,7 +179,7 @@ MathJax.Hub.Config({
 
 <p>En <strong>bipartit</strong> grafs hörn kan delas upp i två mängder $X$ och $Y$ där varje hörn i $X$ endast har kanter till hörn i $Y$ och vice versa. En bipartit graf kan alltid färgläggas med två färger.</p>
 
-<p>$$\sum_x \delta(x) = \sum_y \delta(y) = |E|$$</p>
+<p>$$\sum_{x \in X} \delta(x) = \sum_{y \in Y} \delta(y) = |E|$$</p>
 
 <h2 id="kantfärgning">Kantfärgning</h2>
 
@@ -213,7 +213,7 @@ MathJax.Hub.Config({
 
 <p>har en transversal endast om</p>
 
-<p>$$|\cup_{i \in H}| \geq |H|$$</p>
+<p>$$|\cup_{i \in H} S_i| \geq |H|$$</p>
 
 <p>för alla $H \subseteq I$ gäller.</p>
 
@@ -221,19 +221,41 @@ MathJax.Hub.Config({
 
 <p>En <strong>plan graf</strong> ritad i planet har inga korsande kanter. En <strong>planär graf</strong> är isomorf med en plan graf, men kan vara ritad med korsande kanter.</p>
 
+<p>En plan graf har $\chi \leq 4$.</p>
+
 <p>Den plana grafen delar in planet i ytor som betecknas <strong>r</strong>.</p>
 
 <p>För att räkna ut kanter <strong>e</strong>, hörn <strong>v</strong>, ytor <strong>r</strong> eller komponenter <strong>c</strong> så kan man använda sig av formeln:</p>
 
 <p>$$v-e+r-c=1$$</p>
 
-<p>eller om grafen är sammanhängande:</p>
+<p>eller om grafen är sammanhängande (Eulers polyederformel):</p>
 
 <p>$$v-e+r=2$$</p>
 
-<p><strong>Duala grafer</strong></p>
+<p>För en <em>sammanhängande</em> graf så gäller:</p>
 
-<p><strong>Platonska kroppar</strong></p>
+<p>$$3v \geq e+6$$</p>
+
+<p>För en <em>bipartit</em> och <em>sammanhängande</em> graf så gäller:</p>
+
+<p>$$2v \geq e+4$$</p>
+
+<p><strong>Kuratowskis sats</strong> säger att grafen G är icke-planär om och endast om en graf som är isomorf med $K_5$ eller $K_{3,3}$ kan får från G genom att sugga ut hörn med valens 2.</p>
+
+<p><strong>Wagners sats</strong> säger att grafen G är icke-planär om man istället tar bort kanter genom att sammanfoga två hörn.</p>
+
+<p><strong>Duala grafen</strong> av $G$ betecknas $G^{\bot}$. Man får en dual graf om man:</p>
+
+<ul>
+<li>Lägger ett hörn i varje yta</li>
+<li>Drar en kant mellan de nya hörnen</li>
+<li>De nya kanterna går igenom endast en G kant</li>
+</ul>
+
+<p>Om $G$ är sammanhängande så är $G$ och $G^{\top}$ varandras dualgrafer.</p>
+
+<p>En <strong>platonska kropp</strong> är en dubbelt reguljär graf vilket innebär att varje hörn har samma valens <strong>$n \geq 3$</strong> och varje yta har lika många gränsande kanter <strong>$m \geq 3$</strong>. Det finns totalt 5 <em>platonska kroppar</em> där dualgrafen är en <em>platonsk kropp</em> med $n$ och $m$ omvänt.</p>
 
                     </div>
                     
