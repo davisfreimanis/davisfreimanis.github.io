@@ -12,6 +12,7 @@
       <title>Grafteori</title>
       <link>https://davisfreimanis.github.io/kth/sf1630/grafer/</link>
       <pubDate>Wed, 14 Sep 2016 11:21:28 +0200</pubDate>
+      
       <guid>https://davisfreimanis.github.io/kth/sf1630/grafer/</guid>
       <description>
 
@@ -180,9 +181,111 @@
     </item>
     
     <item>
+      <title>Heltalsaritmetik</title>
+      <link>https://davisfreimanis.github.io/kth/sf1630/aritmetik/</link>
+      <pubDate>Wed, 14 Sep 2016 11:21:28 +0200</pubDate>
+      
+      <guid>https://davisfreimanis.github.io/kth/sf1630/aritmetik/</guid>
+      <description>
+
+&lt;h1 id=&#34;kapitel-5-funktioner&#34;&gt;Kapitel 5 - Funktioner&lt;/h1&gt;
+
+&lt;h2 id=&#34;funktionskonceptet&#34;&gt;Funktionskonceptet&lt;/h2&gt;
+
+&lt;p&gt;En &lt;strong&gt;funktion&lt;/strong&gt; $f: X \to Y$ är en svart låda som tar ett element från mängden $X$ och returnerar ett unikt element från mängden $Y$.&lt;/p&gt;
+
+&lt;h2 id=&#34;surjektioner-injektioner-och-bijektioner&#34;&gt;Surjektioner, Injektioner och Bijektioner&lt;/h2&gt;
+
+&lt;p&gt;En funktion $f: X \to Y$ är &lt;strong&gt;surjektiv&lt;/strong&gt; om för alla $y \in Y$ är en bild av &lt;strong&gt;minst ett&lt;/strong&gt; $x\in X$.&lt;/p&gt;
+
+&lt;p&gt;En funktion $f: X \to Y$ är &lt;strong&gt;injektiv&lt;/strong&gt; om för alla $y \in Y$ är en bild av &lt;strong&gt;högst ett&lt;/strong&gt; $x\in X$.&lt;/p&gt;
+
+&lt;p&gt;En funktion $f: X \to Y$ är &lt;strong&gt;bijektiv&lt;/strong&gt; om för alla $y \in Y$ har &lt;strong&gt;exakt ett&lt;/strong&gt; $x\in X$.&lt;/p&gt;
+
+&lt;p&gt;En funktion är &lt;strong&gt;bijektiv&lt;/strong&gt; om den är &lt;strong&gt;surjektiv&lt;/strong&gt; och &lt;strong&gt;injektiv&lt;/strong&gt;. Det vill säga att varje element $x\in X$ avbildas på ett $y\in Y$.&lt;/p&gt;
+
+&lt;h2 id=&#34;sammansatta-funktioner&#34;&gt;Sammansatta funktioner&lt;/h2&gt;
+
+&lt;p&gt;En funktion kallas &lt;strong&gt;sammansatt&lt;/strong&gt; av funktionerna $f: X \to Y$ och $g: Y \to Z$ och skrivs $(g \circ f)$ och är samma sak som att skriva $g(f(x))$.&lt;/p&gt;
+
+&lt;p&gt;Om $f$ och $g$ är &lt;em&gt;injektiva&lt;/em&gt; så är även &lt;strong&gt;kompositionen&lt;/strong&gt; $g \circ f$ det.&lt;/p&gt;
+
+&lt;p&gt;Om $f$ och $g$ är &lt;em&gt;surjektiva&lt;/em&gt; så är även &lt;strong&gt;kompositionen&lt;/strong&gt; $g \circ f$ det.&lt;/p&gt;
+
+&lt;p&gt;Om $f$ och $g$ är &lt;em&gt;bijektiva&lt;/em&gt; så är även &lt;strong&gt;kompositionen&lt;/strong&gt; $g \circ f$ det.&lt;/p&gt;
+
+&lt;h2 id=&#34;bijektioner-och-inversa-funktioner&#34;&gt;Bijektioner och inversa funktioner&lt;/h2&gt;
+
+&lt;p&gt;En funktion $f:X \to Y$ har en &lt;strong&gt;invers&lt;/strong&gt; funktion $g: Y \to X$ om för alla $x \in X$ och $y \in Y$&lt;/p&gt;
+
+&lt;p&gt;$$(g \circ f)(x)=(x)$$
+$$(f \circ g)(y)=(y)$$&lt;/p&gt;
+
+&lt;p&gt;En funktion har en &lt;em&gt;invers&lt;/em&gt; om och endast om funktionen är &lt;strong&gt;bijektiv&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;kapitel-6-räkning&#34;&gt;Kapitel 6 - Räkning&lt;/h1&gt;
+
+&lt;h1 id=&#34;kapitel-8-delbarhet-och-primtal&#34;&gt;Kapitel 8 - Delbarhet och primtal&lt;/h1&gt;
+
+&lt;h2 id=&#34;delbarhet&#34;&gt;Delbarhet&lt;/h2&gt;
+
+&lt;p&gt;$x$ är en &lt;strong&gt;multipel&lt;/strong&gt; av $y$ om $x=yq$ där $q \in \mathbb{Z}$.&lt;/p&gt;
+
+&lt;p&gt;$y$ är en &lt;strong&gt;faktor&lt;/strong&gt; av $x$ och $y$ &lt;strong&gt;delar&lt;/strong&gt; $x$. Detta skrivs $y | x$. Det innebär att resten blir 0.&lt;/p&gt;
+
+&lt;h2 id=&#34;kvot-och-rest&#34;&gt;Kvot och rest&lt;/h2&gt;
+
+&lt;p&gt;Om $x$ och $y$ inte delas så skrivs det $y\not| x$.&lt;/p&gt;
+
+&lt;p&gt;Det som blir över av heltalsdivisionen blir &lt;strong&gt;resten&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;representation-av-heltal&#34;&gt;Representation av heltal&lt;/h2&gt;
+
+&lt;h2 id=&#34;största-gemensama-delaren-sgd&#34;&gt;Största gemensama delaren (SGD)&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Största gemensama delaren&lt;/strong&gt; (SGD eller GCD på engelska) är det tal som är det största talet som delar $x$ och $y$.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Euklides algoritm&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Två tal $x$, $y$ är &lt;strong&gt;relativt prima&lt;/strong&gt; (coprime) om $sgd(x,y)=1$.&lt;/p&gt;
+
+&lt;h2 id=&#34;primtal&#34;&gt;Primtal&lt;/h2&gt;
+
+&lt;p&gt;Ett heltal $x$ är ett &lt;strong&gt;primtal&lt;/strong&gt; om $x \geq 2$ och de enda delarna är 1 och $x$ själv.&lt;/p&gt;
+
+&lt;p&gt;Man kan alltid &lt;strong&gt;primtalsfaktorisera&lt;/strong&gt; ett heltal.&lt;/p&gt;
+
+&lt;h2 id=&#34;primtalsfaktorisering&#34;&gt;Primtalsfaktorisering&lt;/h2&gt;
+
+&lt;h1 id=&#34;kapitel-13-modulär-aritmetik&#34;&gt;Kapitel 13 - Modulär aritmetik&lt;/h1&gt;
+
+&lt;h2 id=&#34;kongruens&#34;&gt;Kongruens&lt;/h2&gt;
+
+&lt;p&gt;Ett heltal $x_1$ är &lt;strong&gt;kongruent&lt;/strong&gt; med $x_2$ &lt;strong&gt;modulo&lt;/strong&gt; $m$ om $x_1 - x_2$ är delbart med $m$. Vi skriver detta $x_1 \equiv x_2$ (mod m) eller $x_1 \equiv_m x_2$.&lt;/p&gt;
+
+&lt;p&gt;Om vi har heltalen $x_1$, $x_2$, $y_1$ och $y_2$ så att:&lt;/p&gt;
+
+&lt;p&gt;$$x_1 \equiv_m x_2$$
+$$y_1 \equiv_m y_2$$&lt;/p&gt;
+
+&lt;p&gt;så gäller det att:&lt;/p&gt;
+
+&lt;p&gt;$$x_1 + y_1 \equiv_m x_2 + y_2$$
+$$x_1 y_1 \equiv_m x_2 y_2$$&lt;/p&gt;
+
+&lt;h2 id=&#34;mathbb-z-m-och-dess-aritmetik&#34;&gt;$\mathbb{Z}_m$ och dess aritmetik&lt;/h2&gt;
+
+&lt;h2 id=&#34;inverterbara-element-i-mathbb-z-m&#34;&gt;Inverterbara element i $\mathbb{Z}_m$&lt;/h2&gt;
+
+&lt;h1 id=&#34;kinesiska-restsatsen&#34;&gt;Kinesiska restsatsen&lt;/h1&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Formler för statistik</title>
       <link>https://davisfreimanis.github.io/kth/sf1901/statistik/</link>
       <pubDate>Tue, 17 May 2016 13:17:49 +0200</pubDate>
+      
       <guid>https://davisfreimanis.github.io/kth/sf1901/statistik/</guid>
       <description>
 
@@ -257,6 +360,7 @@ där s är antalet rader i matrisen och r är antalet columnet. Q blir ett utfal
       <title>Formler för sannolikhet</title>
       <link>https://davisfreimanis.github.io/kth/sf1901/sannolikhet/</link>
       <pubDate>Wed, 27 Apr 2016 11:21:28 +0200</pubDate>
+      
       <guid>https://davisfreimanis.github.io/kth/sf1901/sannolikhet/</guid>
       <description>
 
@@ -364,6 +468,7 @@ $\rho(X,Y)=\frac{C(X,Y)}{D(X)D(Y)}$ och är alltid $-1 \leq \rho \leq 1$&lt;/p&g
       <title>Övning 1</title>
       <link>https://davisfreimanis.github.io/kth/dd1387/ovning1/</link>
       <pubDate>Wed, 27 Apr 2016 11:21:28 +0200</pubDate>
+      
       <guid>https://davisfreimanis.github.io/kth/dd1387/ovning1/</guid>
       <description>
 
