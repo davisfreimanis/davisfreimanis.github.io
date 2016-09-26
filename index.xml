@@ -255,7 +255,7 @@ $$(f \circ g)(y)=(y)$$&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Största gemensama delaren&lt;/strong&gt; (SGD eller GCD på engelska) är det tal som är det största talet som delar $x$ och $y$.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Euklides algoritm&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Euklides algoritm&lt;/strong&gt; kan man använda för att hitta SGD för två heltal.&lt;/p&gt;
 
 &lt;p&gt;Två tal $x$, $y$ är &lt;strong&gt;relativt prima&lt;/strong&gt; (coprime) om $sgd(x,y)=1$.&lt;/p&gt;
 
@@ -266,6 +266,8 @@ $$(f \circ g)(y)=(y)$$&lt;/p&gt;
 &lt;p&gt;Man kan alltid &lt;strong&gt;primtalsfaktorisera&lt;/strong&gt; ett heltal.&lt;/p&gt;
 
 &lt;h2 id=&#34;primtalsfaktorisering&#34;&gt;Primtalsfaktorisering&lt;/h2&gt;
+
+&lt;p&gt;Alla positiva heltal $n \geq 2$ har en &lt;em&gt;unik&lt;/em&gt; &lt;strong&gt;primtalsfaktorisering&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;h1 id=&#34;kapitel-13-modulär-aritmetik&#34;&gt;Kapitel 13 - Modulär aritmetik&lt;/h1&gt;
 
@@ -286,6 +288,18 @@ $$x_1 y_1 \equiv_m x_2 y_2$$&lt;/p&gt;
 &lt;h2 id=&#34;mathbb-z-m-och-dess-aritmetik&#34;&gt;$\mathbb{Z}_m$ och dess aritmetik&lt;/h2&gt;
 
 &lt;h2 id=&#34;inverterbara-element-i-mathbb-z-m&#34;&gt;Inverterbara element i $\mathbb{Z}_m$&lt;/h2&gt;
+
+&lt;p&gt;Ett tal $r$ i $\mathbb{Z}_m$ är &lt;strong&gt;inverterbart&lt;/strong&gt; om det finns ett $x$ i $\mathbb{Z}_m$ så att $rx = 1$ i $\mathbb{Z}_m$.&lt;/p&gt;
+
+&lt;p&gt;Talet $r$ är inverterbart om och endast om $r$ och $m$ är relativt prima. Om $m$ är ett primtal så är alla element i $\mathbb{Z}_m$ inverterbara förutom 0.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Eulers funktion&lt;/strong&gt; $\Phi(m)$ är antalet heltal i $\mathbb{Z}_m$ som är relativt prima med $m$.&lt;/p&gt;
+
+&lt;p&gt;Om $y$ är inverterbart i $\mathbb{Z}_m$ så är $y^{\Phi(m)}=1$.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Eulers teorem&lt;/strong&gt; säger att om $SGD(y,m)=1$ så är $y^{\Phi(m)} \equiv_{m} 1$.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Fermats teorem&lt;/strong&gt; säger att om p är prima och $p\not| y$ så är $y^{p-1} \equiv_{m} 1$&lt;/p&gt;
 
 &lt;h1 id=&#34;kinesiska-restsatsen&#34;&gt;Kinesiska restsatsen&lt;/h1&gt;
 </description>

@@ -152,7 +152,7 @@ $$(f \circ g)(y)=(y)$$</p>
 
 <p><strong>Största gemensama delaren</strong> (SGD eller GCD på engelska) är det tal som är det största talet som delar $x$ och $y$.</p>
 
-<p><strong>Euklides algoritm</strong></p>
+<p><strong>Euklides algoritm</strong> kan man använda för att hitta SGD för två heltal.</p>
 
 <p>Två tal $x$, $y$ är <strong>relativt prima</strong> (coprime) om $sgd(x,y)=1$.</p>
 
@@ -163,6 +163,8 @@ $$(f \circ g)(y)=(y)$$</p>
 <p>Man kan alltid <strong>primtalsfaktorisera</strong> ett heltal.</p>
 
 <h2 id="primtalsfaktorisering">Primtalsfaktorisering</h2>
+
+<p>Alla positiva heltal $n \geq 2$ har en <em>unik</em> <strong>primtalsfaktorisering</strong>.</p>
 
 <h1 id="kapitel-13-modulär-aritmetik">Kapitel 13 - Modulär aritmetik</h1>
 
@@ -183,6 +185,18 @@ $$x_1 y_1 \equiv_m x_2 y_2$$</p>
 <h2 id="mathbb-z-m-och-dess-aritmetik">$\mathbb{Z}_m$ och dess aritmetik</h2>
 
 <h2 id="inverterbara-element-i-mathbb-z-m">Inverterbara element i $\mathbb{Z}_m$</h2>
+
+<p>Ett tal $r$ i $\mathbb{Z}_m$ är <strong>inverterbart</strong> om det finns ett $x$ i $\mathbb{Z}_m$ så att $rx = 1$ i $\mathbb{Z}_m$.</p>
+
+<p>Talet $r$ är inverterbart om och endast om $r$ och $m$ är relativt prima. Om $m$ är ett primtal så är alla element i $\mathbb{Z}_m$ inverterbara förutom 0.</p>
+
+<p><strong>Eulers funktion</strong> $\Phi(m)$ är antalet heltal i $\mathbb{Z}_m$ som är relativt prima med $m$.</p>
+
+<p>Om $y$ är inverterbart i $\mathbb{Z}_m$ så är $y^{\Phi(m)}=1$.</p>
+
+<p><strong>Eulers teorem</strong> säger att om $SGD(y,m)=1$ så är $y^{\Phi(m)} \equiv_{m} 1$.</p>
+
+<p><strong>Fermats teorem</strong> säger att om p är prima och $p\not| y$ så är $y^{p-1} \equiv_{m} 1$</p>
 
 <h1 id="kinesiska-restsatsen">Kinesiska restsatsen</h1>
 
