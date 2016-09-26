@@ -69,7 +69,7 @@ Det som blir över av heltalsdivisionen blir **resten**.
 
 **Största gemensama delaren** (SGD eller GCD på engelska) är det tal som är det största talet som delar $x$ och $y$.
 
-**Euklides algoritm**
+**Euklides algoritm** kan man använda för att hitta SGD för två heltal.
 
 Två tal $x$, $y$ är **relativt prima** (coprime) om $sgd(x,y)=1$.
 
@@ -81,7 +81,7 @@ Man kan alltid **primtalsfaktorisera** ett heltal.
 
 ## Primtalsfaktorisering
 
-
+Alla positiva heltal $n \geq 2$ har en *unik* **primtalsfaktorisering**.
 
 # Kapitel 13 - Modulär aritmetik
 
@@ -101,8 +101,18 @@ $$x_1 y_1 \equiv_m x_2 y_2$$
 
 ## $\mathbb{Z}_m$ och dess aritmetik
 
-
-
 ## Inverterbara element i $\mathbb{Z}_m$
+
+Ett tal $r$ i $\mathbb{Z}_m$ är **inverterbart** om det finns ett $x$ i $\mathbb{Z}_m$ så att $rx = 1$ i $\mathbb{Z}_m$.
+
+Talet $r$ är inverterbart om och endast om $r$ och $m$ är relativt prima. Om $m$ är ett primtal så är alla element i $\mathbb{Z}_m$ inverterbara förutom 0.
+
+**Eulers funktion** $\Phi(m)$ är antalet heltal i $\mathbb{Z}_m$ som är relativt prima med $m$. 
+
+Om $y$ är inverterbart i $\mathbb{Z}_m$ så är $y^{\Phi(m)}=1$.
+
+**Eulers teorem** säger att om $SGD(y,m)=1$ så är $y^{\Phi(m)} \equiv_{m} 1$.
+
+**Fermats teorem** säger att om p är prima och $p\not| y$ så är $y^{p-1} \equiv_{m} 1$
 
 # Kinesiska restsatsen
