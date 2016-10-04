@@ -34,6 +34,8 @@
 
 &lt;h2 id=&#34;klassifikationer&#34;&gt;Klassifikationer&lt;/h2&gt;
 
+&lt;p&gt;Man kan dela upp mängderna som har samma ekvivalensrelation till en klass.&lt;/p&gt;
+
 &lt;h1 id=&#34;kapitel-10-räkning&#34;&gt;Kapitel 10 - Räkning&lt;/h1&gt;
 
 &lt;h2 id=&#34;additionsprincipen&#34;&gt;Additionsprincipen&lt;/h2&gt;
@@ -84,6 +86,12 @@ $$S(n,k)=S(n-1,k-1)+kS(n-1,k)$$&lt;/p&gt;
 &lt;h2 id=&#34;ekvivalenspartitioner&#34;&gt;Ekvivalenspartitioner&lt;/h2&gt;
 
 &lt;h2 id=&#34;multinomialtal&#34;&gt;Multinomialtal&lt;/h2&gt;
+
+&lt;p&gt;Antalet sätt att fördela n st olika element i k st lådor med $n_i$ st i låda $i$.&lt;/p&gt;
+
+&lt;p&gt;$${{n}\choose{n_1, n_2, &amp;hellip; , n_k}}=\frac{n!}{n_1!n_2!&amp;hellip;n_k!}$$&lt;/p&gt;
+
+&lt;p&gt;där summan av $n_1+n_2+&amp;hellip;+n_k=n$ och $n_i \geq 0$&lt;/p&gt;
 </description>
     </item>
     
