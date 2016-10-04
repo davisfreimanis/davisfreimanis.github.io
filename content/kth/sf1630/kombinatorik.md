@@ -21,6 +21,7 @@ En **relation** kan ha dessa tre egenskaper:
 En **eqvivalensrelation** är en relation som har alla tre egenskaperna.
 
 ## Klassifikationer
+Man kan dela upp mängderna som har samma ekvivalensrelation till en klass.
 
 # Kapitel 10 - Räkning
 
@@ -65,3 +66,8 @@ Lättast är att visualisera **stirlingtalen** i en pyramid.
 ## Ekvivalenspartitioner
 
 ## Multinomialtal
+Antalet sätt att fördela n st olika element i k st lådor med $n_i$ st i låda $i$.
+
+$${{n}\choose{n_1, n_2, ... , n_k}}=\frac{n!}{n_1!n_2!...n_k!}$$ 
+
+där summan av $n_1+n_2+...+n_k=n$ och $n_i \geq 0$
