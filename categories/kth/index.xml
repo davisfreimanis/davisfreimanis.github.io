@@ -9,6 +9,85 @@
     <atom:link href="https://davisfreimanis.github.io/categories/kth/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Kombinatorik</title>
+      <link>https://davisfreimanis.github.io/kth/sf1630/kombinatorik/</link>
+      <pubDate>Wed, 21 Sep 2016 14:56:56 +0200</pubDate>
+      
+      <guid>https://davisfreimanis.github.io/kth/sf1630/kombinatorik/</guid>
+      <description>
+
+&lt;h1 id=&#34;kapitel-7-heltal&#34;&gt;Kapitel 7 - Heltal&lt;/h1&gt;
+
+&lt;h2 id=&#34;ekvivalensrelationer&#34;&gt;Ekvivalensrelationer&lt;/h2&gt;
+
+&lt;p&gt;En &lt;strong&gt;relation&lt;/strong&gt; på en mängd $X$ är en mängd av ordnade par av medlemar av $X$.&lt;/p&gt;
+
+&lt;p&gt;En &lt;strong&gt;relation&lt;/strong&gt; kan ha dessa tre egenskaper:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Reflexiv&lt;/strong&gt; om $xRx$ för varje $x \in X$&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Symmetrisk&lt;/strong&gt; om $xRy$ så gäller även $yRx$&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Transitiv&lt;/strong&gt; om $xRy$ och $yRz$ så är $xRz$&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;En &lt;strong&gt;eqvivalensrelation&lt;/strong&gt; är en relation som har alla tre egenskaperna.&lt;/p&gt;
+
+&lt;h2 id=&#34;klassifikationer&#34;&gt;Klassifikationer&lt;/h2&gt;
+
+&lt;h1 id=&#34;kapitel-10-räkning&#34;&gt;Kapitel 10 - Räkning&lt;/h1&gt;
+
+&lt;h2 id=&#34;additionsprincipen&#34;&gt;Additionsprincipen&lt;/h2&gt;
+
+&lt;p&gt;Om $A$ och $B$ är disjunkta icke-tomma mängder så är: $$|A \cup B| = |A| + |B|$$&lt;/p&gt;
+
+&lt;h2 id=&#34;multiplikationsprincipen&#34;&gt;Multiplikationsprincipen&lt;/h2&gt;
+
+&lt;p&gt;Om $A$ och $B$ är icke-tomma mängder så är: $$|A \times B| = |A| \times |B|$$&lt;/p&gt;
+
+&lt;h1 id=&#34;kapitel-11-delmängder-och-design&#34;&gt;Kapitel 11 - Delmängder och design&lt;/h1&gt;
+
+&lt;h2 id=&#34;binomialtal&#34;&gt;Binomialtal&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Binomialtal&lt;/strong&gt; betecknas ${a}\choose{b}$ och läses &amp;lsquo;a över b&amp;rsquo;.
+Man använder &lt;strong&gt;binomialtal&lt;/strong&gt; för att räkna ut antalet b-delmängder ur a utan upprepning.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Binomialtalen&lt;/strong&gt; kan antingen räknas ut rekursivt med &lt;em&gt;Pascals triangel&lt;/em&gt; eller med formeln: $${{n}\choose{r}}=\frac{n!}{r!(n-r)!}$$&lt;/p&gt;
+
+&lt;h2 id=&#34;oordnant-med-repetition&#34;&gt;Oordnant med repetition&lt;/h2&gt;
+
+&lt;p&gt;${{n+r-1}\choose{r}}$ antal sätt att välja r från n med repetition.&lt;/p&gt;
+
+&lt;h2 id=&#34;binomialsatsen&#34;&gt;Binomialsatsen&lt;/h2&gt;
+
+&lt;p&gt;$(a+b)^n={{n}\choose{0}}a^n+{{n}\choose{1}}a^{n-1}b+&amp;hellip;+{{n}\choose{n}}b^n$&lt;/p&gt;
+
+&lt;h2 id=&#34;sållprincipen-sieve-principle&#34;&gt;Sållprincipen (Sieve principle)&lt;/h2&gt;
+
+&lt;p&gt;Visualisera med Venndiagram.
+Om $A_1$, $A_2$, &amp;hellip;, $A_n$ är mängder då gäller: $$|A_1 \cup A_2 \cup &amp;hellip; \cup A_n| = \alpha_1 - \alpha_2 + \alpha_3 - &amp;hellip; + (-1)^{n-1}\alpha_n$$&lt;/p&gt;
+
+&lt;p&gt;där $\alpha_n$ är överlappningar med kardinalitet n som inkluderas och exkluderas vid unionen.&lt;/p&gt;
+
+&lt;h1 id=&#34;kapitel-12-partitioner-klasser-och-fördelning&#34;&gt;Kapitel 12 - Partitioner, klasser och fördelning&lt;/h1&gt;
+
+&lt;h2 id=&#34;partitioner-av-en-delmängd&#34;&gt;Partitioner av en delmängd&lt;/h2&gt;
+
+&lt;p&gt;En &lt;strong&gt;familj&lt;/strong&gt; av mängder består av mängder som kallas &lt;strong&gt;delar&lt;/strong&gt;. En &lt;strong&gt;partition&lt;/strong&gt; är en familj i familjen.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Stirlingtal&lt;/strong&gt; betecknas $S(n,k)$ och är antalet partitioner av en n-mängd X i k delar där $1 \leq k \leq n$
+$$S(n,1)=1$$
+$$S(n,n)=1$$
+$$S(n,k)=S(n-1,k-1)+kS(n-1,k)$$&lt;/p&gt;
+
+&lt;p&gt;Lättast är att visualisera &lt;strong&gt;stirlingtalen&lt;/strong&gt; i en pyramid.&lt;/p&gt;
+
+&lt;h2 id=&#34;ekvivalenspartitioner&#34;&gt;Ekvivalenspartitioner&lt;/h2&gt;
+
+&lt;h2 id=&#34;multinomialtal&#34;&gt;Multinomialtal&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Grafteori</title>
       <link>https://davisfreimanis.github.io/kth/sf1630/grafer/</link>
       <pubDate>Wed, 14 Sep 2016 11:21:28 +0200</pubDate>
