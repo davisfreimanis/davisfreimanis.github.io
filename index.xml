@@ -84,7 +84,7 @@ Exempel på ändliga grupper:&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Generatorn&lt;/strong&gt; betecknas $G=\langle x\rangle$&lt;/p&gt;
 
-&lt;p&gt;Den &lt;strong&gt;direkta produkten&lt;/strong&gt; $A \times B$&lt;/p&gt;
+&lt;p&gt;Den &lt;strong&gt;direkta produkten&lt;/strong&gt; $A \times B$ är en grupp som fås vid gruppernas operation $(a_1,b_1)(a_2, b_2)= (a_1a_2, b_1b_2)$&lt;/p&gt;
 
 &lt;p&gt;Om en grupp $G$ av ordning $n&amp;gt;2$ är cyklisk så gäller det att:&lt;/p&gt;
 
