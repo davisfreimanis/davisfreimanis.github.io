@@ -62,7 +62,7 @@ En grupp $G$ är **cyklisk** om det det finns ett element $x \in G$ sådant att 
 
 **Generatorn** betecknas $G=\langle x\rangle$
 
-Den **direkta produkten** $A \times B$ 
+Den **direkta produkten** $A \times B$ är en grupp som fås vid gruppernas operation $(a_1,b_1)(a_2, b_2)= (a_1a_2, b_1b_2)$
 
 Om en grupp $G$ av ordning $n>2$ är cyklisk så gäller det att:
 
