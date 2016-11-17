@@ -64,6 +64,11 @@ En grupp $G$ är **cyklisk** om det det finns ett element $x \in G$ sådant att 
 
 Den **direkta produkten** $A \times B$ 
 
+Om en grupp $G$ av ordning $n>2$ är cyklisk så gäller det att:
+
+* För varje delare $d$ till $n$ så gäller det att $x^d=1$
+* För varje delare $d$ till $n$ så är antalet element i $G$ av ordning $d$ lika med $\Phi(d)$.
+
 ## Delgrupper
 En **delgrupp** $H$ till $G$ betecknas $H \subseteq G$. 
 
@@ -73,4 +78,15 @@ En delmängd $H$ till en grupp $G$ är en delgrupp om och endast om:
 * **Sluten** $x,y\in H \Rightarrow xy\in H$
 * **Invers** $x \in H \Rightarrow x^{-1} \in H$
 
+Delgruppen H:s ordning kommer att vara delbar med G:s ordning. $|H|$ delar $|G|$.
+
 ## Sidoklasser
+**Högersidoklassen** $gH$ av $H$ får man om man multiplicerar ett $g \in G$ med alla element i $H$ från höger.
+
+**Vänstersidoklassen** $gH$ av $H$ får man om man multiplicerar ett $g \in G$ med alla element i $H$ från vänster.
+
+Alla högersidoklasser är antingen är identiska eller helt disjunkta med andra högersidoklasser. Samma gäller för vänstersidoklasser.
+
+Alla sidoklasser har samma ordning och unionen av alla sidoklasser blir $G$.
+
+Om $G$ är en grupp av ordning $n$ och $H$ är en delgrupp av ordning $m$, då är $m|n$. Då är också alla elements ordningar delbara med $n$ och $g^n=1$.
