@@ -118,6 +118,8 @@ Exempel på ändliga grupper:&lt;/p&gt;
 &lt;p&gt;Alla sidoklasser har samma ordning och unionen av alla sidoklasser blir $G$.&lt;/p&gt;
 
 &lt;p&gt;Om $G$ är en grupp av ordning $n$ och $H$ är en delgrupp av ordning $m$, då är $m|n$. Då är också alla elements ordningar delbara med $n$ och $g^n=1$.&lt;/p&gt;
+
+&lt;p&gt;Centrum $Z(G)$ för en grupp $G$ är $Z(G) = \{ z \in G | zg = gz \quad \forall g \in G \}$. Dvs att elementen i centrum måste kommutera med resten av elementen i $G$.&lt;/p&gt;
 </description>
     </item>
     
