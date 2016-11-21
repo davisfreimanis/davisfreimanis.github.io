@@ -6,8 +6,60 @@
     <description>Recent content in Kths on Davis Freimanis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 17 Nov 2016 18:54:45 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 21 Nov 2016 10:41:42 +0100</lastBuildDate>
     <atom:link href="https://davisfreimanis.github.io/kth/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ringar och kroppar</title>
+      <link>https://davisfreimanis.github.io/kth/sf1630/ringar/</link>
+      <pubDate>Mon, 21 Nov 2016 10:41:42 +0100</pubDate>
+      
+      <guid>https://davisfreimanis.github.io/kth/sf1630/ringar/</guid>
+      <description>
+
+&lt;h1 id=&#34;kapitel-21-grupper-av-permutationer&#34;&gt;Kapitel 21 - Grupper av permutationer&lt;/h1&gt;
+
+&lt;h2 id=&#34;definitioner-och-exempel&#34;&gt;Definitioner och exempel&lt;/h2&gt;
+
+&lt;h2 id=&#34;banor-och-stabilisatorer&#34;&gt;Banor och stabilisatorer&lt;/h2&gt;
+
+&lt;h2 id=&#34;storleken-av-en-bana&#34;&gt;Storleken av en bana&lt;/h2&gt;
+
+&lt;h2 id=&#34;antalet-banor&#34;&gt;Antalet banor&lt;/h2&gt;
+
+&lt;p&gt;Antalet banor kan räknas ut med &lt;em&gt;Burnsides lemma&lt;/em&gt;
+$$\frac{1}{|G|}\sum_{g\in G}|F(g)|$$&lt;/p&gt;
+
+&lt;p&gt;Detta är även det som kalla &lt;strong&gt;väsentligt olika&lt;/strong&gt; färgningar.&lt;/p&gt;
+
+&lt;h1 id=&#34;kapitel-22-ringar-kroppar-och-polynom&#34;&gt;Kapitel 22 - Ringar, kroppar och polynom&lt;/h1&gt;
+
+&lt;h2 id=&#34;ringar&#34;&gt;Ringar&lt;/h2&gt;
+
+&lt;p&gt;En &lt;strong&gt;ring&lt;/strong&gt; $(R, +, \times)$ har två binära operationer: addition och multiplikation och uppfyller dessa tre axiom:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;$(R, +)$ är en kommutativ grupp. Identitetselementet är 0.&lt;/li&gt;
+&lt;li&gt;$(R, \times)$ är &lt;em&gt;sluten, associativ och har identitet 1&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;De distributiva lagarna gäller. $a(b+c) = ab + ac$&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;inverterbara-element-i-ringar&#34;&gt;Inverterbara element i ringar&lt;/h2&gt;
+
+&lt;p&gt;Ett element $x \in R$ är &lt;em&gt;inverterbart&lt;/em&gt; om $ux = xu = 1$ för något $u \in R$. Inversen är entydlig.&lt;/p&gt;
+
+&lt;p&gt;Mängden $U&amp;reg;$ av inverterbara element av en ring $R$ är en grupp med multiplikationsoperatorn.&lt;/p&gt;
+
+&lt;h2 id=&#34;kroppar&#34;&gt;Kroppar&lt;/h2&gt;
+
+&lt;p&gt;En &lt;strong&gt;kropp&lt;/strong&gt; (field) $(F, +, \times)$ uppfyller:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;(F, +, \times) är en ring&lt;/li&gt;
+&lt;li&gt;F\{0} är en kommutativ grupp&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Grupper</title>
