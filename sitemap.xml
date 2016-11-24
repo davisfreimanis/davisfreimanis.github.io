@@ -2,11 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://davisfreimanis.github.io/</loc>
-    <lastmod>2016-11-21T10:41:42+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://davisfreimanis.github.io/kth/sf1630/ringar/</loc>
     <lastmod>2016-11-21T10:41:42+01:00</lastmod>
   </url>
@@ -44,6 +39,47 @@
   <url>
     <loc>https://davisfreimanis.github.io/kth/dd1387/ovning1/</loc>
     <lastmod>2016-04-27T11:21:28+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://davisfreimanis.github.io/categories/c&#43;&#43;/</loc>
+    <lastmod>2016-04-27T11:21:28+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://davisfreimanis.github.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://davisfreimanis.github.io/</loc>
+    <lastmod>2016-11-21T10:41:42+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://davisfreimanis.github.io/categories/diskret-matematik/</loc>
+    <lastmod>2016-11-21T10:41:42+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://davisfreimanis.github.io/categories/kth/</loc>
+    <lastmod>2016-11-21T10:41:42+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://davisfreimanis.github.io/kth/</loc>
+    <lastmod>2016-11-21T10:41:42+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://davisfreimanis.github.io/categories/sannstat/</loc>
+    <lastmod>2016-05-17T13:17:49+02:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>
