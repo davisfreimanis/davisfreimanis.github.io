@@ -12,6 +12,9 @@ date = "2016-11-21T10:41:42+01:00"
 ## Definitioner och exempel
 
 ## Banor och stabilisatorer
+**Banor** (orbits) skrivs $Gx$ för banan av G på X.
+
+**Stabilisatorn** skrivs $G_x$
 
 ## Storleken av en bana
 
