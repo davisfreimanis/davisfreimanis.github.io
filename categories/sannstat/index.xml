@@ -2,11 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sannstat on Davis Freimanis</title>
-    <link>https://davisfreimanis.github.io/categories/sannstat/index.xml</link>
+    <link>https://davisfreimanis.github.io/categories/sannstat/</link>
     <description>Recent content in Sannstat on Davis Freimanis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://davisfreimanis.github.io/categories/sannstat/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 17 May 2016 13:17:49 +0200</lastBuildDate>
+    
+	<atom:link href="https://davisfreimanis.github.io/categories/sannstat/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Formler för statistik</title>
@@ -14,73 +17,13 @@
       <pubDate>Tue, 17 May 2016 13:17:49 +0200</pubDate>
       
       <guid>https://davisfreimanis.github.io/kth/sf1901/statistik/</guid>
-      <description>
-
-&lt;h2 id=&#34;kapitel-10-beskrivande-statistik&#34;&gt;Kapitel 10 - Beskrivande statistik&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Aritmetiska medelvärdet&lt;/strong&gt; kallas medelvärdet och betecknas $\bar{x}=\frac{1}{n} \sum_{j=1}^{n}x_j = \frac{x_1+x_2+\dots + x_n}{n}$&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Stickprovets standardavvikelse&lt;/strong&gt; är kvadratroten ur variansen. $s=\sqrt{\frac{1}{n-1} \sum_{j=1}^{n}(x_j-\bar{x})^2}$&lt;/p&gt;
-
-&lt;h2 id=&#34;kapitel-11-punktskattning&#34;&gt;Kapitel 11 - Punktskattning&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Begrepp&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;$\theta$ är det riktiga värdet&lt;/p&gt;
-
-&lt;p&gt;$\theta^*_{obs}$ är utfallet av s.v. (en gissning)&lt;/p&gt;
-
-&lt;p&gt;$\theta^*$ är stickprovsvariabeln och också s.v.&lt;/p&gt;
-
-&lt;p&gt;En &lt;strong&gt;Väntevärdesriktig skattning&lt;/strong&gt; förkortas ibland &lt;em&gt;vvr&lt;/em&gt; skattning. En punktskattning sägs vara väntevärdesriktig om $E(\theta^*)=\theta$. D.v.s. om stickprovsvariabeln $\theta^*$ har väntevärde $\theta$.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Medelkvadratfelet&lt;/strong&gt; för en punktskattning $\theta^*_{obs}$ är $E((\theta^*-\theta)^2)$.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Effektivitet&lt;/strong&gt;. Om man har två väntevärdesriktiga skattningar så är den som har den som har lägst varians effektivast.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Maximum-likelihood-skattning&lt;/strong&gt;.
-Om man har oberoende observationer från stokastiska variabler så använder man formel 9.1. Man räknar ut Maximum-likelihood-funktionen:
-$$
-L(\theta) =
-\begin{cases}
-p_{X_1}(x_1;\theta)\cdots p_{X_n}(x_n;\theta) \&lt;br /&gt;
-f_{X_1}(x_1;\theta)\cdots f_{X_n}(x_n;\theta)
-\end{cases}
-$$
-för det kontinuerliga respektive diskreta fallet. Logaritmera sedan produkten och använd logaritmlagarna för att förenkla uttrycket. Derivera sedan och sätt derivatan till 0. Lös sedan ut $\theta$.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Minsta-kvadrat-skattning&lt;/strong&gt;.
-Om man har oberoende observationer från stokastiska variabler så använder man formel 9.2. Man summerar differansen mellan skattningens värde med det förväntade väntevärdet som sedan kvadreras. Derivera sedan för att lösa ut variabeln $\theta$ som minimerar kvadratsumman. $$Q(\theta)=\sum_{i=1}^{n}(x_i - \mu_i(\theta_1,\theta_2,&amp;hellip;,\theta_k))^2$$&lt;/p&gt;
-
-&lt;h2 id=&#34;kapitel-12-intervallskattning&#34;&gt;Kapitel 12 - Intervallskattning&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Konfidensintervall&lt;/strong&gt; ($\lambda$-metoden) används när standardavvikelsen är känd. Man låter $\theta^*$ vara $N(\theta, D)$.
-$$I_{\theta}=\theta^*_{obs}±D\cdot \lambda_{\alpha/2}$$
-är då ett konfidensintervall för $\theta$ med konfidensgraden $1-\alpha$.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Konfidensintervall för väntevärde&lt;/strong&gt; ($t$-metoden)
-$$I_{\theta}=\theta^*_{obs}±D^*_{obs}\cdot t_{\alpha/2}(f)$$
-där f brukar vara $n-1$ enligt §11.1d.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Konfidensintervall för standardavvikelse&lt;/strong&gt; (baserad på $\chi^2$-fördelning)
-$$I_{\theta}=\theta^*_{obs}±D^*_{obs}\cdot \lambda_{\alpha/2}$$&lt;/p&gt;
-
-&lt;h2 id=&#34;kapitel-13-hypotesprövning&#34;&gt;Kapitel 13 - Hypotesprövning&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Begrepp&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Styrkefunktionen&lt;/strong&gt; $h(\theta) = P(förkasta \ H_0)$ då $\theta$ är rätt parametervärde.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Konfidensmetoden&lt;/strong&gt; innebär att man skapar ett konfidensintervall. Man förkastar $H_0: \theta = \theta_0$ på nivån $\alpha$ om värdet $\theta_0$ inte tillför konfidensintervallet med konfidensgraden $1-\alpha$.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;$\chi^2$-test&lt;/strong&gt; för given fördelning löses med formeln: $$Q=\sum_{j=1}^{r}\frac{(x_{j}-np_{j})^2}{np_{j}}$$ och man kan förkasta nollhypotesen om $Q&amp;gt;\chi^2_{\alpha(r-1)}$ och alla $np_{j}\geq 5$&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;$\chi^2$-test&lt;/strong&gt; för test av föredelning med skattade parametrar löses genom att jämföra det riktiga väntevärdet med det skattade.
-$\chi^2_{\alpha}(r-k-1)$-fördelad, där r är antalet termer i summan och k är antalet okända parametrar man vill hitta.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;$\chi^2$-test&lt;/strong&gt; (homogenitetstest). Det enklaste sättet att lösa dessa uppgifter är att man sätter in alla värden i en matris på miniräknaren och använder funktionen &lt;code&gt;X-Test...&lt;/code&gt; på miniräknaren. Om p-värdet är mindre än 0.05 så förkastar man nollhypotesen. Man kan även jämföra om Q-värdet är större än $\chi^2_{\alpha}(t-1)$ och i så fall förkastas nollhypotesen. Om man gör det för hand så tar man hjälp av formeln för homogenitetstest i paragraf 14.3: $$Q=\sum^s_{i=1} \sum^r_{j=1} \frac{(x_{ij}-\frac{n_i m_j}{N})^2}{\frac{n_i m_j}{N}}$$
-där s är antalet rader i matrisen och r är antalet columnet. Q blir ett utfall av en approximativt $\chi^2((r-1)(s-1))$-fördelad stokastisk variabel.&lt;/p&gt;
-</description>
+      <description>Kapitel 10 - Beskrivande statistik Aritmetiska medelvärdet kallas medelvärdet och betecknas $\bar{x}=\frac{1}{n} \sum_{j=1}^{n}x_j = \frac{x_1+x_2+\dots + x_n}{n}$
+Stickprovets standardavvikelse är kvadratroten ur variansen. $s=\sqrt{\frac{1}{n-1} \sum_{j=1}^{n}(x_j-\bar{x})^2}$
+Kapitel 11 - Punktskattning Begrepp
+$\theta$ är det riktiga värdet
+$\theta^*_{obs}$ är utfallet av s.v. (en gissning)
+$\theta^*$ är stickprovsvariabeln och också s.v.
+En Väntevärdesriktig skattning förkortas ibland vvr skattning. En punktskattning sägs vara väntevärdesriktig om $E(\theta^*)=\theta$. D.v.s. om stickprovsvariabeln $\theta^*$ har väntevärde $\theta$.</description>
     </item>
     
     <item>
@@ -89,106 +32,12 @@ där s är antalet rader i matrisen och r är antalet columnet. Q blir ett utfal
       <pubDate>Wed, 27 Apr 2016 11:21:28 +0200</pubDate>
       
       <guid>https://davisfreimanis.github.io/kth/sf1901/sannolikhet/</guid>
-      <description>
-
-&lt;h2 id=&#34;kapitel-2-sannolikhetsteorins-grunder&#34;&gt;Kapitel 2 - Sannolikhetsteorins grunder&lt;/h2&gt;
-
-&lt;h3 id=&#34;händelser&#34;&gt;Händelser&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Utfall&lt;/strong&gt; är resultatet av ett slumpmässigt försök&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Händelse&lt;/strong&gt; är en samling av utfall och betecknas med stora bokstäver $A, B, C,&amp;hellip;$&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Utfallsrummet&lt;/strong&gt; är mängden av möjliga utfall och betecknas $\Omega$&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Union&lt;/strong&gt; $A \cup B$ är då $A$, $B$ eller $A$ och $B$ inträffar&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Snitt&lt;/strong&gt; $A \cap B$ är då både $A$ och $B$ inträffar&lt;/p&gt;
-
-&lt;p&gt;$A$ och $B$ är &lt;strong&gt;disjunkta&lt;/strong&gt; om $A$ och $B$ inte kan inträffa samtidigt&lt;/p&gt;
-
-&lt;p&gt;$0 \leq P(A) \leq 1$&lt;/p&gt;
-
-&lt;p&gt;$P(\Omega)=1$&lt;/p&gt;
-
-&lt;p&gt;Om $A_1, A_2,&amp;hellip;$ är disjunkta så gäller $P(A_1 \cup A_2 \cup &amp;hellip;)=P(A_1)+P(A_2)+&amp;hellip;$&lt;/p&gt;
-
-&lt;p&gt;För &lt;strong&gt;komplementet&lt;/strong&gt; $ A^* $ gäller $P(A^*)=1-P(A)$&lt;/p&gt;
-
-&lt;p&gt;$P(A \cup B)=P(A)+P(B)-P(A \cap B)$&lt;/p&gt;
-
-&lt;p&gt;$P(A \cap B)=P(A)+P(B)-P(A \cup B)$&lt;/p&gt;
-
-&lt;p&gt;$P(A \cap B \cap C)=P(A)P(B)P(C)$ &lt;strong&gt;om $A$, $B$ och $C$ är oberoende&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;kombinatorik&#34;&gt;Kombinatorik&lt;/h3&gt;
-
-&lt;p&gt;$\binom{n}{k}=\frac{n(n-1)\cdots (n-k+1)}{k!}$ på miniräknaren &lt;code&gt;n nCr k&lt;/code&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;betingad-sannolikhet&#34;&gt;Betingad sannolikhet&lt;/h3&gt;
-
-&lt;p&gt;Den &lt;strong&gt;betingade sannolikheten&lt;/strong&gt; uttrycks $P(B|A)=\frac{P(A \cap B)}{P(A)}$ som ger sannolikheten för $B$ givet att $A$ har inträffat&lt;/p&gt;
-
-&lt;p&gt;$P(A \cap B)=P(A)P(B|A)=P(B)P(A|B)$&lt;/p&gt;
-
-&lt;p&gt;$P(A \cap B \cap C)=P(A)P(B|A)P(C|A \cap B)$&lt;/p&gt;
-
-&lt;h2 id=&#34;kapitel-3-endimensionella-stokastiska-variabler&#34;&gt;Kapitel 3 - Endimensionella stokastiska variabler&lt;/h2&gt;
-
-&lt;p&gt;$p_X(x)$ kallas &lt;strong&gt;sannolikhetsfunktionen&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;$f_X(x)$ kallas &lt;strong&gt;täthetsfunktionen&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;$F_X(x)=P(X \leq x)$ kallas &lt;strong&gt;fördelningsfunktionen&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;$F&amp;rsquo;_X(x)=\frac{d}{dx}F_X(x)=f_X(x)$&lt;/p&gt;
-
-&lt;p&gt;$P(a &amp;lt; X \leq b)=F_X(b)-F_X(a)$&lt;/p&gt;
-
-&lt;h2 id=&#34;kapitel-5-väntevärden&#34;&gt;Kapitel 5 - Väntevärden&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Väntevärde&lt;/strong&gt; för en diskret stokastisk variabel X definieras av:
-$E(X)=\sum_{k} kp_X(k)$&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Väntevärde&lt;/strong&gt; för en kontinuerlig stokastisk variabel X definieras av:
-$E(X)=\int_{-\infty}^{\infty} xf_X(x) dx$&lt;/p&gt;
-
-&lt;p&gt;$E(aX+bY+c)=aE(X)+bE(Y)+c$&lt;/p&gt;
-
-&lt;p&gt;$E(XY)=E(X)E(Y)$ &lt;strong&gt;om $X$ och $Y$ är oberoende&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Varians&lt;/strong&gt; räknas lättast ut med sambandet
-$V(X)=E(X^2)-[E(X)]^2$&lt;/p&gt;
-
-&lt;p&gt;$V(aX+b)=a^2V(X)$&lt;/p&gt;
-
-&lt;p&gt;$V(aX+bX+c)=a^2V(X)+b^2V(Y)+2abC(X,Y)$&lt;/p&gt;
-
-&lt;p&gt;$V(X+Y)=V(X)+V(Y)$ &lt;strong&gt;om $X$ och $Y$ är oberoende&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Standardavvikelse&lt;/strong&gt; räknas ut med hjälp av variansen
-$D(X)=\sqrt{V(X)}$&lt;/p&gt;
-
-&lt;p&gt;$D(aX+b)=|a|D(X)$&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Kovarians&lt;/strong&gt; följer av sambandet
-$C(X,Y)=E(XY)-E(X)E(Y)$&lt;/p&gt;
-
-&lt;p&gt;Om $C(X,Y)=0$ så är $X$ och $Y$ okorrelerade&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Korrelationskoefficienten&lt;/strong&gt; för $X$ och $Y$ definieras av
-$\rho(X,Y)=\frac{C(X,Y)}{D(X)D(Y)}$ och är alltid $-1 \leq \rho \leq 1$&lt;/p&gt;
-
-&lt;h2 id=&#34;kapitel-6&#34;&gt;Kapitel 6&lt;/h2&gt;
-
-&lt;h3 id=&#34;allmän-normalfördelning&#34;&gt;Allmän normalfördelning&lt;/h3&gt;
-
-&lt;p&gt;Alla &lt;strong&gt;normalfördelningar&lt;/strong&gt; $N(\mu, \sigma)$ kan skrivas om till den &lt;strong&gt;standardiserade normalfördelningen&lt;/strong&gt; $N(0,1)$&lt;/p&gt;
-
-&lt;p&gt;$P(a &amp;lt; X &amp;lt; b)=P(\frac{a-\mu}{\sigma} &amp;lt; \frac{X-\mu}{\sigma} &amp;lt; \frac{b-\mu}{\sigma})=P(\frac{a-\mu}{\sigma} &amp;lt; Y &amp;lt; \frac{b-\mu}{\sigma})=\Phi(\frac{b-\mu}{\sigma})-\Phi(\frac{a-\mu}{\sigma})$&lt;/p&gt;
-
-&lt;p&gt;För att räkna ut $\Phi(x)$ på en Ti-räknare så använder man &lt;code&gt;normcdf(-1e99,x,0,1)&lt;/code&gt;&lt;/p&gt;
-</description>
+      <description>Kapitel 2 - Sannolikhetsteorins grunder Händelser Utfall är resultatet av ett slumpmässigt försök
+Händelse är en samling av utfall och betecknas med stora bokstäver $A, B, C,&amp;hellip;$
+Utfallsrummet är mängden av möjliga utfall och betecknas $\Omega$
+Union $A \cup B$ är då $A$, $B$ eller $A$ och $B$ inträffar
+Snitt $A \cap B$ är då både $A$ och $B$ inträffar
+$A$ och $B$ är disjunkta om $A$ och $B$ inte kan inträffa samtidigt</description>
     </item>
     
   </channel>
