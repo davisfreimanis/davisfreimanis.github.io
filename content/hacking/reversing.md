@@ -15,4 +15,4 @@ categories = ["pwn", "reversing"]
 # Sections
 Sections in code
 * .text is usually where the code is
-* .rodata 
+* .rodata
