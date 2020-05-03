@@ -7,7 +7,7 @@
 
     <meta name="description" content="Bra formler för kapitel 10 till 14">
 
-    <meta name="generator" content="Hugo 0.39" />
+    <meta name="generator" content="Hugo 0.62.0" />
     <meta name="twitter:card" content="summary">
     
     <meta name="twitter:title" content="Formler för statistik &middot; Davis Freimanis">
@@ -93,70 +93,45 @@ MathJax.Hub.Config({
                     
                     
                     <div class="post-description">
-                        
-
-<h2 id="kapitel-10-beskrivande-statistik">Kapitel 10 - Beskrivande statistik</h2>
-
+                        <h2 id="kapitel-10---beskrivande-statistik">Kapitel 10 - Beskrivande statistik</h2>
 <p><strong>Aritmetiska medelvärdet</strong> kallas medelvärdet och betecknas $\bar{x}=\frac{1}{n} \sum_{j=1}^{n}x_j = \frac{x_1+x_2+\dots + x_n}{n}$</p>
-
 <p><strong>Stickprovets standardavvikelse</strong> är kvadratroten ur variansen. $s=\sqrt{\frac{1}{n-1} \sum_{j=1}^{n}(x_j-\bar{x})^2}$</p>
-
-<h2 id="kapitel-11-punktskattning">Kapitel 11 - Punktskattning</h2>
-
+<h2 id="kapitel-11---punktskattning">Kapitel 11 - Punktskattning</h2>
 <p><strong>Begrepp</strong></p>
-
 <p>$\theta$ är det riktiga värdet</p>
-
 <p>$\theta^*_{obs}$ är utfallet av s.v. (en gissning)</p>
-
 <p>$\theta^*$ är stickprovsvariabeln och också s.v.</p>
-
 <p>En <strong>Väntevärdesriktig skattning</strong> förkortas ibland <em>vvr</em> skattning. En punktskattning sägs vara väntevärdesriktig om $E(\theta^*)=\theta$. D.v.s. om stickprovsvariabeln $\theta^*$ har väntevärde $\theta$.</p>
-
 <p><strong>Medelkvadratfelet</strong> för en punktskattning $\theta^*_{obs}$ är $E((\theta^*-\theta)^2)$.</p>
-
 <p><strong>Effektivitet</strong>. Om man har två väntevärdesriktiga skattningar så är den som har den som har lägst varians effektivast.</p>
-
 <p><strong>Maximum-likelihood-skattning</strong>.
 Om man har oberoende observationer från stokastiska variabler så använder man formel 9.1. Man räknar ut Maximum-likelihood-funktionen:
 $$
 L(\theta) =
 \begin{cases}
-p_{X_1}(x_1;\theta)\cdots p_{X_n}(x_n;\theta) \<br />
+p_{X_1}(x_1;\theta)\cdots p_{X_n}(x_n;\theta) \\<br>
 f_{X_1}(x_1;\theta)\cdots f_{X_n}(x_n;\theta)
 \end{cases}
 $$
 för det kontinuerliga respektive diskreta fallet. Logaritmera sedan produkten och använd logaritmlagarna för att förenkla uttrycket. Derivera sedan och sätt derivatan till 0. Lös sedan ut $\theta$.</p>
-
 <p><strong>Minsta-kvadrat-skattning</strong>.
 Om man har oberoende observationer från stokastiska variabler så använder man formel 9.2. Man summerar differansen mellan skattningens värde med det förväntade väntevärdet som sedan kvadreras. Derivera sedan för att lösa ut variabeln $\theta$ som minimerar kvadratsumman. $$Q(\theta)=\sum_{i=1}^{n}(x_i - \mu_i(\theta_1,\theta_2,&hellip;,\theta_k))^2$$</p>
-
-<h2 id="kapitel-12-intervallskattning">Kapitel 12 - Intervallskattning</h2>
-
+<h2 id="kapitel-12---intervallskattning">Kapitel 12 - Intervallskattning</h2>
 <p><strong>Konfidensintervall</strong> ($\lambda$-metoden) används när standardavvikelsen är känd. Man låter $\theta^*$ vara $N(\theta, D)$.
 $$I_{\theta}=\theta^*_{obs}±D\cdot \lambda_{\alpha/2}$$
 är då ett konfidensintervall för $\theta$ med konfidensgraden $1-\alpha$.</p>
-
 <p><strong>Konfidensintervall för väntevärde</strong> ($t$-metoden)
 $$I_{\theta}=\theta^*_{obs}±D^*_{obs}\cdot t_{\alpha/2}(f)$$
 där f brukar vara $n-1$ enligt §11.1d.</p>
-
 <p><strong>Konfidensintervall för standardavvikelse</strong> (baserad på $\chi^2$-fördelning)
 $$I_{\theta}=\theta^*_{obs}±D^*_{obs}\cdot \lambda_{\alpha/2}$$</p>
-
-<h2 id="kapitel-13-hypotesprövning">Kapitel 13 - Hypotesprövning</h2>
-
+<h2 id="kapitel-13---hypotesprvning">Kapitel 13 - Hypotesprövning</h2>
 <p><strong>Begrepp</strong></p>
-
 <p><strong>Styrkefunktionen</strong> $h(\theta) = P(förkasta \ H_0)$ då $\theta$ är rätt parametervärde.</p>
-
 <p><strong>Konfidensmetoden</strong> innebär att man skapar ett konfidensintervall. Man förkastar $H_0: \theta = \theta_0$ på nivån $\alpha$ om värdet $\theta_0$ inte tillför konfidensintervallet med konfidensgraden $1-\alpha$.</p>
-
 <p><strong>$\chi^2$-test</strong> för given fördelning löses med formeln: $$Q=\sum_{j=1}^{r}\frac{(x_{j}-np_{j})^2}{np_{j}}$$ och man kan förkasta nollhypotesen om $Q&gt;\chi^2_{\alpha(r-1)}$ och alla $np_{j}\geq 5$</p>
-
 <p><strong>$\chi^2$-test</strong> för test av föredelning med skattade parametrar löses genom att jämföra det riktiga väntevärdet med det skattade.
 $\chi^2_{\alpha}(r-k-1)$-fördelad, där r är antalet termer i summan och k är antalet okända parametrar man vill hitta.</p>
-
 <p><strong>$\chi^2$-test</strong> (homogenitetstest). Det enklaste sättet att lösa dessa uppgifter är att man sätter in alla värden i en matris på miniräknaren och använder funktionen <code>X-Test...</code> på miniräknaren. Om p-värdet är mindre än 0.05 så förkastar man nollhypotesen. Man kan även jämföra om Q-värdet är större än $\chi^2_{\alpha}(t-1)$ och i så fall förkastas nollhypotesen. Om man gör det för hand så tar man hjälp av formeln för homogenitetstest i paragraf 14.3: $$Q=\sum^s_{i=1} \sum^r_{j=1} \frac{(x_{ij}-\frac{n_i m_j}{N})^2}{\frac{n_i m_j}{N}}$$
 där s är antalet rader i matrisen och r är antalet columnet. Q blir ett utfall av en approximativt $\chi^2((r-1)(s-1))$-fördelad stokastisk variabel.</p>
 

@@ -7,7 +7,7 @@
 
     <meta name="description" content="Heltalsaritmetik i diskret matematik">
 
-    <meta name="generator" content="Hugo 0.39" />
+    <meta name="generator" content="Hugo 0.62.0" />
     <meta name="twitter:card" content="summary">
     
     <meta name="twitter:title" content="Heltalsaritmetik &middot; Davis Freimanis">
@@ -93,111 +93,59 @@ MathJax.Hub.Config({
                     
                     
                     <div class="post-description">
-                        
-
-<h1 id="kapitel-5-funktioner">Kapitel 5 - Funktioner</h1>
-
+                        <h1 id="kapitel-5---funktioner">Kapitel 5 - Funktioner</h1>
 <h2 id="funktionskonceptet">Funktionskonceptet</h2>
-
 <p>En <strong>funktion</strong> $f: X \to Y$ är en svart låda som tar ett element från mängden $X$ och returnerar ett unikt element från mängden $Y$.</p>
-
 <h2 id="surjektioner-injektioner-och-bijektioner">Surjektioner, Injektioner och Bijektioner</h2>
-
 <p>En funktion $f: X \to Y$ är <strong>surjektiv</strong> om för alla $y \in Y$ är en bild av <strong>minst ett</strong> $x\in X$.</p>
-
 <p>En funktion $f: X \to Y$ är <strong>injektiv</strong> om för alla $y \in Y$ är en bild av <strong>högst ett</strong> $x\in X$.</p>
-
 <p>En funktion $f: X \to Y$ är <strong>bijektiv</strong> om för alla $y \in Y$ har <strong>exakt ett</strong> $x\in X$.</p>
-
 <p>En funktion är <strong>bijektiv</strong> om den är <strong>surjektiv</strong> och <strong>injektiv</strong>. Det vill säga att varje element $x\in X$ avbildas på ett $y\in Y$.</p>
-
 <h2 id="sammansatta-funktioner">Sammansatta funktioner</h2>
-
 <p>En funktion kallas <strong>sammansatt</strong> av funktionerna $f: X \to Y$ och $g: Y \to Z$ och skrivs $(g \circ f)$ och är samma sak som att skriva $g(f(x))$.</p>
-
 <p>Om $f$ och $g$ är <em>injektiva</em> så är även <strong>kompositionen</strong> $g \circ f$ det.</p>
-
 <p>Om $f$ och $g$ är <em>surjektiva</em> så är även <strong>kompositionen</strong> $g \circ f$ det.</p>
-
 <p>Om $f$ och $g$ är <em>bijektiva</em> så är även <strong>kompositionen</strong> $g \circ f$ det.</p>
-
 <h2 id="bijektioner-och-inversa-funktioner">Bijektioner och inversa funktioner</h2>
-
 <p>En funktion $f:X \to Y$ har en <strong>invers</strong> funktion $g: Y \to X$ om för alla $x \in X$ och $y \in Y$</p>
-
 <p>$$(g \circ f)(x)=(x)$$
 $$(f \circ g)(y)=(y)$$</p>
-
 <p>En funktion har en <em>invers</em> om och endast om funktionen är <strong>bijektiv</strong>.</p>
-
-<h1 id="kapitel-6-räkning">Kapitel 6 - Räkning</h1>
-
-<h1 id="kapitel-8-delbarhet-och-primtal">Kapitel 8 - Delbarhet och primtal</h1>
-
+<h1 id="kapitel-6---rkning">Kapitel 6 - Räkning</h1>
+<h1 id="kapitel-8---delbarhet-och-primtal">Kapitel 8 - Delbarhet och primtal</h1>
 <h2 id="delbarhet">Delbarhet</h2>
-
 <p>$x$ är en <strong>multipel</strong> av $y$ om $x=yq$ där $q \in \mathbb{Z}$.</p>
-
 <p>$y$ är en <strong>faktor</strong> av $x$ och $y$ <strong>delar</strong> $x$. Detta skrivs $y | x$. Det innebär att resten blir 0.</p>
-
 <h2 id="kvot-och-rest">Kvot och rest</h2>
-
 <p>Om $x$ och $y$ inte delas så skrivs det $y\not| x$.</p>
-
 <p>Det som blir över av heltalsdivisionen blir <strong>resten</strong>.</p>
-
 <h2 id="representation-av-heltal">Representation av heltal</h2>
-
-<h2 id="största-gemensama-delaren-sgd">Största gemensama delaren (SGD)</h2>
-
+<h2 id="strsta-gemensama-delaren-sgd">Största gemensama delaren (SGD)</h2>
 <p><strong>Största gemensama delaren</strong> (SGD eller GCD på engelska) är det tal som är det största talet som delar $x$ och $y$.</p>
-
 <p><strong>Euklides algoritm</strong> kan man använda för att hitta SGD för två heltal.</p>
-
 <p>Två tal $x$, $y$ är <strong>relativt prima</strong> (coprime) om $sgd(x,y)=1$.</p>
-
 <h2 id="primtal">Primtal</h2>
-
 <p>Ett heltal $x$ är ett <strong>primtal</strong> om $x \geq 2$ och de enda delarna är 1 och $x$ själv.</p>
-
 <p>Man kan alltid <strong>primtalsfaktorisera</strong> ett heltal.</p>
-
 <h2 id="primtalsfaktorisering">Primtalsfaktorisering</h2>
-
 <p>Alla positiva heltal $n \geq 2$ har en <em>unik</em> <strong>primtalsfaktorisering</strong>.</p>
-
-<h1 id="kapitel-13-modulär-aritmetik">Kapitel 13 - Modulär aritmetik</h1>
-
+<h1 id="kapitel-13---modulr-aritmetik">Kapitel 13 - Modulär aritmetik</h1>
 <h2 id="kongruens">Kongruens</h2>
-
 <p>Ett heltal $x_1$ är <strong>kongruent</strong> med $x_2$ <strong>modulo</strong> $m$ om $x_1 - x_2$ är delbart med $m$. Vi skriver detta $x_1 \equiv x_2$ (mod m) eller $x_1 \equiv_m x_2$.</p>
-
 <p>Om vi har heltalen $x_1$, $x_2$, $y_1$ och $y_2$ så att:</p>
-
 <p>$$x_1 \equiv_m x_2$$
 $$y_1 \equiv_m y_2$$</p>
-
 <p>så gäller det att:</p>
-
 <p>$$x_1 + y_1 \equiv_m x_2 + y_2$$
 $$x_1 y_1 \equiv_m x_2 y_2$$</p>
-
-<h2 id="mathbb-z-m-och-dess-aritmetik">$\mathbb{Z}_m$ och dess aritmetik</h2>
-
-<h2 id="inverterbara-element-i-mathbb-z-m">Inverterbara element i $\mathbb{Z}_m$</h2>
-
+<h2 id="mathbbz-m-och-dess-aritmetik">$\mathbb{Z}_m$ och dess aritmetik</h2>
+<h2 id="inverterbara-element-i-mathbbz-m">Inverterbara element i $\mathbb{Z}_m$</h2>
 <p>Ett tal $r$ i $\mathbb{Z}_m$ är <strong>inverterbart</strong> om det finns ett $x$ i $\mathbb{Z}_m$ så att $rx = 1$ i $\mathbb{Z}_m$.</p>
-
 <p>Talet $r$ är inverterbart om och endast om $r$ och $m$ är relativt prima. Om $m$ är ett primtal så är alla element i $\mathbb{Z}_m$ inverterbara förutom 0.</p>
-
 <p><strong>Eulers funktion</strong> $\Phi(m)$ är antalet heltal i $\mathbb{Z}_m$ som är relativt prima med $m$.</p>
-
 <p>Om $y$ är inverterbart i $\mathbb{Z}_m$ så är $y^{\Phi(m)}=1$.</p>
-
 <p><strong>Eulers teorem</strong> säger att om $SGD(y,m)=1$ så är $y^{\Phi(m)} \equiv_{m} 1$.</p>
-
 <p><strong>Fermats teorem</strong> säger att om p är prima och $p\not| y$ så är $y^{p-1} \equiv_{m} 1$</p>
-
 <h1 id="kinesiska-restsatsen">Kinesiska restsatsen</h1>
 
                     </div>

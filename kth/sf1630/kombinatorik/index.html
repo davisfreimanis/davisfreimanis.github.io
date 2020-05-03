@@ -7,7 +7,7 @@
 
     <meta name="description" content="Kombinatorik i diskret matematik">
 
-    <meta name="generator" content="Hugo 0.39" />
+    <meta name="generator" content="Hugo 0.62.0" />
     <meta name="twitter:card" content="summary">
     
     <meta name="twitter:title" content="Kombinatorik &middot; Davis Freimanis">
@@ -93,83 +93,48 @@ MathJax.Hub.Config({
                     
                     
                     <div class="post-description">
-                        
-
-<h1 id="kapitel-7-heltal">Kapitel 7 - Heltal</h1>
-
+                        <h1 id="kapitel-7---heltal">Kapitel 7 - Heltal</h1>
 <h2 id="ekvivalensrelationer">Ekvivalensrelationer</h2>
-
 <p>En <strong>relation</strong> på en mängd $X$ är en mängd av ordnade par av medlemar av $X$.</p>
-
 <p>En <strong>relation</strong> kan ha dessa tre egenskaper:</p>
-
 <ul>
 <li><strong>Reflexiv</strong> om $xRx$ för varje $x \in X$</li>
 <li><strong>Symmetrisk</strong> om $xRy$ så gäller även $yRx$</li>
 <li><strong>Transitiv</strong> om $xRy$ och $yRz$ så är $xRz$</li>
 </ul>
-
 <p>En <strong>eqvivalensrelation</strong> är en relation som har alla tre egenskaperna.</p>
-
 <h2 id="klassifikationer">Klassifikationer</h2>
-
 <p>Man kan dela upp mängderna som har samma ekvivalensrelation till en klass.</p>
-
-<h1 id="kapitel-10-räkning">Kapitel 10 - Räkning</h1>
-
+<h1 id="kapitel-10---rkning">Kapitel 10 - Räkning</h1>
 <h2 id="additionsprincipen">Additionsprincipen</h2>
-
 <p>Om $A$ och $B$ är disjunkta icke-tomma mängder så är: $$|A \cup B| = |A| + |B|$$</p>
-
 <h2 id="multiplikationsprincipen">Multiplikationsprincipen</h2>
-
 <p>Om $A$ och $B$ är icke-tomma mängder så är: $$|A \times B| = |A| \times |B|$$</p>
-
-<h1 id="kapitel-11-delmängder-och-design">Kapitel 11 - Delmängder och design</h1>
-
+<h1 id="kapitel-11---delmngder-och-design">Kapitel 11 - Delmängder och design</h1>
 <h2 id="binomialtal">Binomialtal</h2>
-
 <p><strong>Binomialtal</strong> betecknas ${a}\choose{b}$ och läses &lsquo;a över b&rsquo;.
 Man använder <strong>binomialtal</strong> för att räkna ut antalet b-delmängder ur a utan upprepning.</p>
-
 <p><strong>Binomialtalen</strong> kan antingen räknas ut rekursivt med <em>Pascals triangel</em> eller med formeln: $${{n}\choose{r}}=\frac{n!}{r!(n-r)!}$$</p>
-
 <h2 id="oordnant-med-repetition">Oordnant med repetition</h2>
-
 <p>${{n+r-1}\choose{r}}$ antal sätt att välja r från n med repetition.</p>
-
 <h2 id="binomialsatsen">Binomialsatsen</h2>
-
 <p>$(a+b)^n={{n}\choose{0}}a^n+{{n}\choose{1}}a^{n-1}b+&hellip;+{{n}\choose{n}}b^n$</p>
-
-<h2 id="sållprincipen-sieve-principle">Sållprincipen (Sieve principle)</h2>
-
+<h2 id="sllprincipen-sieve-principle">Sållprincipen (Sieve principle)</h2>
 <p>Visualisera med Venndiagram.
 Om $A_1$, $A_2$, &hellip;, $A_n$ är mängder då gäller: $$|A_1 \cup A_2 \cup &hellip; \cup A_n| = \alpha_1 - \alpha_2 + \alpha_3 - &hellip; + (-1)^{n-1}\alpha_n$$</p>
-
 <p>där $\alpha_n$ är överlappningar med kardinalitet n som inkluderas och exkluderas vid unionen.</p>
-
-<h1 id="kapitel-12-partitioner-klasser-och-fördelning">Kapitel 12 - Partitioner, klasser och fördelning</h1>
-
-<h2 id="partitioner-av-en-delmängd">Partitioner av en delmängd</h2>
-
+<h1 id="kapitel-12---partitioner-klasser-och-frdelning">Kapitel 12 - Partitioner, klasser och fördelning</h1>
+<h2 id="partitioner-av-en-delmngd">Partitioner av en delmängd</h2>
 <p>En <strong>familj</strong> av mängder består av mängder som kallas <strong>delar</strong>. En <strong>partition</strong> är en familj i familjen.</p>
-
 <p><strong>Stirlingtal</strong> betecknas $S(n,k)$ och är antalet partitioner av en n-mängd X i k delar där $1 \leq k \leq n$
 $$S(n,1)=1$$
 $$S(n,n)=1$$
 $$S(n,k)=S(n-1,k-1)+kS(n-1,k)$$</p>
-
 <p>Lättast är att visualisera <strong>stirlingtalen</strong> i en pyramid.</p>
-
 <h2 id="ekvivalenspartitioner">Ekvivalenspartitioner</h2>
-
 <h2 id="multinomialtal">Multinomialtal</h2>
-
 <p>Antalet sätt att fördela n st olika element i k st lådor med $n_i$ st i låda $i$.</p>
-
 <p>$${{n}\choose{n_1, n_2, &hellip; , n_k}}=\frac{n!}{n_1!n_2!&hellip;n_k!}$$</p>
-
 <p>där summan av $n_1+n_2+&hellip;+n_k=n$ och $n_i \geq 0$</p>
 
                     </div>

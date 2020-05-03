@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Diskret Matematik on Davis Freimanis</title>
+    <title>Diskret matematik on Davis Freimanis</title>
     <link>https://davisfreimanis.github.io/categories/diskret-matematik/</link>
-    <description>Recent content in Diskret Matematik on Davis Freimanis</description>
+    <description>Recent content in Diskret matematik on Davis Freimanis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 21 Nov 2016 10:41:42 +0100</lastBuildDate>
@@ -57,7 +57,8 @@ Klassifikationer Man kan dela upp mängderna som har samma ekvivalensrelation ti
 Fullständig graf. Alla hörn har en kant till de andra hörnen i grafen. Betecknas $K_n$
 Cyklisk graf. Alla hörn har valens 2. Betecknas $C_n$
 Isomorfism Isomorfism betyder att två grafer är samma. Graferna är isomorfa om det finns en bijektion (en funktion som är 1-1).
-Tre nödvändiga vilkor för isomorfi:</description>
+Tre nödvändiga vilkor för isomorfi:
+ Lika många hörn och kanter $\delta(v) = \delta(\alpha(v))$ Lika många trianglar  Valens Valens är antalet kanter som gränsar till hörnet.</description>
     </item>
     
     <item>

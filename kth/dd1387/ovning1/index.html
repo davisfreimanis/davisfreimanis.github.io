@@ -7,7 +7,7 @@
 
     <meta name="description" content="Länkning, preprocessorer, kompilatorer, makefiler">
 
-    <meta name="generator" content="Hugo 0.39" />
+    <meta name="generator" content="Hugo 0.62.0" />
     <meta name="twitter:card" content="summary">
     
     <meta name="twitter:title" content="Övning 1 &middot; Davis Freimanis">
@@ -93,73 +93,48 @@ MathJax.Hub.Config({
                     
                     
                     <div class="post-description">
-                        
-
-<h1 id="övning-1">Övning 1</h1>
-
+                        <h1 id="vning-1">Övning 1</h1>
 <h2 id="makefiler">Makefiler</h2>
-
-<h2 id="länkning">Länkning</h2>
-
+<h2 id="lnkning">Länkning</h2>
 <p>Kompilerar objektfiler från cpp filerna och sedan länkar till en exekverbarfil. Kollar även om ändringar är gjorda för att inte kompilera om.</p>
-
 <h2 id="preprocessorer">Preprocessorer</h2>
-
 <p>Man inkluderar headerfilerna <code>#include &quot;header.h&quot;</code> (söker lokalt i mappen) eller <code>&lt;header.h&gt;</code> (söker i standardsökvägarna).
 <code>#define</code> är till för att definiera macron #undef för att ta bort definitionen.</p>
-
 <h2 id="pekare-och-referencer">Pekare och referencer</h2>
-
 <p>int x = 0; // lägger int på stacken
-int *p = &x; // skapar en pekare som refererar till minnespositionen där x ligger
+int *p = &amp;x; // skapar en pekare som refererar till minnespositionen där x ligger
 int &amp;r = x;</p>
-
 <p>Man kan inkrementera *p med ++ så kommer den hoppa 4 bytes fram då en int vanligtvis tar så mycket plats.</p>
-
 <h2 id="strukturer">Strukturer</h2>
-
 <p>Struct allt public som default
 Class allt private som default</p>
-
 <h2 id="scope">Scope</h2>
-
 <pre><code>int getX();
-</code></pre>
-
-<pre><code>int Koord::getX() 
+</code></pre><pre><code>int Koord::getX() 
 {
 	return x;
 }
-</code></pre>
-
-<p>The java way</p>
-
+</code></pre><p>The java way</p>
 <pre><code>void setX(int x);
 
 void Koord::setX(int x)
 {
 	this-&gt;x = x;
 }
-</code></pre>
-
-<p>The C way</p>
-
+</code></pre><p>The C way</p>
 <pre><code>int&amp; x()
 {
 	return x;
 }
-</code></pre>
-
-<p>När en metod definieras som const så kommer inga värden att ändras. Read only metod!! En const metod kan ENDAST anropa read only metoder.</p>
-
+</code></pre><p>När en metod definieras som const så kommer inga värden att ändras. Read only metod!! En const metod kan ENDAST anropa read only metoder.</p>
 <p><code>this</code> är en pekare och för att komma åt den så måste man skriva <code>(*this).x</code>. Ett enklare sätt att skiva det är <code>this-&gt;x</code>.</p>
-
 <h1 id="rule-of-three">Rule of three</h1>
-
-<p>Körs automatiskt
-* Copy consturctor
-* Destructor
-* Tilldelningsoperator</p>
+<p>Körs automatiskt</p>
+<ul>
+<li>Copy consturctor</li>
+<li>Destructor</li>
+<li>Tilldelningsoperator</li>
+</ul>
 
                     </div>
                     

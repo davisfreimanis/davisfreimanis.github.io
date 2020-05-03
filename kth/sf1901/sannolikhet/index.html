@@ -7,7 +7,7 @@
 
     <meta name="description" content="Bra formler för kapitel 1 till 7">
 
-    <meta name="generator" content="Hugo 0.39" />
+    <meta name="generator" content="Hugo 0.62.0" />
     <meta name="twitter:card" content="summary">
     
     <meta name="twitter:title" content="Formler för sannolikhet &middot; Davis Freimanis">
@@ -93,104 +93,57 @@ MathJax.Hub.Config({
                     
                     
                     <div class="post-description">
-                        
-
-<h2 id="kapitel-2-sannolikhetsteorins-grunder">Kapitel 2 - Sannolikhetsteorins grunder</h2>
-
-<h3 id="händelser">Händelser</h3>
-
+                        <h2 id="kapitel-2---sannolikhetsteorins-grunder">Kapitel 2 - Sannolikhetsteorins grunder</h2>
+<h3 id="hndelser">Händelser</h3>
 <p><strong>Utfall</strong> är resultatet av ett slumpmässigt försök</p>
-
 <p><strong>Händelse</strong> är en samling av utfall och betecknas med stora bokstäver $A, B, C,&hellip;$</p>
-
 <p><strong>Utfallsrummet</strong> är mängden av möjliga utfall och betecknas $\Omega$</p>
-
 <p><strong>Union</strong> $A \cup B$ är då $A$, $B$ eller $A$ och $B$ inträffar</p>
-
 <p><strong>Snitt</strong> $A \cap B$ är då både $A$ och $B$ inträffar</p>
-
 <p>$A$ och $B$ är <strong>disjunkta</strong> om $A$ och $B$ inte kan inträffa samtidigt</p>
-
 <p>$0 \leq P(A) \leq 1$</p>
-
 <p>$P(\Omega)=1$</p>
-
 <p>Om $A_1, A_2,&hellip;$ är disjunkta så gäller $P(A_1 \cup A_2 \cup &hellip;)=P(A_1)+P(A_2)+&hellip;$</p>
-
 <p>För <strong>komplementet</strong> $ A^* $ gäller $P(A^*)=1-P(A)$</p>
-
 <p>$P(A \cup B)=P(A)+P(B)-P(A \cap B)$</p>
-
 <p>$P(A \cap B)=P(A)+P(B)-P(A \cup B)$</p>
-
 <p>$P(A \cap B \cap C)=P(A)P(B)P(C)$ <strong>om $A$, $B$ och $C$ är oberoende</strong></p>
-
 <h3 id="kombinatorik">Kombinatorik</h3>
-
 <p>$\binom{n}{k}=\frac{n(n-1)\cdots (n-k+1)}{k!}$ på miniräknaren <code>n nCr k</code></p>
-
 <h3 id="betingad-sannolikhet">Betingad sannolikhet</h3>
-
 <p>Den <strong>betingade sannolikheten</strong> uttrycks $P(B|A)=\frac{P(A \cap B)}{P(A)}$ som ger sannolikheten för $B$ givet att $A$ har inträffat</p>
-
 <p>$P(A \cap B)=P(A)P(B|A)=P(B)P(A|B)$</p>
-
 <p>$P(A \cap B \cap C)=P(A)P(B|A)P(C|A \cap B)$</p>
-
-<h2 id="kapitel-3-endimensionella-stokastiska-variabler">Kapitel 3 - Endimensionella stokastiska variabler</h2>
-
+<h2 id="kapitel-3---endimensionella-stokastiska-variabler">Kapitel 3 - Endimensionella stokastiska variabler</h2>
 <p>$p_X(x)$ kallas <strong>sannolikhetsfunktionen</strong></p>
-
 <p>$f_X(x)$ kallas <strong>täthetsfunktionen</strong></p>
-
 <p>$F_X(x)=P(X \leq x)$ kallas <strong>fördelningsfunktionen</strong></p>
-
 <p>$F&rsquo;_X(x)=\frac{d}{dx}F_X(x)=f_X(x)$</p>
-
 <p>$P(a &lt; X \leq b)=F_X(b)-F_X(a)$</p>
-
-<h2 id="kapitel-5-väntevärden">Kapitel 5 - Väntevärden</h2>
-
+<h2 id="kapitel-5---vntevrden">Kapitel 5 - Väntevärden</h2>
 <p><strong>Väntevärde</strong> för en diskret stokastisk variabel X definieras av:
 $E(X)=\sum_{k} kp_X(k)$</p>
-
 <p><strong>Väntevärde</strong> för en kontinuerlig stokastisk variabel X definieras av:
 $E(X)=\int_{-\infty}^{\infty} xf_X(x) dx$</p>
-
 <p>$E(aX+bY+c)=aE(X)+bE(Y)+c$</p>
-
 <p>$E(XY)=E(X)E(Y)$ <strong>om $X$ och $Y$ är oberoende</strong></p>
-
 <p><strong>Varians</strong> räknas lättast ut med sambandet
 $V(X)=E(X^2)-[E(X)]^2$</p>
-
 <p>$V(aX+b)=a^2V(X)$</p>
-
 <p>$V(aX+bX+c)=a^2V(X)+b^2V(Y)+2abC(X,Y)$</p>
-
 <p>$V(X+Y)=V(X)+V(Y)$ <strong>om $X$ och $Y$ är oberoende</strong></p>
-
 <p><strong>Standardavvikelse</strong> räknas ut med hjälp av variansen
 $D(X)=\sqrt{V(X)}$</p>
-
 <p>$D(aX+b)=|a|D(X)$</p>
-
 <p><strong>Kovarians</strong> följer av sambandet
 $C(X,Y)=E(XY)-E(X)E(Y)$</p>
-
 <p>Om $C(X,Y)=0$ så är $X$ och $Y$ okorrelerade</p>
-
 <p><strong>Korrelationskoefficienten</strong> för $X$ och $Y$ definieras av
 $\rho(X,Y)=\frac{C(X,Y)}{D(X)D(Y)}$ och är alltid $-1 \leq \rho \leq 1$</p>
-
 <h2 id="kapitel-6">Kapitel 6</h2>
-
-<h3 id="allmän-normalfördelning">Allmän normalfördelning</h3>
-
+<h3 id="allmn-normalfrdelning">Allmän normalfördelning</h3>
 <p>Alla <strong>normalfördelningar</strong> $N(\mu, \sigma)$ kan skrivas om till den <strong>standardiserade normalfördelningen</strong> $N(0,1)$</p>
-
 <p>$P(a &lt; X &lt; b)=P(\frac{a-\mu}{\sigma} &lt; \frac{X-\mu}{\sigma} &lt; \frac{b-\mu}{\sigma})=P(\frac{a-\mu}{\sigma} &lt; Y &lt; \frac{b-\mu}{\sigma})=\Phi(\frac{b-\mu}{\sigma})-\Phi(\frac{a-\mu}{\sigma})$</p>
-
 <p>För att räkna ut $\Phi(x)$ på en Ti-räknare så använder man <code>normcdf(-1e99,x,0,1)</code></p>
 
                     </div>

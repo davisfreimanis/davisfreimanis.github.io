@@ -7,7 +7,7 @@
 
     <meta name="description" content="Grupper i diskret matematik">
 
-    <meta name="generator" content="Hugo 0.39" />
+    <meta name="generator" content="Hugo 0.62.0" />
     <meta name="twitter:card" content="summary">
     
     <meta name="twitter:title" content="Grupper &middot; Davis Freimanis">
@@ -93,110 +93,66 @@ MathJax.Hub.Config({
                     
                     
                     <div class="post-description">
-                        
-
-<h1 id="kapitel-20-grupper">Kapitel 20 - Grupper</h1>
-
+                        <h1 id="kapitel-20---grupper">Kapitel 20 - Grupper</h1>
 <h2 id="gruppaxiomen">Gruppaxiomen</h2>
-
 <p>En grupp består av en mängd element och en binär operator. En grupp $G$ skrivs $(G, *)$.</p>
-
 <p>En grupp måste uppfylla dessa fyra axiom:</p>
-
 <ul>
 <li>Gruppen ska vara <strong>sluten</strong>. $x * y \in G \quad \forall x, y \in G$</li>
 <li>Gruppen ska vara <strong>associativ</strong>. $(x * y) * z = x * (y * z) \quad \forall x,y,z \in G$</li>
 <li>Gruppen ska ha ett <strong>identitet</strong>selement $e$ så att $e * x = x * e = x$</li>
 <li>Varje element i gruppen ska ha en <strong>invers</strong> så att $x * x&rsquo; = x&rsquo; * x = e$</li>
 </ul>
-
 <p>Gruppens <strong>ordning</strong> betecknas |G|.</p>
-
-<h2 id="exempel-på-grupper">Exempel på grupper</h2>
-
+<h2 id="exempel-p-grupper">Exempel på grupper</h2>
 <p>Det finns <strong>ändliga</strong> och <strong>oändliga</strong> grupper.
 Exempel på ändliga grupper:</p>
-
 <ul>
 <li>Mängden av permutationer</li>
 <li>Liksidig triangel och andra geometriska former</li>
 </ul>
-
 <p>Exempel på oändliga grupper:</p>
-
 <ul>
 <li>Heltalen vid addition</li>
 </ul>
-
 <p>Symmetrierna i trianglen kan man få vid rotationer och speglingar. Triangeln har tre speglingar och tre rotationer vilka motsvaras av en rotation 0, 120 och 240 grader. Varje operation går att skriva in i en <strong>latinsk kvadrat</strong> av storleken $6 \times 6$.</p>
-
 <h2 id="gruppalgebra">Gruppalgebra</h2>
-
 <p>En grupp sägs vara <strong>abelsk</strong> om gruppen är kommutativ. $xy = yx \quad \forall x,y \in G$</p>
-
 <p>$xy = xz \Rightarrow y = z$ <strong>vänsterkancellativa lagen</strong>.</p>
-
 <p>$ax = bx \Rightarrow a = b$ <strong>högerkancellativa lagen</strong>.</p>
-
 <p>Ekvationen $ax = b$ har en entydlig lösning för $x$ i en grupp där $a,b \in G$.</p>
-
-<h2 id="ordning-för-gruppelement">Ordning för gruppelement</h2>
-
+<h2 id="ordning-fr-gruppelement">Ordning för gruppelement</h2>
 <p><strong>Ordningen</strong> för ett gruppelement $g \in G$ är det minsta $n &gt; 0$ så att $g^n =1$. Detta betecknas $o(g)$.</p>
-
 <p>Om det inte finns ett $n$ så att det stämmer så sägs elementet ha <strong>oändlig ordning</strong>.</p>
-
 <p>För ett element av ordning m så gäller $x^s = 1$ om $s|m$.</p>
-
 <h2 id="gruppisomorfi">Gruppisomorfi</h2>
-
 <p>En <strong>isomorfi</strong> är en ekvivalensrelation mellan grupper.</p>
-
-<p>$(G_1,*)$ och $(G_2, \circ)$ är <strong>isomorfa</strong> om och endast om det finns en <strong>bijektion</strong> $\beta: G_1 \to G_2$ så att $\beta(g*g&rsquo;) = \beta(g) \circ \beta(g&rsquo;) \quad \forall g, g&rsquo; \in G_1$.</p>
-
+<p>$(G_1,<em>)$ och $(G_2, \circ)$ är <strong>isomorfa</strong> om och endast om det finns en <strong>bijektion</strong> $\beta: G_1 \to G_2$ så att $\beta(g</em>g&rsquo;) = \beta(g) \circ \beta(g&rsquo;) \quad \forall g, g&rsquo; \in G_1$.</p>
 <p>$|G_1|$ och $|G_2|$ måste vara samma för att grupperna ska kunna vara isomorfa.</p>
-
 <h2 id="cykliska-grupper">Cykliska grupper</h2>
-
 <p>En grupp $G$ är <strong>cyklisk</strong> om det det finns ett element $x \in G$ sådant att varje $g\in G$ är $x^n$ för något heltal $n$. Detta element $x$ <strong>genererar</strong> gruppen.</p>
-
 <p><strong>Generatorn</strong> betecknas $G=\langle x\rangle$</p>
-
 <p>Den <strong>direkta produkten</strong> $A \times B$ är en grupp som fås vid gruppernas operation $(a_1,b_1)(a_2, b_2)= (a_1a_2, b_1b_2)$</p>
-
 <p>Om en grupp $G$ av ordning $n&gt;2$ är cyklisk så gäller det att:</p>
-
 <ul>
 <li>För varje delare $d$ till $n$ så gäller det att $x^d=1$</li>
 <li>För varje delare $d$ till $n$ så är antalet element i $G$ av ordning $d$ lika med $\Phi(d)$.</li>
 </ul>
-
 <h2 id="delgrupper">Delgrupper</h2>
-
 <p>En <strong>delgrupp</strong> $H$ till $G$ betecknas $H \subseteq G$.</p>
-
 <p>En delmängd $H$ till en grupp $G$ är en delgrupp om och endast om:</p>
-
 <ul>
 <li>H är inte en tom mängd $H \ne \emptyset$</li>
 <li><strong>Sluten</strong> $x,y\in H \Rightarrow xy\in H$</li>
 <li><strong>Invers</strong> $x \in H \Rightarrow x^{-1} \in H$</li>
 </ul>
-
 <p>Delgruppen H:s ordning kommer att vara delbar med G:s ordning. $|H|$ delar $|G|$.</p>
-
 <h2 id="sidoklasser">Sidoklasser</h2>
-
 <p><strong>Högersidoklassen</strong> $gH$ av $H$ får man om man multiplicerar ett $g \in G$ med alla element i $H$ från höger.</p>
-
 <p><strong>Vänstersidoklassen</strong> $gH$ av $H$ får man om man multiplicerar ett $g \in G$ med alla element i $H$ från vänster.</p>
-
 <p>Alla högersidoklasser är antingen är identiska eller helt disjunkta med andra högersidoklasser. Samma gäller för vänstersidoklasser.</p>
-
 <p>Alla sidoklasser har samma ordning och unionen av alla sidoklasser blir $G$.</p>
-
 <p>Om $G$ är en grupp av ordning $n$ och $H$ är en delgrupp av ordning $m$, då är $m|n$. Då är också alla elements ordningar delbara med $n$ och $g^n=1$.</p>
-
 <p>Centrum $Z(G)$ för en grupp $G$ är $Z(G) = \{ z \in G | zg = gz \quad \forall g \in G \}$. Dvs att elementen i centrum måste kommutera med resten av elementen i $G$.</p>
 
                     </div>

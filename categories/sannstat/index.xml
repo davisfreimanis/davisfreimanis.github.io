@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sannstat on Davis Freimanis</title>
@@ -23,7 +23,8 @@ Kapitel 11 - Punktskattning Begrepp
 $\theta$ är det riktiga värdet
 $\theta^*_{obs}$ är utfallet av s.v. (en gissning)
 $\theta^*$ är stickprovsvariabeln och också s.v.
-En Väntevärdesriktig skattning förkortas ibland vvr skattning. En punktskattning sägs vara väntevärdesriktig om $E(\theta^*)=\theta$. D.v.s. om stickprovsvariabeln $\theta^*$ har väntevärde $\theta$.</description>
+En Väntevärdesriktig skattning förkortas ibland vvr skattning. En punktskattning sägs vara väntevärdesriktig om $E(\theta^*)=\theta$. D.v.s. om stickprovsvariabeln $\theta^*$ har väntevärde $\theta$.
+Medelkvadratfelet för en punktskattning $\theta^*_{obs}$ är $E((\theta^*-\theta)^2)$.</description>
     </item>
     
     <item>
