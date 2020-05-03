@@ -1,117 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>KTH on Davis Freimanis</title>
-    <link>https://davisfreimanis.github.io/categories/kth/</link>
-    <description>Recent content in KTH on Davis Freimanis</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 21 Nov 2016 10:41:42 +0100</lastBuildDate>
-    
-	<atom:link href="https://davisfreimanis.github.io/categories/kth/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Ringar och kroppar</title>
-      <link>https://davisfreimanis.github.io/kth/sf1630/ringar/</link>
-      <pubDate>Mon, 21 Nov 2016 10:41:42 +0100</pubDate>
-      
-      <guid>https://davisfreimanis.github.io/kth/sf1630/ringar/</guid>
-      <description>Kapitel 21 - Grupper av permutationer Definitioner och exempel Banor och stabilisatorer Banor (orbits) skrivs $Gx$ för banan av G på X.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>KTH on Davis Freimanis</title><link>https://davisfreimanis.github.io/categories/kth/</link><description>Recent content in KTH on Davis Freimanis</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 21 Nov 2016 10:41:42 +0100</lastBuildDate><atom:link href="https://davisfreimanis.github.io/categories/kth/index.xml" rel="self" type="application/rss+xml"/><item><title>Ringar och kroppar</title><link>https://davisfreimanis.github.io/kth/sf1630/ringar/</link><pubDate>Mon, 21 Nov 2016 10:41:42 +0100</pubDate><guid>https://davisfreimanis.github.io/kth/sf1630/ringar/</guid><description>Kapitel 21 - Grupper av permutationer Definitioner och exempel Banor och stabilisatorer Banor (orbits) skrivs $Gx$ för banan av G på X.
 Stabilisatorn skrivs $G_x$
 Storleken av en bana Antalet banor Antalet banor kan räknas ut med Burnsides lemma $$\frac{1}{|G|}\sum_{g\in G}|F(g)|$$
 Detta är även det som kalla väsentligt olika färgningar.
-Kapitel 22 - Ringar, kroppar och polynom Ringar En ring $(R, +, \times)$ har två binära operationer: addition och multiplikation och uppfyller dessa tre axiom:</description>
-    </item>
-    
-    <item>
-      <title>Grupper</title>
-      <link>https://davisfreimanis.github.io/kth/sf1630/grupper/</link>
-      <pubDate>Thu, 17 Nov 2016 18:54:45 +0100</pubDate>
-      
-      <guid>https://davisfreimanis.github.io/kth/sf1630/grupper/</guid>
-      <description>Kapitel 20 - Grupper Gruppaxiomen En grupp består av en mängd element och en binär operator. En grupp $G$ skrivs $(G, *)$.
+Kapitel 22 - Ringar, kroppar och polynom Ringar En ring $(R, +, \times)$ har två binära operationer: addition och multiplikation och uppfyller dessa tre axiom:</description></item><item><title>Grupper</title><link>https://davisfreimanis.github.io/kth/sf1630/grupper/</link><pubDate>Thu, 17 Nov 2016 18:54:45 +0100</pubDate><guid>https://davisfreimanis.github.io/kth/sf1630/grupper/</guid><description>Kapitel 20 - Grupper Gruppaxiomen En grupp består av en mängd element och en binär operator. En grupp $G$ skrivs $(G, *)$.
 En grupp måste uppfylla dessa fyra axiom:
- Gruppen ska vara sluten. $x * y \in G \quad \forall x, y \in G$ Gruppen ska vara associativ. $(x * y) * z = x * (y * z) \quad \forall x,y,z \in G$ Gruppen ska ha ett identitetselement $e$ så att $e * x = x * e = x$ Varje element i gruppen ska ha en invers så att $x * x&amp;rsquo; = x&amp;rsquo; * x = e$  Gruppens ordning betecknas |G|.</description>
-    </item>
-    
-    <item>
-      <title>Kombinatorik</title>
-      <link>https://davisfreimanis.github.io/kth/sf1630/kombinatorik/</link>
-      <pubDate>Wed, 21 Sep 2016 14:56:56 +0200</pubDate>
-      
-      <guid>https://davisfreimanis.github.io/kth/sf1630/kombinatorik/</guid>
-      <description>Kapitel 7 - Heltal Ekvivalensrelationer En relation på en mängd $X$ är en mängd av ordnade par av medlemar av $X$.
+Gruppen ska vara sluten. $x * y \in G \quad \forall x, y \in G$ Gruppen ska vara associativ. $(x * y) * z = x * (y * z) \quad \forall x,y,z \in G$ Gruppen ska ha ett identitetselement $e$ så att $e * x = x * e = x$ Varje element i gruppen ska ha en invers så att $x * x&amp;rsquo; = x&amp;rsquo; * x = e$ Gruppens ordning betecknas |G|.</description></item><item><title>Kombinatorik</title><link>https://davisfreimanis.github.io/kth/sf1630/kombinatorik/</link><pubDate>Wed, 21 Sep 2016 14:56:56 +0200</pubDate><guid>https://davisfreimanis.github.io/kth/sf1630/kombinatorik/</guid><description>Kapitel 7 - Heltal Ekvivalensrelationer En relation på en mängd $X$ är en mängd av ordnade par av medlemar av $X$.
 En relation kan ha dessa tre egenskaper:
- Reflexiv om $xRx$ för varje $x \in X$ Symmetrisk om $xRy$ så gäller även $yRx$ Transitiv om $xRy$ och $yRz$ så är $xRz$  En eqvivalensrelation är en relation som har alla tre egenskaperna.
-Klassifikationer Man kan dela upp mängderna som har samma ekvivalensrelation till en klass.</description>
-    </item>
-    
-    <item>
-      <title>Grafteori</title>
-      <link>https://davisfreimanis.github.io/kth/sf1630/grafer/</link>
-      <pubDate>Wed, 14 Sep 2016 11:21:28 +0200</pubDate>
-      
-      <guid>https://davisfreimanis.github.io/kth/sf1630/grafer/</guid>
-      <description>Kapitel 15 - Grafer Grafer och dess representation En Graf betecknas $G=(V,E)$ där V motsvarar hörnen och E kanterna.
+Reflexiv om $xRx$ för varje $x \in X$ Symmetrisk om $xRy$ så gäller även $yRx$ Transitiv om $xRy$ och $yRz$ så är $xRz$ En eqvivalensrelation är en relation som har alla tre egenskaperna.
+Klassifikationer Man kan dela upp mängderna som har samma ekvivalensrelation till en klass.</description></item><item><title>Grafteori</title><link>https://davisfreimanis.github.io/kth/sf1630/grafer/</link><pubDate>Wed, 14 Sep 2016 11:21:28 +0200</pubDate><guid>https://davisfreimanis.github.io/kth/sf1630/grafer/</guid><description>Kapitel 15 - Grafer Grafer och dess representation En Graf betecknas $G=(V,E)$ där V motsvarar hörnen och E kanterna.
 Fullständig graf. Alla hörn har en kant till de andra hörnen i grafen. Betecknas $K_n$
 Cyklisk graf. Alla hörn har valens 2. Betecknas $C_n$
 Isomorfism Isomorfism betyder att två grafer är samma. Graferna är isomorfa om det finns en bijektion (en funktion som är 1-1).
 Tre nödvändiga vilkor för isomorfi:
- Lika många hörn och kanter $\delta(v) = \delta(\alpha(v))$ Lika många trianglar  Valens Valens är antalet kanter som gränsar till hörnet.</description>
-    </item>
-    
-    <item>
-      <title>Heltalsaritmetik</title>
-      <link>https://davisfreimanis.github.io/kth/sf1630/aritmetik/</link>
-      <pubDate>Wed, 14 Sep 2016 11:21:28 +0200</pubDate>
-      
-      <guid>https://davisfreimanis.github.io/kth/sf1630/aritmetik/</guid>
-      <description>Kapitel 5 - Funktioner Funktionskonceptet En funktion $f: X \to Y$ är en svart låda som tar ett element från mängden $X$ och returnerar ett unikt element från mängden $Y$.
+Lika många hörn och kanter $\delta(v) = \delta(\alpha(v))$ Lika många trianglar Valens Valens är antalet kanter som gränsar till hörnet.</description></item><item><title>Heltalsaritmetik</title><link>https://davisfreimanis.github.io/kth/sf1630/aritmetik/</link><pubDate>Wed, 14 Sep 2016 11:21:28 +0200</pubDate><guid>https://davisfreimanis.github.io/kth/sf1630/aritmetik/</guid><description>Kapitel 5 - Funktioner Funktionskonceptet En funktion $f: X \to Y$ är en svart låda som tar ett element från mängden $X$ och returnerar ett unikt element från mängden $Y$.
 Surjektioner, Injektioner och Bijektioner En funktion $f: X \to Y$ är surjektiv om för alla $y \in Y$ är en bild av minst ett $x\in X$.
-En funktion $f: X \to Y$ är injektiv om för alla $y \in Y$ är en bild av högst ett $x\in X$.</description>
-    </item>
-    
-    <item>
-      <title>Formler för statistik</title>
-      <link>https://davisfreimanis.github.io/kth/sf1901/statistik/</link>
-      <pubDate>Tue, 17 May 2016 13:17:49 +0200</pubDate>
-      
-      <guid>https://davisfreimanis.github.io/kth/sf1901/statistik/</guid>
-      <description>Kapitel 10 - Beskrivande statistik Aritmetiska medelvärdet kallas medelvärdet och betecknas $\bar{x}=\frac{1}{n} \sum_{j=1}^{n}x_j = \frac{x_1+x_2+\dots + x_n}{n}$
+En funktion $f: X \to Y$ är injektiv om för alla $y \in Y$ är en bild av högst ett $x\in X$.</description></item><item><title>Formler för statistik</title><link>https://davisfreimanis.github.io/kth/sf1901/statistik/</link><pubDate>Tue, 17 May 2016 13:17:49 +0200</pubDate><guid>https://davisfreimanis.github.io/kth/sf1901/statistik/</guid><description>Kapitel 10 - Beskrivande statistik Aritmetiska medelvärdet kallas medelvärdet och betecknas $\bar{x}=\frac{1}{n} \sum_{j=1}^{n}x_j = \frac{x_1+x_2+\dots + x_n}{n}$
 Stickprovets standardavvikelse är kvadratroten ur variansen. $s=\sqrt{\frac{1}{n-1} \sum_{j=1}^{n}(x_j-\bar{x})^2}$
 Kapitel 11 - Punktskattning Begrepp
 $\theta$ är det riktiga värdet
 $\theta^*_{obs}$ är utfallet av s.v. (en gissning)
 $\theta^*$ är stickprovsvariabeln och också s.v.
 En Väntevärdesriktig skattning förkortas ibland vvr skattning. En punktskattning sägs vara väntevärdesriktig om $E(\theta^*)=\theta$. D.v.s. om stickprovsvariabeln $\theta^*$ har väntevärde $\theta$.
-Medelkvadratfelet för en punktskattning $\theta^*_{obs}$ är $E((\theta^*-\theta)^2)$.</description>
-    </item>
-    
-    <item>
-      <title>Formler för sannolikhet</title>
-      <link>https://davisfreimanis.github.io/kth/sf1901/sannolikhet/</link>
-      <pubDate>Wed, 27 Apr 2016 11:21:28 +0200</pubDate>
-      
-      <guid>https://davisfreimanis.github.io/kth/sf1901/sannolikhet/</guid>
-      <description>Kapitel 2 - Sannolikhetsteorins grunder Händelser Utfall är resultatet av ett slumpmässigt försök
+Medelkvadratfelet för en punktskattning $\theta^*_{obs}$ är $E((\theta^*-\theta)^2)$.</description></item><item><title>Formler för sannolikhet</title><link>https://davisfreimanis.github.io/kth/sf1901/sannolikhet/</link><pubDate>Wed, 27 Apr 2016 11:21:28 +0200</pubDate><guid>https://davisfreimanis.github.io/kth/sf1901/sannolikhet/</guid><description>Kapitel 2 - Sannolikhetsteorins grunder Händelser Utfall är resultatet av ett slumpmässigt försök
 Händelse är en samling av utfall och betecknas med stora bokstäver $A, B, C,&amp;hellip;$
 Utfallsrummet är mängden av möjliga utfall och betecknas $\Omega$
 Union $A \cup B$ är då $A$, $B$ eller $A$ och $B$ inträffar
 Snitt $A \cap B$ är då både $A$ och $B$ inträffar
-$A$ och $B$ är disjunkta om $A$ och $B$ inte kan inträffa samtidigt</description>
-    </item>
-    
-    <item>
-      <title>Övning 1</title>
-      <link>https://davisfreimanis.github.io/kth/dd1387/ovning1/</link>
-      <pubDate>Wed, 27 Apr 2016 11:21:28 +0200</pubDate>
-      
-      <guid>https://davisfreimanis.github.io/kth/dd1387/ovning1/</guid>
-      <description>Övning 1 Makefiler Länkning Kompilerar objektfiler från cpp filerna och sedan länkar till en exekverbarfil. Kollar även om ändringar är gjorda för att inte kompilera om.
+$A$ och $B$ är disjunkta om $A$ och $B$ inte kan inträffa samtidigt</description></item><item><title>Övning 1</title><link>https://davisfreimanis.github.io/kth/dd1387/ovning1/</link><pubDate>Wed, 27 Apr 2016 11:21:28 +0200</pubDate><guid>https://davisfreimanis.github.io/kth/dd1387/ovning1/</guid><description>Övning 1 Makefiler Länkning Kompilerar objektfiler från cpp filerna och sedan länkar till en exekverbarfil. Kollar även om ändringar är gjorda för att inte kompilera om.
 Preprocessorer Man inkluderar headerfilerna #include &amp;quot;header.h&amp;quot; (söker lokalt i mappen) eller &amp;lt;header.h&amp;gt; (söker i standardsökvägarna). #define är till för att definiera macron #undef för att ta bort definitionen.
-Pekare och referencer int x = 0; // lägger int på stacken int *p = &amp;amp;x; // skapar en pekare som refererar till minnespositionen där x ligger int &amp;amp;r = x;</description>
-    </item>
-    
-  </channel>
-</rss>
+Pekare och referencer int x = 0; // lägger int på stacken int *p = &amp;amp;x; // skapar en pekare som refererar till minnespositionen där x ligger int &amp;amp;r = x;</description></item></channel></rss>

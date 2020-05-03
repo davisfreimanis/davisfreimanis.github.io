@@ -1,26 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>C&#43;&#43; on Davis Freimanis</title>
-    <link>https://davisfreimanis.github.io/categories/c&#43;&#43;/</link>
-    <description>Recent content in C&#43;&#43; on Davis Freimanis</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 27 Apr 2016 11:21:28 +0200</lastBuildDate>
-    
-	<atom:link href="https://davisfreimanis.github.io/categories/c++/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Övning 1</title>
-      <link>https://davisfreimanis.github.io/kth/dd1387/ovning1/</link>
-      <pubDate>Wed, 27 Apr 2016 11:21:28 +0200</pubDate>
-      
-      <guid>https://davisfreimanis.github.io/kth/dd1387/ovning1/</guid>
-      <description>Övning 1 Makefiler Länkning Kompilerar objektfiler från cpp filerna och sedan länkar till en exekverbarfil. Kollar även om ändringar är gjorda för att inte kompilera om.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>C++ on Davis Freimanis</title><link>https://davisfreimanis.github.io/categories/c++/</link><description>Recent content in C++ on Davis Freimanis</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 27 Apr 2016 11:21:28 +0200</lastBuildDate><atom:link href="https://davisfreimanis.github.io/categories/c++/index.xml" rel="self" type="application/rss+xml"/><item><title>Övning 1</title><link>https://davisfreimanis.github.io/kth/dd1387/ovning1/</link><pubDate>Wed, 27 Apr 2016 11:21:28 +0200</pubDate><guid>https://davisfreimanis.github.io/kth/dd1387/ovning1/</guid><description>Övning 1 Makefiler Länkning Kompilerar objektfiler från cpp filerna och sedan länkar till en exekverbarfil. Kollar även om ändringar är gjorda för att inte kompilera om.
 Preprocessorer Man inkluderar headerfilerna #include &amp;quot;header.h&amp;quot; (söker lokalt i mappen) eller &amp;lt;header.h&amp;gt; (söker i standardsökvägarna). #define är till för att definiera macron #undef för att ta bort definitionen.
-Pekare och referencer int x = 0; // lägger int på stacken int *p = &amp;amp;x; // skapar en pekare som refererar till minnespositionen där x ligger int &amp;amp;r = x;</description>
-    </item>
-    
-  </channel>
-</rss>
+Pekare och referencer int x = 0; // lägger int på stacken int *p = &amp;amp;x; // skapar en pekare som refererar till minnespositionen där x ligger int &amp;amp;r = x;</description></item></channel></rss>
