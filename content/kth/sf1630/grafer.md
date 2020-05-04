@@ -7,8 +7,6 @@ categories = ["Diskret matematik", "KTH"]
 
 +++
 
-# Kapitel 15 - Grafer
-
 ## Grafer och dess representation
 
 En **Graf** betecknas $G=(V,E)$ där V motsvarar hörnen och E kanterna.
@@ -19,7 +17,7 @@ En **Graf** betecknas $G=(V,E)$ där V motsvarar hörnen och E kanterna.
 
 ## Isomorfism
 
-**Isomorfism** betyder att två grafer är samma. Graferna är isomorfa om det finns en bijektion (en funktion som är 1-1). 
+**Isomorfism** betyder att två grafer är samma. Graferna är isomorfa om det finns en bijektion (en funktion som är 1-1).
 
 Tre nödvändiga vilkor för isomorfi:
 
@@ -45,7 +43,7 @@ Summan av alla valenser över alla hörn i en graf är $\sum_{v \in V} \delta(v)
 
 **Hamiltonstig** är samma som en *hamiltoncykel*, men kan istället sluta på vilket hörn som helst.
 
-**Eulerkrets** i en graf är en krets som innehåller varje kant exakt en gång. Kretsen avslutas i samma hörn som den började. 
+**Eulerkrets** i en graf är en krets som innehåller varje kant exakt en gång. Kretsen avslutas i samma hörn som den började.
 
 **Eulerväg** är samma som en *eulerkrets*, men kan istället sulta i vilket hörn som helst.
 
@@ -71,54 +69,47 @@ Om $T=(V,E)$ är ett träd med $|V| \geq 2$ så gäller även:
 
 ## Hörnfärgning
 
-Hörnen på en graf kan färgläggas så att en kant går mellan två olika färgade hörn. 
+Hörnen på en graf kan färgläggas så att en kant går mellan två olika färgade hörn.
 
 **Kromatiska talet** betecknas $\chi(G)$ och är det minsta antalet färger som behövs för att färglägga hörnet på en graf G. Det kan vara svårt och tidskrävande att räkna ut det kromatiska talet och därför används giriga algoritmer som får ut ett tillräckligt bra närmevärde till det kromatiska talet och ibland även det minsta.
 
-
-
-# Kapitel 17 - Bipartita grafer
-
 ## Bipartita grafer
+
 En **bipartit** grafs hörn kan delas upp i två mängder $X$ och $Y$ där varje hörn i $X$ endast har kanter till hörn i $Y$ och vice versa. En bipartit graf kan alltid färgläggas med två färger.
 
 $$\sum\_{x \in X} \delta(x) = \sum\_{y \in Y} \delta(y) = |E|$$
 
 ## Kantfärgning
+
 Kanterna i en graf kan färgläggas så att inget hörn har två kanter med samma färg. Det minsta antalet färger kallas för det **kromatiska indexet** och betecknas $\chi'(G)$
 
 I en *bipartit graf* så är det minsta antalet färger den största valensen i grafen.
 
 ## Latinska kvadrater
+
 En **latinsk kvadrat** är en $n \times n$ matris där det finns n olika symboler i varje rad och kolumn.
 
 Man kan alltid göra klart en $n \times m$ latinsk rektangel till en $n \times n$ latinsk kvadrat.
 
 ## Matchningar
+
 En **matchning** i en graf $G=(X \cap Y, E)$ är när ett hörn i mängd X har en disjunkt kant till ett hörn i mängd Y. En *fullständig matchning* är när alla hörn i X har en kant till Y. En *maximal matchning* är när maximalt antal hörn i X har en matchning till Y.
 
 **Halls vilkor** i en graf $G=(X \cap Y, E)$ så gäller: $$|N(A)| \geq |A|$$ där $N(A)$ är mängden unika grannar till A och där A är alla delmängder av X. Vilkoret måste vara uppfyllt för att det ska kunna finnas en fullständig matchning i G.
 
-## Maximala matchningar
-
-**Theorem 17.5.2**
-
-**Alternerande stig**
-
 ## Transversaler
+
 En **transversal** är en mängd element från ett ändligt antal familjer. Man får en *transversal* genom att ta ett element från varje familj utan att något av de elementen är samma.
 
 $$\tau = \\{S_i|i \in I\\}$$
 
-har en transversal endast om 
+har en transversal endast om
 
 $$|\cup\_{i \in H} S_i| \geq |H|$$
 
 för alla $H \subseteq I$ gäller.
 
-
-
-# Planära grafer
+## Planära grafer
 
 En **plan graf** ritad i planet har inga korsande kanter. En **planär graf** är isomorf med en plan graf, men kan vara ritad med korsande kanter.
 
@@ -155,4 +146,3 @@ $$2v \geq e+4$$
 Om $G$ är sammanhängande så är $G$ och $G^{\top}$ varandras dualgrafer.
 
 En **platonska kropp** är en dubbelt reguljär graf vilket innebär att varje hörn har samma valens **$n \geq 3$** och varje yta har lika många gränsande kanter **$m \geq 3$**. Det finns totalt 5 *platonska kroppar* där dualgrafen är en *platonsk kropp* med $n$ och $m$ omvänt.
-

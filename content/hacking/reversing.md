@@ -6,13 +6,16 @@ author = "Davis"
 categories = ["pwn", "reversing"]
 +++
 
-# Tools
+## Tools
+
 * `strings <binary>`
 * `file <binary>`
 * `objdump -d <binary>`
 * Ghidra
 
-# Sections
-Sections in code
+## Sections
+
+### Sections in code
+
 * .text is usually where the code is
 * .rodata

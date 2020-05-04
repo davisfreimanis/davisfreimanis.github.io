@@ -6,11 +6,10 @@ author = "Davis"
 categories = ["pwn", "reversing"]
 +++
 
-# GDB
-
 ## Registers
 
 ## Instructions
+
 * Change the flavor of assembly `set disassembly-flavor intel`
 * `disassembly main`
 * Step instruction `si`
