@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title type="text">Davis Freimanis</title><subtitle type="html">MemE is a powerful and highly customizable GoHugo theme for personal blogs.</subtitle><updated>2020-05-04T17:55:13+00:00</updated><id>https://davisfreimanis.github.io/</id><link rel="alternate" type="text/html" href="https://davisfreimanis.github.io/"/><link rel="self" type="application/atom+xml" href="https://davisfreimanis.github.io/atom.xml"/><author><name>Davis Freimanis</name><uri>https://davisfreimanis.github.io/</uri></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><generator uri="https://gohugo.io/" version="0.68.3">Hugo</generator><entry><title type="text">Ringar och kroppar</title><link rel="alternate" type="text/html" href="https://davisfreimanis.github.io/kth/sf1630/ringar/"/><id>https://davisfreimanis.github.io/kth/sf1630/ringar/</id><updated>2020-05-04T17:55:11+00:00</updated><published>2016-11-21T10:41:42+01:00</published><author><name>Davis Freimanis</name><uri>https://davisfreimanis.github.io/</uri></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Ringar och kroppar i diskret matematik</summary><content type="html"><![CDATA[<h1 id="kapitel-21---grupper-av-permutationer">Kapitel 21 - Grupper av permutationer</h1>
+<h2 id="definitioner-och-exempel">Definitioner och exempel</h2>
+<h2 id="banor-och-stabilisatorer">Banor och stabilisatorer</h2>
+<p><strong>Banor</strong> (orbits) skrivs $Gx$ för banan av G på X.</p>
+<p><strong>Stabilisatorn</strong> skrivs $G_x$</p>
+<h2 id="storleken-av-en-bana">Storleken av en bana</h2>
+<h2 id="antalet-banor">Antalet banor</h2>
+<p>Antalet banor kan räknas ut med <em>Burnsides lemma</em>
+$$\frac{1}{|G|}\sum_{g\in G}|F(g)|$$</p>
+<p>Detta är även det som kalla <strong>väsentligt olika</strong> färgningar.</p>
+<h1 id="kapitel-22---ringar-kroppar-och-polynom">Kapitel 22 - Ringar, kroppar och polynom</h1>
+<h2 id="ringar">Ringar</h2>
+<p>En <strong>ring</strong> $(R, +, \times)$ har två binära operationer: addition och multiplikation och uppfyller dessa tre axiom:</p>
+<ul>
+<li>$(R, +)$ är en kommutativ grupp. Identitetselementet är 0.</li>
+<li>$(R, \times)$ är <em>sluten, associativ och har identitet 1</em></li>
+<li>De distributiva lagarna gäller. $a(b+c) = ab + ac$</li>
+</ul>
+<h2 id="inverterbara-element-i-ringar">Inverterbara element i ringar</h2>
+<p>Ett element $x \in R$ är <em>inverterbart</em> om $ux = xu = 1$ för något $u \in R$. Inversen är entydlig.</p>
+<p>Mängden $U(R)$ av inverterbara element av en ring $R$ är en grupp med multiplikationsoperatorn.</p>
+<h2 id="kroppar">Kroppar</h2>
+<p>En <strong>kropp</strong> (field) $(F, +, \times)$ uppfyller:</p>
+<ul>
+<li>(F, +, \times) är en ring</li>
+<li>F\{0} är en kommutativ grupp</li>
+</ul>
+]]></content><category scheme="https://davisfreimanis.github.io/categories/diskret-matematik/" term="Diskret matematik" label="Diskret matematik"/><category scheme="https://davisfreimanis.github.io/categories/kth/" term="KTH" label="KTH"/></entry><entry><title type="text">Grupper</title><link rel="alternate" type="text/html" href="https://davisfreimanis.github.io/kth/sf1630/grupper/"/><id>https://davisfreimanis.github.io/kth/sf1630/grupper/</id><updated>2020-05-04T17:55:11+00:00</updated><published>2016-11-17T18:54:45+01:00</published><author><name>Davis Freimanis</name><uri>https://davisfreimanis.github.io/</uri></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Grupper i diskret matematik</summary><content type="html"><![CDATA[<h1 id="kapitel-20---grupper">Kapitel 20 - Grupper</h1>
+<h2 id="gruppaxiomen">Gruppaxiomen</h2>
+<p>En grupp består av en mängd element och en binär operator. En grupp $G$ skrivs $(G, *)$.</p>
+<p>En grupp måste uppfylla dessa fyra axiom:</p>
+<ul>
+<li>Gruppen ska vara <strong>sluten</strong>. $x * y \in G \quad \forall x, y \in G$</li>
+<li>Gruppen ska vara <strong>associativ</strong>. $(x * y) * z = x * (y * z) \quad \forall x,y,z \in G$</li>
+<li>Gruppen ska ha ett <strong>identitet</strong>selement $e$ så att $e * x = x * e = x$</li>
+<li>Varje element i gruppen ska ha en <strong>invers</strong> så att $x * x&rsquo; = x&rsquo; * x = e$</li>
+</ul>
+<p>Gruppens <strong>ordning</strong> betecknas |G|.</p>
+<h2 id="exempel-på-grupper">Exempel på grupper</h2>
+<p>Det finns <strong>ändliga</strong> och <strong>oändliga</strong> grupper.
+Exempel på ändliga grupper:</p>
+<ul>
+<li>Mängden av permutationer</li>
+<li>Liksidig triangel och andra geometriska former</li>
+</ul>
+<p>Exempel på oändliga grupper:</p>
+<ul>
+<li>Heltalen vid addition</li>
+</ul>
+<p>Symmetrierna i trianglen kan man få vid rotationer och speglingar. Triangeln har tre speglingar och tre rotationer vilka motsvaras av en rotation 0, 120 och 240 grader. Varje operation går att skriva in i en <strong>latinsk kvadrat</strong> av storleken $6 \times 6$.</p>
+<h2 id="gruppalgebra">Gruppalgebra</h2>
+<p>En grupp sägs vara <strong>abelsk</strong> om gruppen är kommutativ. $xy = yx \quad \forall x,y \in G$</p>
+<p>$xy = xz \Rightarrow y = z$ <strong>vänsterkancellativa lagen</strong>.</p>
+<p>$ax = bx \Rightarrow a = b$ <strong>högerkancellativa lagen</strong>.</p>
+<p>Ekvationen $ax = b$ har en entydlig lösning för $x$ i en grupp där $a,b \in G$.</p>
+<h2 id="ordning-för-gruppelement">Ordning för gruppelement</h2>
+<p><strong>Ordningen</strong> för ett gruppelement $g \in G$ är det minsta $n &gt; 0$ så att $g^n =1$. Detta betecknas $o(g)$.</p>
+<p>Om det inte finns ett $n$ så att det stämmer så sägs elementet ha <strong>oändlig ordning</strong>.</p>
+<p>För ett element av ordning m så gäller $x^s = 1$ om $s|m$.</p>
+<h2 id="gruppisomorfi">Gruppisomorfi</h2>
+<p>En <strong>isomorfi</strong> är en ekvivalensrelation mellan grupper.</p>
+<p>$(G_1,<em>)$ och $(G_2, \circ)$ är <strong>isomorfa</strong> om och endast om det finns en <strong>bijektion</strong> $\beta: G_1 \to G_2$ så att $\beta(g</em>g&rsquo;) = \beta(g) \circ \beta(g&rsquo;) \quad \forall g, g&rsquo; \in G_1$.</p>
+<p>$|G_1|$ och $|G_2|$ måste vara samma för att grupperna ska kunna vara isomorfa.</p>
+<h2 id="cykliska-grupper">Cykliska grupper</h2>
+<p>En grupp $G$ är <strong>cyklisk</strong> om det det finns ett element $x \in G$ sådant att varje $g\in G$ är $x^n$ för något heltal $n$. Detta element $x$ <strong>genererar</strong> gruppen.</p>
+<p><strong>Generatorn</strong> betecknas $G=\langle x\rangle$</p>
+<p>Den <strong>direkta produkten</strong> $A \times B$ är en grupp som fås vid gruppernas operation $(a_1,b_1)(a_2, b_2)= (a_1a_2, b_1b_2)$</p>
+<p>Om en grupp $G$ av ordning $n&gt;2$ är cyklisk så gäller det att:</p>
+<ul>
+<li>För varje delare $d$ till $n$ så gäller det att $x^d=1$</li>
+<li>För varje delare $d$ till $n$ så är antalet element i $G$ av ordning $d$ lika med $\Phi(d)$.</li>
+</ul>
+<h2 id="delgrupper">Delgrupper</h2>
+<p>En <strong>delgrupp</strong> $H$ till $G$ betecknas $H \subseteq G$.</p>
+<p>En delmängd $H$ till en grupp $G$ är en delgrupp om och endast om:</p>
+<ul>
+<li>H är inte en tom mängd $H \ne \emptyset$</li>
+<li><strong>Sluten</strong> $x,y\in H \Rightarrow xy\in H$</li>
+<li><strong>Invers</strong> $x \in H \Rightarrow x^{-1} \in H$</li>
+</ul>
+<p>Delgruppen H:s ordning kommer att vara delbar med G:s ordning. $|H|$ delar $|G|$.</p>
+<h2 id="sidoklasser">Sidoklasser</h2>
+<p><strong>Högersidoklassen</strong> $gH$ av $H$ får man om man multiplicerar ett $g \in G$ med alla element i $H$ från höger.</p>
+<p><strong>Vänstersidoklassen</strong> $gH$ av $H$ får man om man multiplicerar ett $g \in G$ med alla element i $H$ från vänster.</p>
+<p>Alla högersidoklasser är antingen är identiska eller helt disjunkta med andra högersidoklasser. Samma gäller för vänstersidoklasser.</p>
+<p>Alla sidoklasser har samma ordning och unionen av alla sidoklasser blir $G$.</p>
+<p>Om $G$ är en grupp av ordning $n$ och $H$ är en delgrupp av ordning $m$, då är $m|n$. Då är också alla elements ordningar delbara med $n$ och $g^n=1$.</p>
+<p>Centrum $Z(G)$ för en grupp $G$ är $Z(G) = \{ z \in G | zg = gz \quad \forall g \in G \}$. Dvs att elementen i centrum måste kommutera med resten av elementen i $G$.</p>
+]]></content><category scheme="https://davisfreimanis.github.io/categories/diskret-matematik/" term="Diskret matematik" label="Diskret matematik"/><category scheme="https://davisfreimanis.github.io/categories/kth/" term="KTH" label="KTH"/></entry><entry><title type="text">Kombinatorik</title><link rel="alternate" type="text/html" href="https://davisfreimanis.github.io/kth/sf1630/kombinatorik/"/><id>https://davisfreimanis.github.io/kth/sf1630/kombinatorik/</id><updated>2020-05-04T17:55:11+00:00</updated><published>2016-09-21T14:56:56+02:00</published><author><name>Davis Freimanis</name><uri>https://davisfreimanis.github.io/</uri></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Kombinatorik i diskret matematik</summary><content type="html"><![CDATA[<h1 id="kapitel-7---heltal">Kapitel 7 - Heltal</h1>
+<h2 id="ekvivalensrelationer">Ekvivalensrelationer</h2>
+<p>En <strong>relation</strong> på en mängd $X$ är en mängd av ordnade par av medlemar av $X$.</p>
+<p>En <strong>relation</strong> kan ha dessa tre egenskaper:</p>
+<ul>
+<li><strong>Reflexiv</strong> om $xRx$ för varje $x \in X$</li>
+<li><strong>Symmetrisk</strong> om $xRy$ så gäller även $yRx$</li>
+<li><strong>Transitiv</strong> om $xRy$ och $yRz$ så är $xRz$</li>
+</ul>
+<p>En <strong>eqvivalensrelation</strong> är en relation som har alla tre egenskaperna.</p>
+<h2 id="klassifikationer">Klassifikationer</h2>
+<p>Man kan dela upp mängderna som har samma ekvivalensrelation till en klass.</p>
+<h1 id="kapitel-10---räkning">Kapitel 10 - Räkning</h1>
+<h2 id="additionsprincipen">Additionsprincipen</h2>
+<p>Om $A$ och $B$ är disjunkta icke-tomma mängder så är: $$|A \cup B| = |A| + |B|$$</p>
+<h2 id="multiplikationsprincipen">Multiplikationsprincipen</h2>
+<p>Om $A$ och $B$ är icke-tomma mängder så är: $$|A \times B| = |A| \times |B|$$</p>
+<h1 id="kapitel-11---delmängder-och-design">Kapitel 11 - Delmängder och design</h1>
+<h2 id="binomialtal">Binomialtal</h2>
+<p><strong>Binomialtal</strong> betecknas ${a}\choose{b}$ och läses &lsquo;a över b&rsquo;.
+Man använder <strong>binomialtal</strong> för att räkna ut antalet b-delmängder ur a utan upprepning.</p>
+<p><strong>Binomialtalen</strong> kan antingen räknas ut rekursivt med <em>Pascals triangel</em> eller med formeln: $${{n}\choose{r}}=\frac{n!}{r!(n-r)!}$$</p>
+<h2 id="oordnant-med-repetition">Oordnant med repetition</h2>
+<p>${{n+r-1}\choose{r}}$ antal sätt att välja r från n med repetition.</p>
+<h2 id="binomialsatsen">Binomialsatsen</h2>
+<p>$(a+b)^n={{n}\choose{0}}a^n+{{n}\choose{1}}a^{n-1}b+&hellip;+{{n}\choose{n}}b^n$</p>
+<h2 id="sållprincipen-sieve-principle">Sållprincipen (Sieve principle)</h2>
+<p>Visualisera med Venndiagram.
+Om $A_1$, $A_2$, &hellip;, $A_n$ är mängder då gäller: $$|A_1 \cup A_2 \cup &hellip; \cup A_n| = \alpha_1 - \alpha_2 + \alpha_3 - &hellip; + (-1)^{n-1}\alpha_n$$</p>
+<p>där $\alpha_n$ är överlappningar med kardinalitet n som inkluderas och exkluderas vid unionen.</p>
+<h1 id="kapitel-12---partitioner-klasser-och-fördelning">Kapitel 12 - Partitioner, klasser och fördelning</h1>
+<h2 id="partitioner-av-en-delmängd">Partitioner av en delmängd</h2>
+<p>En <strong>familj</strong> av mängder består av mängder som kallas <strong>delar</strong>. En <strong>partition</strong> är en familj i familjen.</p>
+<p><strong>Stirlingtal</strong> betecknas $S(n,k)$ och är antalet partitioner av en n-mängd X i k delar där $1 \leq k \leq n$
+$$S(n,1)=1$$
+$$S(n,n)=1$$
+$$S(n,k)=S(n-1,k-1)+kS(n-1,k)$$</p>
+<p>Lättast är att visualisera <strong>stirlingtalen</strong> i en pyramid.</p>
+<h2 id="ekvivalenspartitioner">Ekvivalenspartitioner</h2>
+<h2 id="multinomialtal">Multinomialtal</h2>
+<p>Antalet sätt att fördela n st olika element i k st lådor med $n_i$ st i låda $i$.</p>
+<p>$${{n}\choose{n_1, n_2, &hellip; , n_k}}=\frac{n!}{n_1!n_2!&hellip;n_k!}$$</p>
+<p>där summan av $n_1+n_2+&hellip;+n_k=n$ och $n_i \geq 0$</p>
+]]></content><category scheme="https://davisfreimanis.github.io/categories/diskret-matematik/" term="Diskret matematik" label="Diskret matematik"/><category scheme="https://davisfreimanis.github.io/categories/kth/" term="KTH" label="KTH"/></entry><entry><title type="text">Grafteori</title><link rel="alternate" type="text/html" href="https://davisfreimanis.github.io/kth/sf1630/grafer/"/><id>https://davisfreimanis.github.io/kth/sf1630/grafer/</id><updated>2020-05-04T17:55:11+00:00</updated><published>2016-09-14T11:21:28+02:00</published><author><name>Davis Freimanis</name><uri>https://davisfreimanis.github.io/</uri></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Grafteori i diskret matematik</summary><content type="html"><![CDATA[<h1 id="kapitel-15---grafer">Kapitel 15 - Grafer</h1>
+<h2 id="grafer-och-dess-representation">Grafer och dess representation</h2>
+<p>En <strong>Graf</strong> betecknas $G=(V,E)$ där V motsvarar hörnen och E kanterna.</p>
+<p><strong>Fullständig graf</strong>. Alla hörn har en kant till de andra hörnen i grafen. Betecknas $K_n$</p>
+<p><strong>Cyklisk graf</strong>. Alla hörn har valens 2. Betecknas $C_n$</p>
+<h2 id="isomorfism">Isomorfism</h2>
+<p><strong>Isomorfism</strong> betyder att två grafer är samma. Graferna är isomorfa om det finns en bijektion (en funktion som är 1-1).</p>
+<p>Tre nödvändiga vilkor för isomorfi:</p>
+<ul>
+<li>Lika många hörn och kanter</li>
+<li>$\delta(v) = \delta(\alpha(v))$</li>
+<li>Lika många trianglar</li>
+</ul>
+<h2 id="valens">Valens</h2>
+<p><strong>Valens</strong> är antalet kanter som gränsar till hörnet. Kallas även grad. Betecknas $\delta(x)$ för hörnet x. En graf är <strong>k-reguljär</strong> om alla hörn har valensen k.</p>
+<p>Summan av alla valenser över alla hörn i en graf är $\sum_{v \in V} \delta(v) = 2|E|$.</p>
+<h2 id="stigar-och-cykler">Stigar och cykler</h2>
+<ul>
+<li><strong>Vandring</strong> (walk) $v_1, v_2,&hellip;,v_n$</li>
+<li><strong>Väg</strong> (trail) samma som vandring fast en kant får inte upprepas</li>
+<li><strong>Krets</strong> (circuit) en väg som är sluten</li>
+<li><strong>Stig</strong> (path) inget hörn upprepas</li>
+<li><strong>Cykel</strong> (cycle) inget hörn upprepas förutom första och sista</li>
+</ul>
+<p><strong>Hamiltoncykel</strong> i en graf är en cykel där alla hörn passeras och avslutas vid samma hörn. <em>Det finns inget lätt sätt att avgöra om en graf är hamiltonsk (har en hamiltoncykel)</em></p>
+<p><strong>Hamiltonstig</strong> är samma som en <em>hamiltoncykel</em>, men kan istället sluta på vilket hörn som helst.</p>
+<p><strong>Eulerkrets</strong> i en graf är en krets som innehåller varje kant exakt en gång. Kretsen avslutas i samma hörn som den började.</p>
+<p><strong>Eulerväg</strong> är samma som en <em>eulerkrets</em>, men kan istället sulta i vilket hörn som helst.</p>
+<p>En graf $G=(V, E)$ har en <em>eulerkrets/väg</em> om och endast om:</p>
+<ul>
+<li>G är sammanhängande förutom ensamma hörn</li>
+<li>G har inga/två hörn med udda valens</li>
+</ul>
+<p>Om det finns två udda hörn i grafen så måste vägen börja och sluta i respektive hörn.</p>
+<h2 id="träd">Träd</h2>
+<p>Ett <strong>träd</strong> T har två egenskaper:</p>
+<ul>
+<li>T är sammanhängande</li>
+<li>Det finns inga cykler i T</li>
+</ul>
+<p>Om $T=(V,E)$ är ett träd med $|V| \geq 2$ så gäller även:</p>
+<ul>
+<li>För varje par $x,y$ av hörn så finns det en unik väg i T från x till y</li>
+<li>Grafen man får från T när man tar bort en kant har två komponenter vilka i sin tur är träd</li>
+<li>$|E|=|V|-1$</li>
+</ul>
+<h2 id="hörnfärgning">Hörnfärgning</h2>
+<p>Hörnen på en graf kan färgläggas så att en kant går mellan två olika färgade hörn.</p>
+<p><strong>Kromatiska talet</strong> betecknas $\chi(G)$ och är det minsta antalet färger som behövs för att färglägga hörnet på en graf G. Det kan vara svårt och tidskrävande att räkna ut det kromatiska talet och därför används giriga algoritmer som får ut ett tillräckligt bra närmevärde till det kromatiska talet och ibland även det minsta.</p>
+<h1 id="kapitel-17---bipartita-grafer">Kapitel 17 - Bipartita grafer</h1>
+<h2 id="bipartita-grafer">Bipartita grafer</h2>
+<p>En <strong>bipartit</strong> grafs hörn kan delas upp i två mängder $X$ och $Y$ där varje hörn i $X$ endast har kanter till hörn i $Y$ och vice versa. En bipartit graf kan alltid färgläggas med två färger.</p>
+<p>$$\sum_{x \in X} \delta(x) = \sum_{y \in Y} \delta(y) = |E|$$</p>
+<h2 id="kantfärgning">Kantfärgning</h2>
+<p>Kanterna i en graf kan färgläggas så att inget hörn har två kanter med samma färg. Det minsta antalet färger kallas för det <strong>kromatiska indexet</strong> och betecknas $\chi&rsquo;(G)$</p>
+<p>I en <em>bipartit graf</em> så är det minsta antalet färger den största valensen i grafen.</p>
+<h2 id="latinska-kvadrater">Latinska kvadrater</h2>
+<p>En <strong>latinsk kvadrat</strong> är en $n \times n$ matris där det finns n olika symboler i varje rad och kolumn.</p>
+<p>Man kan alltid göra klart en $n \times m$ latinsk rektangel till en $n \times n$ latinsk kvadrat.</p>
+<h2 id="matchningar">Matchningar</h2>
+<p>En <strong>matchning</strong> i en graf $G=(X \cap Y, E)$ är när ett hörn i mängd X har en disjunkt kant till ett hörn i mängd Y. En <em>fullständig matchning</em> är när alla hörn i X har en kant till Y. En <em>maximal matchning</em> är när maximalt antal hörn i X har en matchning till Y.</p>
+<p><strong>Halls vilkor</strong> i en graf $G=(X \cap Y, E)$ så gäller: $$|N(A)| \geq |A|$$ där $N(A)$ är mängden unika grannar till A och där A är alla delmängder av X. Vilkoret måste vara uppfyllt för att det ska kunna finnas en fullständig matchning i G.</p>
+<h2 id="maximala-matchningar">Maximala matchningar</h2>
+<p><strong>Theorem 17.5.2</strong></p>
+<p><strong>Alternerande stig</strong></p>
+<h2 id="transversaler">Transversaler</h2>
+<p>En <strong>transversal</strong> är en mängd element från ett ändligt antal familjer. Man får en <em>transversal</em> genom att ta ett element från varje familj utan att något av de elementen är samma.</p>
+<p>$$\tau = \{S_i|i \in I\}$$</p>
+<p>har en transversal endast om</p>
+<p>$$|\cup_{i \in H} S_i| \geq |H|$$</p>
+<p>för alla $H \subseteq I$ gäller.</p>
+<h1 id="planära-grafer">Planära grafer</h1>
+<p>En <strong>plan graf</strong> ritad i planet har inga korsande kanter. En <strong>planär graf</strong> är isomorf med en plan graf, men kan vara ritad med korsande kanter.</p>
+<p>En plan graf har $\chi \leq 4$.</p>
+<p>Den plana grafen delar in planet i ytor som betecknas <strong>r</strong>.</p>
+<p>För att räkna ut kanter <strong>e</strong>, hörn <strong>v</strong>, ytor <strong>r</strong> eller komponenter <strong>c</strong> så kan man använda sig av formeln:</p>
+<p>$$v-e+r-c=1$$</p>
+<p>eller om grafen är sammanhängande (Eulers polyederformel):</p>
+<p>$$v-e+r=2$$</p>
+<p>För en <em>sammanhängande</em> graf så gäller:</p>
+<p>$$3v \geq e+6$$</p>
+<p>För en <em>bipartit</em> och <em>sammanhängande</em> graf så gäller:</p>
+<p>$$2v \geq e+4$$</p>
+<p><strong>Kuratowskis sats</strong> säger att grafen G är icke-planär om och endast om en graf som är isomorf med $K_5$ eller $K_{3,3}$ kan får från G genom att sugga ut hörn med valens 2.</p>
+<p><strong>Wagners sats</strong> säger att grafen G är icke-planär om man istället tar bort kanter genom att sammanfoga två hörn.</p>
+<p><strong>Duala grafen</strong> av $G$ betecknas $G^{\bot}$. Man får en dual graf om man:</p>
+<ul>
+<li>Lägger ett hörn i varje yta</li>
+<li>Drar en kant mellan de nya hörnen</li>
+<li>De nya kanterna går igenom endast en G kant</li>
+</ul>
+<p>Om $G$ är sammanhängande så är $G$ och $G^{\top}$ varandras dualgrafer.</p>
+<p>En <strong>platonska kropp</strong> är en dubbelt reguljär graf vilket innebär att varje hörn har samma valens <strong>$n \geq 3$</strong> och varje yta har lika många gränsande kanter <strong>$m \geq 3$</strong>. Det finns totalt 5 <em>platonska kroppar</em> där dualgrafen är en <em>platonsk kropp</em> med $n$ och $m$ omvänt.</p>
+]]></content><category scheme="https://davisfreimanis.github.io/categories/diskret-matematik/" term="Diskret matematik" label="Diskret matematik"/><category scheme="https://davisfreimanis.github.io/categories/kth/" term="KTH" label="KTH"/></entry><entry><title type="text">Heltalsaritmetik</title><link rel="alternate" type="text/html" href="https://davisfreimanis.github.io/kth/sf1630/aritmetik/"/><id>https://davisfreimanis.github.io/kth/sf1630/aritmetik/</id><updated>2020-05-04T17:55:11+00:00</updated><published>2016-09-14T11:21:28+02:00</published><author><name>Davis Freimanis</name><uri>https://davisfreimanis.github.io/</uri></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Heltalsaritmetik i diskret matematik</summary><content type="html"><![CDATA[<h1 id="kapitel-5---funktioner">Kapitel 5 - Funktioner</h1>
+<h2 id="funktionskonceptet">Funktionskonceptet</h2>
+<p>En <strong>funktion</strong> $f: X \to Y$ är en svart låda som tar ett element från mängden $X$ och returnerar ett unikt element från mängden $Y$.</p>
+<h2 id="surjektioner-injektioner-och-bijektioner">Surjektioner, Injektioner och Bijektioner</h2>
+<p>En funktion $f: X \to Y$ är <strong>surjektiv</strong> om för alla $y \in Y$ är en bild av <strong>minst ett</strong> $x\in X$.</p>
+<p>En funktion $f: X \to Y$ är <strong>injektiv</strong> om för alla $y \in Y$ är en bild av <strong>högst ett</strong> $x\in X$.</p>
+<p>En funktion $f: X \to Y$ är <strong>bijektiv</strong> om för alla $y \in Y$ har <strong>exakt ett</strong> $x\in X$.</p>
+<p>En funktion är <strong>bijektiv</strong> om den är <strong>surjektiv</strong> och <strong>injektiv</strong>. Det vill säga att varje element $x\in X$ avbildas på ett $y\in Y$.</p>
+<h2 id="sammansatta-funktioner">Sammansatta funktioner</h2>
+<p>En funktion kallas <strong>sammansatt</strong> av funktionerna $f: X \to Y$ och $g: Y \to Z$ och skrivs $(g \circ f)$ och är samma sak som att skriva $g(f(x))$.</p>
+<p>Om $f$ och $g$ är <em>injektiva</em> så är även <strong>kompositionen</strong> $g \circ f$ det.</p>
+<p>Om $f$ och $g$ är <em>surjektiva</em> så är även <strong>kompositionen</strong> $g \circ f$ det.</p>
+<p>Om $f$ och $g$ är <em>bijektiva</em> så är även <strong>kompositionen</strong> $g \circ f$ det.</p>
+<h2 id="bijektioner-och-inversa-funktioner">Bijektioner och inversa funktioner</h2>
+<p>En funktion $f:X \to Y$ har en <strong>invers</strong> funktion $g: Y \to X$ om för alla $x \in X$ och $y \in Y$</p>
+<p>$$(g \circ f)(x)=(x)$$
+$$(f \circ g)(y)=(y)$$</p>
+<p>En funktion har en <em>invers</em> om och endast om funktionen är <strong>bijektiv</strong>.</p>
+<h1 id="kapitel-6---räkning">Kapitel 6 - Räkning</h1>
+<h1 id="kapitel-8---delbarhet-och-primtal">Kapitel 8 - Delbarhet och primtal</h1>
+<h2 id="delbarhet">Delbarhet</h2>
+<p>$x$ är en <strong>multipel</strong> av $y$ om $x=yq$ där $q \in \mathbb{Z}$.</p>
+<p>$y$ är en <strong>faktor</strong> av $x$ och $y$ <strong>delar</strong> $x$. Detta skrivs $y | x$. Det innebär att resten blir 0.</p>
+<h2 id="kvot-och-rest">Kvot och rest</h2>
+<p>Om $x$ och $y$ inte delas så skrivs det $y\not| x$.</p>
+<p>Det som blir över av heltalsdivisionen blir <strong>resten</strong>.</p>
+<h2 id="representation-av-heltal">Representation av heltal</h2>
+<h2 id="största-gemensama-delaren-sgd">Största gemensama delaren (SGD)</h2>
+<p><strong>Största gemensama delaren</strong> (SGD eller GCD på engelska) är det tal som är det största talet som delar $x$ och $y$.</p>
+<p><strong>Euklides algoritm</strong> kan man använda för att hitta SGD för två heltal.</p>
+<p>Två tal $x$, $y$ är <strong>relativt prima</strong> (coprime) om $sgd(x,y)=1$.</p>
+<h2 id="primtal">Primtal</h2>
+<p>Ett heltal $x$ är ett <strong>primtal</strong> om $x \geq 2$ och de enda delarna är 1 och $x$ själv.</p>
+<p>Man kan alltid <strong>primtalsfaktorisera</strong> ett heltal.</p>
+<h2 id="primtalsfaktorisering">Primtalsfaktorisering</h2>
+<p>Alla positiva heltal $n \geq 2$ har en <em>unik</em> <strong>primtalsfaktorisering</strong>.</p>
+<h1 id="kapitel-13---modulär-aritmetik">Kapitel 13 - Modulär aritmetik</h1>
+<h2 id="kongruens">Kongruens</h2>
+<p>Ett heltal $x_1$ är <strong>kongruent</strong> med $x_2$ <strong>modulo</strong> $m$ om $x_1 - x_2$ är delbart med $m$. Vi skriver detta $x_1 \equiv x_2$ (mod m) eller $x_1 \equiv_m x_2$.</p>
+<p>Om vi har heltalen $x_1$, $x_2$, $y_1$ och $y_2$ så att:</p>
+<p>$$x_1 \equiv_m x_2$$
+$$y_1 \equiv_m y_2$$</p>
+<p>så gäller det att:</p>
+<p>$$x_1 + y_1 \equiv_m x_2 + y_2$$
+$$x_1 y_1 \equiv_m x_2 y_2$$</p>
+<h2 id="mathbbz_m-och-dess-aritmetik">$\mathbb{Z}_m$ och dess aritmetik</h2>
+<h2 id="inverterbara-element-i-mathbbz_m">Inverterbara element i $\mathbb{Z}_m$</h2>
+<p>Ett tal $r$ i $\mathbb{Z}_m$ är <strong>inverterbart</strong> om det finns ett $x$ i $\mathbb{Z}_m$ så att $rx = 1$ i $\mathbb{Z}_m$.</p>
+<p>Talet $r$ är inverterbart om och endast om $r$ och $m$ är relativt prima. Om $m$ är ett primtal så är alla element i $\mathbb{Z}_m$ inverterbara förutom 0.</p>
+<p><strong>Eulers funktion</strong> $\Phi(m)$ är antalet heltal i $\mathbb{Z}_m$ som är relativt prima med $m$.</p>
+<p>Om $y$ är inverterbart i $\mathbb{Z}_m$ så är $y^{\Phi(m)}=1$.</p>
+<p><strong>Eulers teorem</strong> säger att om $SGD(y,m)=1$ så är $y^{\Phi(m)} \equiv_{m} 1$.</p>
+<p><strong>Fermats teorem</strong> säger att om p är prima och $p\not| y$ så är $y^{p-1} \equiv_{m} 1$</p>
+<h1 id="kinesiska-restsatsen">Kinesiska restsatsen</h1>
+]]></content><category scheme="https://davisfreimanis.github.io/categories/diskret-matematik/" term="Diskret matematik" label="Diskret matematik"/><category scheme="https://davisfreimanis.github.io/categories/kth/" term="KTH" label="KTH"/></entry><entry><title type="text">Formler för statistik</title><link rel="alternate" type="text/html" href="https://davisfreimanis.github.io/kth/sf1901/statistik/"/><id>https://davisfreimanis.github.io/kth/sf1901/statistik/</id><updated>2020-05-04T17:55:11+00:00</updated><published>2016-05-17T13:17:49+02:00</published><author><name>Davis Freimanis</name><uri>https://davisfreimanis.github.io/</uri></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Bra formler för kapitel 10 till 14</summary><content type="html"><![CDATA[<h2 id="kapitel-10---beskrivande-statistik">Kapitel 10 - Beskrivande statistik</h2>
+<p><strong>Aritmetiska medelvärdet</strong> kallas medelvärdet och betecknas $\bar{x}=\frac{1}{n} \sum_{j=1}^{n}x_j = \frac{x_1+x_2+\dots + x_n}{n}$</p>
+<p><strong>Stickprovets standardavvikelse</strong> är kvadratroten ur variansen. $s=\sqrt{\frac{1}{n-1} \sum_{j=1}^{n}(x_j-\bar{x})^2}$</p>
+<h2 id="kapitel-11---punktskattning">Kapitel 11 - Punktskattning</h2>
+<p><strong>Begrepp</strong></p>
+<p>$\theta$ är det riktiga värdet</p>
+<p>$\theta^*_{obs}$ är utfallet av s.v. (en gissning)</p>
+<p>$\theta^*$ är stickprovsvariabeln och också s.v.</p>
+<p>En <strong>Väntevärdesriktig skattning</strong> förkortas ibland <em>vvr</em> skattning. En punktskattning sägs vara väntevärdesriktig om $E(\theta^*)=\theta$. D.v.s. om stickprovsvariabeln $\theta^*$ har väntevärde $\theta$.</p>
+<p><strong>Medelkvadratfelet</strong> för en punktskattning $\theta^*_{obs}$ är $E((\theta^*-\theta)^2)$.</p>
+<p><strong>Effektivitet</strong>. Om man har två väntevärdesriktiga skattningar så är den som har den som har lägst varians effektivast.</p>
+<p><strong>Maximum-likelihood-skattning</strong>.
+Om man har oberoende observationer från stokastiska variabler så använder man formel 9.1. Man räknar ut Maximum-likelihood-funktionen:
+$$
+L(\theta) =
+\begin{cases}
+p_{X_1}(x_1;\theta)\cdots p_{X_n}(x_n;\theta) \\<br>
+f_{X_1}(x_1;\theta)\cdots f_{X_n}(x_n;\theta)
+\end{cases}
+$$
+för det kontinuerliga respektive diskreta fallet. Logaritmera sedan produkten och använd logaritmlagarna för att förenkla uttrycket. Derivera sedan och sätt derivatan till 0. Lös sedan ut $\theta$.</p>
+<p><strong>Minsta-kvadrat-skattning</strong>.
+Om man har oberoende observationer från stokastiska variabler så använder man formel 9.2. Man summerar differansen mellan skattningens värde med det förväntade väntevärdet som sedan kvadreras. Derivera sedan för att lösa ut variabeln $\theta$ som minimerar kvadratsumman. $$Q(\theta)=\sum_{i=1}^{n}(x_i - \mu_i(\theta_1,\theta_2,&hellip;,\theta_k))^2$$</p>
+<h2 id="kapitel-12---intervallskattning">Kapitel 12 - Intervallskattning</h2>
+<p><strong>Konfidensintervall</strong> ($\lambda$-metoden) används när standardavvikelsen är känd. Man låter $\theta^*$ vara $N(\theta, D)$.
+$$I_{\theta}=\theta^*_{obs}±D\cdot \lambda_{\alpha/2}$$
+är då ett konfidensintervall för $\theta$ med konfidensgraden $1-\alpha$.</p>
+<p><strong>Konfidensintervall för väntevärde</strong> ($t$-metoden)
+$$I_{\theta}=\theta^*_{obs}±D^*_{obs}\cdot t_{\alpha/2}(f)$$
+där f brukar vara $n-1$ enligt §11.1d.</p>
+<p><strong>Konfidensintervall för standardavvikelse</strong> (baserad på $\chi^2$-fördelning)
+$$I_{\theta}=\theta^*_{obs}±D^*_{obs}\cdot \lambda_{\alpha/2}$$</p>
+<h2 id="kapitel-13---hypotesprövning">Kapitel 13 - Hypotesprövning</h2>
+<p><strong>Begrepp</strong></p>
+<p><strong>Styrkefunktionen</strong> $h(\theta) = P(förkasta \ H_0)$ då $\theta$ är rätt parametervärde.</p>
+<p><strong>Konfidensmetoden</strong> innebär att man skapar ett konfidensintervall. Man förkastar $H_0: \theta = \theta_0$ på nivån $\alpha$ om värdet $\theta_0$ inte tillför konfidensintervallet med konfidensgraden $1-\alpha$.</p>
+<p><strong>$\chi^2$-test</strong> för given fördelning löses med formeln: $$Q=\sum_{j=1}^{r}\frac{(x_{j}-np_{j})^2}{np_{j}}$$ och man kan förkasta nollhypotesen om $Q&gt;\chi^2_{\alpha(r-1)}$ och alla $np_{j}\geq 5$</p>
+<p><strong>$\chi^2$-test</strong> för test av föredelning med skattade parametrar löses genom att jämföra det riktiga väntevärdet med det skattade.
+$\chi^2_{\alpha}(r-k-1)$-fördelad, där r är antalet termer i summan och k är antalet okända parametrar man vill hitta.</p>
+<p><strong>$\chi^2$-test</strong> (homogenitetstest). Det enklaste sättet att lösa dessa uppgifter är att man sätter in alla värden i en matris på miniräknaren och använder funktionen <code>X-Test...</code> på miniräknaren. Om p-värdet är mindre än 0.05 så förkastar man nollhypotesen. Man kan även jämföra om Q-värdet är större än $\chi^2_{\alpha}(t-1)$ och i så fall förkastas nollhypotesen. Om man gör det för hand så tar man hjälp av formeln för homogenitetstest i paragraf 14.3: $$Q=\sum^s_{i=1} \sum^r_{j=1} \frac{(x_{ij}-\frac{n_i m_j}{N})^2}{\frac{n_i m_j}{N}}$$
+där s är antalet rader i matrisen och r är antalet columnet. Q blir ett utfall av en approximativt $\chi^2((r-1)(s-1))$-fördelad stokastisk variabel.</p>
+]]></content><category scheme="https://davisfreimanis.github.io/categories/sannstat/" term="Sannstat" label="Sannstat"/><category scheme="https://davisfreimanis.github.io/categories/kth/" term="KTH" label="KTH"/></entry><entry><title type="text">Formler för sannolikhet</title><link rel="alternate" type="text/html" href="https://davisfreimanis.github.io/kth/sf1901/sannolikhet/"/><id>https://davisfreimanis.github.io/kth/sf1901/sannolikhet/</id><updated>2020-05-04T17:55:11+00:00</updated><published>2016-04-27T11:21:28+02:00</published><author><name>Davis Freimanis</name><uri>https://davisfreimanis.github.io/</uri></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Bra formler för kapitel 1 till 7</summary><content type="html"><![CDATA[<h2 id="kapitel-2---sannolikhetsteorins-grunder">Kapitel 2 - Sannolikhetsteorins grunder</h2>
+<h3 id="händelser">Händelser</h3>
+<p><strong>Utfall</strong> är resultatet av ett slumpmässigt försök</p>
+<p><strong>Händelse</strong> är en samling av utfall och betecknas med stora bokstäver $A, B, C,&hellip;$</p>
+<p><strong>Utfallsrummet</strong> är mängden av möjliga utfall och betecknas $\Omega$</p>
+<p><strong>Union</strong> $A \cup B$ är då $A$, $B$ eller $A$ och $B$ inträffar</p>
+<p><strong>Snitt</strong> $A \cap B$ är då både $A$ och $B$ inträffar</p>
+<p>$A$ och $B$ är <strong>disjunkta</strong> om $A$ och $B$ inte kan inträffa samtidigt</p>
+<p>$0 \leq P(A) \leq 1$</p>
+<p>$P(\Omega)=1$</p>
+<p>Om $A_1, A_2,&hellip;$ är disjunkta så gäller $P(A_1 \cup A_2 \cup &hellip;)=P(A_1)+P(A_2)+&hellip;$</p>
+<p>För <strong>komplementet</strong> $ A^* $ gäller $P(A^*)=1-P(A)$</p>
+<p>$P(A \cup B)=P(A)+P(B)-P(A \cap B)$</p>
+<p>$P(A \cap B)=P(A)+P(B)-P(A \cup B)$</p>
+<p>$P(A \cap B \cap C)=P(A)P(B)P(C)$ <strong>om $A$, $B$ och $C$ är oberoende</strong></p>
+<h3 id="kombinatorik">Kombinatorik</h3>
+<p>$\binom{n}{k}=\frac{n(n-1)\cdots (n-k+1)}{k!}$ på miniräknaren <code>n nCr k</code></p>
+<h3 id="betingad-sannolikhet">Betingad sannolikhet</h3>
+<p>Den <strong>betingade sannolikheten</strong> uttrycks $P(B|A)=\frac{P(A \cap B)}{P(A)}$ som ger sannolikheten för $B$ givet att $A$ har inträffat</p>
+<p>$P(A \cap B)=P(A)P(B|A)=P(B)P(A|B)$</p>
+<p>$P(A \cap B \cap C)=P(A)P(B|A)P(C|A \cap B)$</p>
+<h2 id="kapitel-3---endimensionella-stokastiska-variabler">Kapitel 3 - Endimensionella stokastiska variabler</h2>
+<p>$p_X(x)$ kallas <strong>sannolikhetsfunktionen</strong></p>
+<p>$f_X(x)$ kallas <strong>täthetsfunktionen</strong></p>
+<p>$F_X(x)=P(X \leq x)$ kallas <strong>fördelningsfunktionen</strong></p>
+<p>$F&rsquo;_X(x)=\frac{d}{dx}F_X(x)=f_X(x)$</p>
+<p>$P(a &lt; X \leq b)=F_X(b)-F_X(a)$</p>
+<h2 id="kapitel-5---väntevärden">Kapitel 5 - Väntevärden</h2>
+<p><strong>Väntevärde</strong> för en diskret stokastisk variabel X definieras av:
+$E(X)=\sum_{k} kp_X(k)$</p>
+<p><strong>Väntevärde</strong> för en kontinuerlig stokastisk variabel X definieras av:
+$E(X)=\int_{-\infty}^{\infty} xf_X(x) dx$</p>
+<p>$E(aX+bY+c)=aE(X)+bE(Y)+c$</p>
+<p>$E(XY)=E(X)E(Y)$ <strong>om $X$ och $Y$ är oberoende</strong></p>
+<p><strong>Varians</strong> räknas lättast ut med sambandet
+$V(X)=E(X^2)-[E(X)]^2$</p>
+<p>$V(aX+b)=a^2V(X)$</p>
+<p>$V(aX+bX+c)=a^2V(X)+b^2V(Y)+2abC(X,Y)$</p>
+<p>$V(X+Y)=V(X)+V(Y)$ <strong>om $X$ och $Y$ är oberoende</strong></p>
+<p><strong>Standardavvikelse</strong> räknas ut med hjälp av variansen
+$D(X)=\sqrt{V(X)}$</p>
+<p>$D(aX+b)=|a|D(X)$</p>
+<p><strong>Kovarians</strong> följer av sambandet
+$C(X,Y)=E(XY)-E(X)E(Y)$</p>
+<p>Om $C(X,Y)=0$ så är $X$ och $Y$ okorrelerade</p>
+<p><strong>Korrelationskoefficienten</strong> för $X$ och $Y$ definieras av
+$\rho(X,Y)=\frac{C(X,Y)}{D(X)D(Y)}$ och är alltid $-1 \leq \rho \leq 1$</p>
+<h2 id="kapitel-6">Kapitel 6</h2>
+<h3 id="allmän-normalfördelning">Allmän normalfördelning</h3>
+<p>Alla <strong>normalfördelningar</strong> $N(\mu, \sigma)$ kan skrivas om till den <strong>standardiserade normalfördelningen</strong> $N(0,1)$</p>
+<p>$P(a &lt; X &lt; b)=P(\frac{a-\mu}{\sigma} &lt; \frac{X-\mu}{\sigma} &lt; \frac{b-\mu}{\sigma})=P(\frac{a-\mu}{\sigma} &lt; Y &lt; \frac{b-\mu}{\sigma})=\Phi(\frac{b-\mu}{\sigma})-\Phi(\frac{a-\mu}{\sigma})$</p>
+<p>För att räkna ut $\Phi(x)$ på en Ti-räknare så använder man <code>normcdf(-1e99,x,0,1)</code></p>
+]]></content><category scheme="https://davisfreimanis.github.io/categories/sannstat/" term="Sannstat" label="Sannstat"/><category scheme="https://davisfreimanis.github.io/categories/kth/" term="KTH" label="KTH"/></entry><entry><title type="text">Övning 1</title><link rel="alternate" type="text/html" href="https://davisfreimanis.github.io/kth/dd1387/ovning1/"/><id>https://davisfreimanis.github.io/kth/dd1387/ovning1/</id><updated>2020-05-04T17:55:11+00:00</updated><published>2016-04-27T11:21:28+02:00</published><author><name>Davis Freimanis</name><uri>https://davisfreimanis.github.io/</uri></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Länkning, preprocessorer, kompilatorer, makefiler</summary><content type="html"><![CDATA[<h1 id="övning-1">Övning 1</h1>
+<h2 id="makefiler">Makefiler</h2>
+<h2 id="länkning">Länkning</h2>
+<p>Kompilerar objektfiler från cpp filerna och sedan länkar till en exekverbarfil. Kollar även om ändringar är gjorda för att inte kompilera om.</p>
+<h2 id="preprocessorer">Preprocessorer</h2>
+<p>Man inkluderar headerfilerna <code>#include &quot;header.h&quot;</code> (söker lokalt i mappen) eller <code>&lt;header.h&gt;</code> (söker i standardsökvägarna).
+<code>#define</code> är till för att definiera macron #undef för att ta bort definitionen.</p>
+<h2 id="pekare-och-referencer">Pekare och referencer</h2>
+<p>int x = 0; // lägger int på stacken
+int *p = &amp;x; // skapar en pekare som refererar till minnespositionen där x ligger
+int &amp;r = x;</p>
+<p>Man kan inkrementera *p med ++ så kommer den hoppa 4 bytes fram då en int vanligtvis tar så mycket plats.</p>
+<h2 id="strukturer">Strukturer</h2>
+<p>Struct allt public som default
+Class allt private som default</p>
+<h2 id="scope">Scope</h2>
+<pre><code>int getX();
+</code></pre><pre><code>int Koord::getX() 
+{
+	return x;
+}
+</code></pre><p>The java way</p>
+<pre><code>void setX(int x);
+
+void Koord::setX(int x)
+{
+	this-&gt;x = x;
+}
+</code></pre><p>The C way</p>
+<pre><code>int&amp; x()
+{
+	return x;
+}
+</code></pre><p>När en metod definieras som const så kommer inga värden att ändras. Read only metod!! En const metod kan ENDAST anropa read only metoder.</p>
+<p><code>this</code> är en pekare och för att komma åt den så måste man skriva <code>(*this).x</code>. Ett enklare sätt att skiva det är <code>this-&gt;x</code>.</p>
+<h1 id="rule-of-three">Rule of three</h1>
+<p>Körs automatiskt</p>
+<ul>
+<li>Copy consturctor</li>
+<li>Destructor</li>
+<li>Tilldelningsoperator</li>
+</ul>
+]]></content><category scheme="https://davisfreimanis.github.io/categories/c-/" term="C++" label="C++"/><category scheme="https://davisfreimanis.github.io/categories/kth/" term="KTH" label="KTH"/></entry></feed>
