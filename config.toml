@@ -195,12 +195,12 @@ uglyURLs = false
     #     weight = 1
     #     pre = "internal"
     #     post = "home"
-    # [[menu.main]]
-    #     url = "/posts/"
-    #     name = "Posts"
-    #     weight = 2
-    #     pre = "internal"
-    #     post = "archive"
+    [[menu.main]]
+        url = "/posts/"
+        name = "Posts"
+        weight = 2
+        pre = "internal"
+        post = "archive"
     [[menu.main]]
         url = "/categories/"
         name = "Categories"
@@ -213,12 +213,12 @@ uglyURLs = false
         weight = 4
         pre = "internal"
         post = "tags"
-    [[menu.main]]
-        url = "/about/"
-        name = "About"
-        weight = 5
-        pre = "internal"
-        post = "user-circle"
+    # [[menu.main]]
+    #     url = "/about/"
+    #     name = "About"
+    #     weight = 5
+    #     pre = "internal"
+    #     post = "user-circle"
     [[menu.main]]
         weight = 6
         identifier = "theme-switcher"
@@ -317,7 +317,7 @@ uglyURLs = false
 
     ## Poetry
     # Verse (Markdown supported)
-    homePoetry = []
+    # homePoetry = []
     # Padding of links at the bottom
     # Unit: em
     homeLinksPadding = 1
