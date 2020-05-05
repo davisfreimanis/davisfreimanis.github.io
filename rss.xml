@@ -1,1 +1,87 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Davis Freimanis</title><link>https://davisfreimanis.github.io/</link><description>Davis Freimanis blog</description><generator>Hugo 0.68.3 https://gohugo.io/</generator><language>en</language><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><lastBuildDate>Tue, 05 May 2020 15:06:14 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://davisfreimanis.github.io/rss.xml"/></channel></rss>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Davis Freimanis</title><link>https://davisfreimanis.github.io/</link><description>Davis Freimanis blog</description><generator>Hugo 0.68.3 https://gohugo.io/</generator><language>en</language><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><lastBuildDate>Tue, 05 May 2020 18:14:28 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://davisfreimanis.github.io/rss.xml"/><item><title>Deploying a Hugo Website Using Github Actions</title><link>https://davisfreimanis.github.io/posts/hugo-github-actions/</link><guid isPermaLink="true">https://davisfreimanis.github.io/posts/hugo-github-actions/</guid><pubDate>Tue, 05 May 2020 15:04:12 +0200</pubDate><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><description><![CDATA[<p>This <a href="https://github.com/davisfreimanis/davisfreimanis.github.io">blog</a> uses Hugo to serve static pages. To make deploying posts easy, I am using Github Actions for automatic deployment. This post will present how it works.</p>
+<h2 id="github-actions">Github Actions</h2>
+<p>My Github repository contains two branches. Everything that exists in the <code>master</code> branch is automatically published using Github Pages. To separate source code with optimized Hugo pages, I&rsquo;m adding content and modifying the style of the blog in a separate branch <code>source</code>.</p>
+<p>The magic is how the code gets deployed from the <code>source</code> branch to <code>master</code>. This is done with Github Actions and the configuration file is shown below.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="k">name</span><span class="p">:</span><span class="w"> </span>Github<span class="w"> </span>Pages<span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="k">on</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="k">push</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="k">branches</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span>source<span class="w"> </span><span class="p">]</span><span class="w">
+</span><span class="w">  </span><span class="k">pull_request</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="k">branches</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span>source<span class="w"> </span><span class="p">]</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="k">jobs</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="k">build</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="k">runs-on</span><span class="p">:</span><span class="w"> </span>ubuntu<span class="m">-18.04</span><span class="w">
+</span><span class="w">    </span><span class="k">steps</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- <span class="k">uses</span><span class="p">:</span><span class="w"> </span>actions/checkout@v2<span class="w"> </span><span class="c"># Fetches commits</span><span class="w">
+</span><span class="w">      </span><span class="k">with</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span><span class="k">submodules</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">  </span><span class="c"># Fetches Hugo themes</span><span class="w">
+</span><span class="w">        </span><span class="k">fetch-depth</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">    </span><span class="c"># Fetch all history for .GitInfo and .Lastmod</span><span class="w">
+</span><span class="w">
+</span><span class="w">    </span>- <span class="k">name</span><span class="p">:</span><span class="w"> </span>Setup<span class="w">
+</span><span class="w">      </span><span class="k">uses</span><span class="p">:</span><span class="w"> </span>peaceiris/actions-hugo@v2<span class="w">
+</span><span class="w">      </span><span class="k">with</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span><span class="k">hugo-version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;0.68.3&#39;</span><span class="w">
+</span><span class="w">        </span><span class="k">extended</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="c"># For SCSS support in theme</span><span class="w">
+</span><span class="w">
+</span><span class="w">    </span>- <span class="k">name</span><span class="p">:</span><span class="w"> </span>Build<span class="w">
+</span><span class="w">      </span><span class="k">run</span><span class="p">:</span><span class="w"> </span>hugo<span class="w"> </span>--minify<span class="w">
+</span><span class="w">
+</span><span class="w">    </span>- <span class="k">name</span><span class="p">:</span><span class="w"> </span>Deploy<span class="w">
+</span><span class="w">      </span><span class="k">uses</span><span class="p">:</span><span class="w"> </span>peaceiris/actions-gh-pages@v3<span class="w">
+</span><span class="w">      </span><span class="k">with</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span><span class="k">github_token</span><span class="p">:</span><span class="w"> </span>${{<span class="w"> </span>secrets.GITHUB_TOKEN<span class="w"> </span>}}<span class="w">
+</span><span class="w">        </span><span class="k">publish_dir</span><span class="p">:</span><span class="w"> </span>./public<span class="w">
+</span><span class="w">        </span><span class="k">publish_branch</span><span class="p">:</span><span class="w"> </span>master<span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>This configuration file defines when and how Github Actions will run. It monitors the <code>source</code> branch and will run everytime a new commit or pull request is pushed is detected.</p>
+<p>The next thing that happens is that a virtual machine is created running <code>Ubuntu 18.04</code>.</p>
+<p>There are three Github Actions that are used on this virtual machine:</p>
+<ul>
+<li><a href="https://github.com/actions/checkout">checkout</a></li>
+<li><a href="https://github.com/peaceiris/actions-hugo">actions-hugo</a></li>
+<li><a href="https://github.com/peaceiris/actions-gh-pages">actions-gh-pages</a></li>
+</ul>
+<p>The first action <code>checkout</code> fetches the code from the <code>source</code> branch.</p>
+<p>Next <code>actions-hugo</code> installs Hugo and builds the source code and generates the <code>public</code> folder.</p>
+<p>The last action <code>actions-gh-pages</code> takes the public folder and pushes it to the master branch where my page is hosted using Github Pages.</p>
+<p><img src="/images/hugo.jpg" alt="Hugo with Github Actions"></p>
+]]></description><category domain="https://davisfreimanis.github.io/tags/github-actions/">Github Actions</category></item></channel></rss>
