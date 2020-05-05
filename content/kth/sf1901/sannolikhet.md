@@ -1,11 +1,10 @@
-+++
-date = "2016-04-27T11:21:28+02:00"
-title = "Formler för sannolikhet"
-description = "Bra formler för kapitel 1 till 7"
-author = "Davis"
-categories = ["Sannstat", "KTH"]
-
-+++
+---
+date: "2016-04-27T11:21:28+02:00"
+expiryDate: "2020-05-03T11:21:28+02:00"
+title: "Formler för sannolikhet"
+description: "Bra formler för kapitel 1 till 7"
+categories: ["Sannstat", "KTH"]
+---
 
 ## Kapitel 2 - Sannolikhetsteorins grunder
 

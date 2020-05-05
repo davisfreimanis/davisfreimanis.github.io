@@ -1,11 +1,10 @@
-+++
-date = "2016-09-14T11:21:28+02:00"
-title = "Grafteori"
-description = "Grafteori i diskret matematik"
-author = "Davis"
-categories = ["Diskret matematik", "KTH"]
-
-+++
+---
+date: "2016-09-14T11:21:28+02:00"
+expiryDate: "2020-05-03T11:21:28+02:00"
+title: "Grafteori"
+description: "Grafteori i diskret matematik"
+categories: ["Diskret matematik", "KTH"]
+---
 
 ## Grafer och dess representation
 

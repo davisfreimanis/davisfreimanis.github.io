@@ -1,11 +1,10 @@
-+++
-date = "2016-05-17T13:17:49+02:00"
-title = "Formler för statistik"
-description = "Bra formler för kapitel 10 till 14"
-author = "Davis"
-categories = ["Sannstat", "KTH"]
-
-+++
+---
+date: "2016-05-17T13:17:49+02:00"
+expiryDate: "2020-05-03T11:21:28+02:00"
+title: "Formler för statistik"
+description: "Bra formler för kapitel 10 till 14"
+categories: ["Sannstat", "KTH"]
+---
 
 ## Kapitel 10 - Beskrivande statistik
 

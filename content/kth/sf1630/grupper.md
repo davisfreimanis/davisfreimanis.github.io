@@ -1,11 +1,10 @@
-+++
-categories = ["Diskret matematik", "KTH"]
-Description = "Grupper i diskret matematik"
-date = "2016-11-17T18:54:45+01:00"
-title = "Grupper"
-author = "Davis"
-
-+++
+---
+categories: ["Diskret matematik", "KTH"]
+Description: "Grupper i diskret matematik"
+date: "2016-11-17T18:54:45+01:00"
+expiryDate: "2020-05-03T11:21:28+02:00"
+title: "Grupper"
+---
 
 ## Gruppaxiomen
 

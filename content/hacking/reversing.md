@@ -1,10 +1,13 @@
-+++
-date = "2020-04-10T11:21:28+02:00"
-title = "Reversing Techniques"
-description = "Reversing techniques and tools"
-author = "Davis"
-categories = ["pwn", "reversing"]
-+++
+---
+date: "2020-04-10T11:21:28+02:00"
+title: "Reversing Techniques"
+description: "Reversing techniques and tools"
+categories:
+tags:
+- pwn
+- reversing
+draft: true
+---
 
 ## Tools
 

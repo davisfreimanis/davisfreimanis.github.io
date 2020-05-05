@@ -1,10 +1,10 @@
-+++
-date = "2016-09-21T14:56:56+02:00"
-title = "Kombinatorik"
-description = "Kombinatorik i diskret matematik"
-author = "Davis"
-categories = ["Diskret matematik", "KTH"]
-+++
+---
+date: "2016-09-21T14:56:56+02:00"
+expiryDate: "2020-05-03T11:21:28+02:00"
+title: "Kombinatorik"
+description: "Kombinatorik i diskret matematik"
+categories: ["Diskret matematik", "KTH"]
+---
 
 ## Ekvivalensrelationer
 

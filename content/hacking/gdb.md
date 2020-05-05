@@ -1,12 +1,16 @@
-+++
-date = "2020-04-10T11:21:28+02:00"
-title = "GDB"
-description = "GDB notes"
-author = "Davis"
-categories = ["pwn", "reversing"]
-+++
+---
+date: "2020-04-10T11:21:28+02:00"
+title: "GDB"
+description: "GDB notes"
+tags:
+- pwn
+- reversing
+draft: true
+---
 
 ## Registers
+
+Information about registers
 
 ## Instructions
 

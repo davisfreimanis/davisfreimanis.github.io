@@ -1,11 +1,10 @@
-+++
-title = "Ringar och kroppar"
-Description = "Ringar och kroppar i diskret matematik"
-categories = ["Diskret matematik", "KTH"]
-author = "Davis"
-date = "2016-11-21T10:41:42+01:00"
-
-+++
+---
+title: "Ringar och kroppar"
+Description: "Ringar och kroppar i diskret matematik"
+categories: ["Diskret matematik", "KTH"]
+date: "2016-11-21T10:41:42+01:00"
+expiryDate: "2020-05-03T11:21:28+02:00"
+---
 
 ## Banor och stabilisatorer
 
