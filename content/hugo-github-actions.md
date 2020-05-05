@@ -1,7 +1,7 @@
 ---
 title: "Deploying a Hugo Website Using Github Actions"
 date: 2020-05-05T15:04:12+02:00
-draft: true
+draft: false
 tags:
 - Github Actions
 ---
