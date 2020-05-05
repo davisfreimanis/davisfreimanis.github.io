@@ -1,6 +1,6 @@
 # davisfreimanis.github.io
 
-A personal website built with Hugo
+A personal website built with Hugo and MathJax
 
 ## How to Use
 

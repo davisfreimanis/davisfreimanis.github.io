@@ -10,20 +10,20 @@ jobs:
   build:
     runs-on: ubuntu-18.04
     steps:
-    - uses: actions/checkout@v2 # Fetched commits
+    - uses: actions/checkout@v2 # Fetches commits
       with:
         submodules: true  # Fetches Hugo themes
         fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
-    - name: Setup Hugo
+    - name: Setup
       uses: peaceiris/actions-hugo@v2
       with:
         hugo-version: '0.68.3'
-        extended: true # For SCSS
+        extended: true # For SCSS support in theme
 
     - name: Build
       run: hugo --minify
-        
+
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
