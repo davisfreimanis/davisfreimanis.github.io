@@ -1,7 +1,6 @@
 ---
 title: "Agent Sudo"
 date: 2020-05-09T10:17:19+02:00
-draft: true
 categories:
 - Writeups
 tags:
