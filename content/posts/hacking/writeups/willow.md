@@ -11,6 +11,8 @@ tags:
 - rsa
 ---
 
+![Willow](/images/willow/willow.png)
+
 This was a very fun room that required a wide variety of skills ranging from cryptography to steganography.
 
 ## Enumeration

@@ -1,6 +1,8 @@
 # davisfreimanis.github.io
 
-A personal website built with Hugo and MathJax
+A personal website built with Hugo and MathJax. 
+
+Hosted [here](https://davisfreimanis.github.io/)
 
 ## How to Use
 
