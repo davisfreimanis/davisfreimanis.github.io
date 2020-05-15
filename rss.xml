@@ -1,4 +1,77 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Davis Freimanis</title><link>https://davisfreimanis.github.io/</link><description>Davis Freimanis blog</description><generator>Hugo 0.68.3 https://gohugo.io/</generator><language>en</language><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><lastBuildDate>Sat, 09 May 2020 11:21:59 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://davisfreimanis.github.io/rss.xml"/><item><title>Agent Sudo</title><link>https://davisfreimanis.github.io/posts/hacking/writeups/agent-sudo/</link><guid isPermaLink="true">https://davisfreimanis.github.io/posts/hacking/writeups/agent-sudo/</guid><pubDate>Sat, 09 May 2020 10:17:19 +0200</pubDate><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><description><![CDATA[<p><img src="/images/agent-sudo.png" alt="asdf"></p>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Davis Freimanis</title><link>https://davisfreimanis.github.io/</link><description>Davis Freimanis blog</description><generator>Hugo 0.68.3 https://gohugo.io/</generator><language>en</language><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><lastBuildDate>Fri, 15 May 2020 14:25:28 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://davisfreimanis.github.io/rss.xml"/><item><title>Willow</title><link>https://davisfreimanis.github.io/posts/hacking/writeups/willow/</link><guid isPermaLink="true">https://davisfreimanis.github.io/posts/hacking/writeups/willow/</guid><pubDate>Thu, 14 May 2020 07:45:19 +0200</pubDate><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><description><![CDATA[<p>This was a very fun room that required a wide variety of skills ranging from cryptography to steganography.</p>
+<h2 id="enumeration">Enumeration</h2>
+<p>As always we start with enumeration of the open ports by running <code>nmap -sV -sC -vv | tee nmap.txt</code>. This gave us the following output.</p>
+<p><img src="/images/willow/nmap.png" alt="nmap output"></p>
+<h2 id="nfs">NFS</h2>
+<p>We see that the port <code>2049</code> is open which is running <code>nfs</code>. We can use a tool called <code>showmount</code> to enumerate mountable shares by issuing the command <code>showmount -e $IP</code>. This returns with <code>/var/failsafe *</code> meaning that we should be able to mount this directory.</p>
+<p>Mounting in Linux can be done with <code>mount -t nfs $IP:/var/failsafe &lt;destination folder&gt;</code>. In this case we need to create a directory where we will mount such as <code>/tmp/willow</code>. We can now go to this mounted directory and find a file called <code>rsa_keys</code> with the content:</p>
+<pre><code>Public Key Pair: (23, 37627)
+Private Key Pair: (&lt;REDACTED&gt;, 37627)
+</code></pre><p>When we are done we can unmount by running <code>umount /tmp/willow</code>.</p>
+<h2 id="cryptography">Cryptography</h2>
+<p>Moving on we open a web-browser and open up the page that is hosted on port 80. This returns a bunch of characters.</p>
+<p><img src="/images/willow/page.png" alt="Web-site content"></p>
+<p>Upon closer inspection it seems to be hex encoded. This is a task for one of my faviorite online tools <a href="https://gchq.github.io/CyberChef/">CyberChef</a>. When we use the <em>From Hex</em> recipe we get the following output:</p>
+<p><img src="/images/willow/cyberchef.png" alt="CyberChef"></p>
+<p>It looks like we have found an RSA key, but it seems to be encrypted. Remember the <code>rsa_keys</code> that we found in the <code>nfs</code> share? We could use those numbers to decrypt the ssh-key.</p>
+<p>This is a textbook example of RSA encryption and can be decrypted with only a few lines of code. Let&rsquo;s first remember how RSA works:</p>
+<p>$$e=c^d \mod n$$
+$$d=c^e \mod n$$</p>
+<p>where:</p>
+<ul>
+<li>$e$ is the public key exponent</li>
+<li>$d$ is the private key exponent</li>
+<li>$c$ is the plaintext or ciphertext</li>
+<li>$n$ is the modulus</li>
+</ul>
+<p>With the following Pythoncode the RSA cipher could be decrypted to an SSH-key.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">n</span> <span class="o">=</span> <span class="mi">37627</span>
+<span class="n">d</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">REDACTED</span><span class="o">&gt;</span>
+<span class="n">plaintext</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;input.txt&#34;</span><span class="p">,</span> <span class="s2">&#34;r&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+            <span class="n">plaintext</span> <span class="o">=</span> <span class="n">plaintext</span> <span class="o">+</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="o">**</span><span class="n">d</span><span class="o">%</span><span class="n">n</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">plaintext</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="cracking">Cracking</h2>
+<p>It seems like the SSH-key is password-protected. Let&rsquo;s use $john$ to crack the password. We can use the john module <code>ssh2john</code> to convert the key to a format that john can use:</p>
+<p><code>python /usr/share/john/ssh2john.py key.txt &gt; hash</code></p>
+<p>Next we run john with a wordlist:</p>
+<p><code>john --wordlist=/usr/share/wordlists/rockyou.txt hash</code></p>
+<p>Pretty fast we have a password that we can use to login with the SSH-key.</p>
+<h2 id="user-flag">User Flag</h2>
+<p>Before we can use the SSH-key we must change the permissions <code>chmod 600 id_rsa</code>. Next we can login as the user <code>willow</code> with <code>ssh -i id_rsa willow@$IP</code>.</p>
+<p>There is a file called <code>user.jpg</code> that we can download to our computer with <code>scp -i id_rsa willow@$IP:~/user.jpg</code>. Opening the file <code>eog user.jpg</code> reveals the flag.</p>
+<p><img src="/images/willow/flag.png" alt="Flag"></p>
+<h2 id="root-flag">Root Flag</h2>
+<p>The first thing we can do is to run <code>sudo -l</code> to find out that we can run <code>/bin/mount /dev/*</code> without a password. When we check the directory there is a unmounted directory <code>hidden_backup</code> which looks interesting.</p>
+<p>Let&rsquo;s first create a directory where we can mount <code>mkdir -p /tmp/directory</code>
+We mount using <code>sudo /bin/mount /dev/hidden_backup /tmp/directory</code></p>
+<p>In the mount we find <code>creds.txt</code>:</p>
+<pre><code>willow: &lt;REDACTED&gt;
+root: &lt;REDACTED&gt;
+</code></pre><p>Login as root <code>su root</code> where we find a file <code>root.txt</code> with the following text:</p>
+<pre><code>This would be too easy, don't you think? I actually gave you the root flag some time ago. You've got my password now -- go find your flag!
+</code></pre><p>Let&rsquo;s check if there is anything hidden in the <code>user.jpg</code> file that we got for the user flag. Using <code>steghide</code> we can extract information with:</p>
+<p><code>steghide extract -sf user.jpg</code></p>
+<p>After inputing the root password we get the root flag!</p>
+]]></description><category domain="https://davisfreimanis.github.io/categories/writeups/">Writeups</category><category domain="https://davisfreimanis.github.io/tags/tryhackme/">tryhackme</category><category domain="https://davisfreimanis.github.io/tags/nfs/">nfs</category><category domain="https://davisfreimanis.github.io/tags/cracking/">cracking</category><category domain="https://davisfreimanis.github.io/tags/steganography/">steganography</category><category domain="https://davisfreimanis.github.io/tags/rsa/">rsa</category></item><item><title>Agent Sudo</title><link>https://davisfreimanis.github.io/posts/hacking/writeups/agent-sudo/</link><guid isPermaLink="true">https://davisfreimanis.github.io/posts/hacking/writeups/agent-sudo/</guid><pubDate>Sat, 09 May 2020 10:17:19 +0200</pubDate><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><description><![CDATA[<p><img src="/images/agent-sudo.png" alt="asdf"></p>
 <p>This room can be found at <a href="https://tryhackme.com/room/agentsudoctf">Tryhackme</a>. It is a pretty simple and fun room that requires the knowlege of a few password cracking tools and privelege escalation.</p>
 <h2 id="enumerate">Enumerate</h2>
 <p>Run <code>nmap</code> with <code>nmap -sV -sC -vv $IP | tee nmap.txt</code> and we see that we have three ports open: 21, 22 and 80.</p>
