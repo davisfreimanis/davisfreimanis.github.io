@@ -9,7 +9,7 @@ tags:
 - cracking
 ---
 
-![asdf](/images/agent-sudo.png)
+![Agent sudo](/images/agent-sudo/agent-sudo.png)
 
 This room can be found at [Tryhackme](https://tryhackme.com/room/agentsudoctf). It is a pretty simple and fun room that requires the knowlege of a few password cracking tools and privelege escalation.
 

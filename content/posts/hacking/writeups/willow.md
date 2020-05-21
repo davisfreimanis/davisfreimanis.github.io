@@ -13,7 +13,7 @@ tags:
 
 ![Willow](/images/willow/willow.png)
 
-This was a very fun room that required a wide variety of skills ranging from cryptography to steganography.
+This was a very fun room on [Tryhackme](https://tryhackme.com/room/willow) that required a wide variety of skills ranging from cryptography to steganography.
 
 ## Enumeration
 
