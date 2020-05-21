@@ -1,6 +1,79 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title type="text">Davis Freimanis</title><subtitle type="html">Davis Freimanis blog</subtitle><updated>2020-05-15T14:36:05+00:00</updated><id>https://davisfreimanis.github.io/</id><link rel="alternate" type="text/html" href="https://davisfreimanis.github.io/"/><link rel="self" type="application/atom+xml" href="https://davisfreimanis.github.io/atom.xml"/><author><name>Davis Freimanis</name><uri>https://davisfreimanis.github.io/</uri></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><generator uri="https://gohugo.io/" version="0.68.3">Hugo</generator><entry><title type="text">Willow</title><link rel="alternate" type="text/html" href="https://davisfreimanis.github.io/posts/hacking/writeups/willow/"/><id>https://davisfreimanis.github.io/posts/hacking/writeups/willow/</id><updated>2020-05-15T14:36:03+00:00</updated><published>2020-05-14T07:45:19+02:00</published><author><name>Davis Freimanis</name><uri>https://davisfreimanis.github.io/</uri></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">This was a very fun room that required a wide variety of skills ranging from cryptography to steganography.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title type="text">Davis Freimanis</title><subtitle type="html">Davis Freimanis blog</subtitle><updated>2020-05-21T05:15:00+00:00</updated><id>https://davisfreimanis.github.io/</id><link rel="alternate" type="text/html" href="https://davisfreimanis.github.io/"/><link rel="self" type="application/atom+xml" href="https://davisfreimanis.github.io/atom.xml"/><author><name>Davis Freimanis</name><uri>https://davisfreimanis.github.io/</uri></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><generator uri="https://gohugo.io/" version="0.68.3">Hugo</generator><entry><title type="text">Hydra</title><link rel="alternate" type="text/html" href="https://davisfreimanis.github.io/posts/hacking/writeups/hydra/"/><id>https://davisfreimanis.github.io/posts/hacking/writeups/hydra/</id><updated>2020-05-21T05:14:58+00:00</updated><published>2020-05-19T20:07:26+02:00</published><author><name>Davis Freimanis</name><uri>https://davisfreimanis.github.io/</uri></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">This room can be found at Tryhackme and is about password cracking using the powerfull tool hydra. The room has two tasks where the first one is to crack a password using a regular login form and the second task is to brute force an SSH password.</summary><content type="html"><![CDATA[<p><img src="/images/hydra/hydra.png" alt="Hydra"></p>
+<p>This room can be found at <a href="https://tryhackme.com/room/hydra">Tryhackme</a> and is about password cracking using the powerfull tool hydra. The room has two tasks where the first one is to crack a password using a regular login form and the second task is to brute force an SSH password.</p>
+<h2 id="http-post">HTTP Post</h2>
+<p><img src="/images/hydra/login.png" alt="Hydra Login"></p>
+<p>The first task is to login as molly using this HTTP form. We can do this with Hydra, but the syntax is hard to remember.</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-l</td>
+<td>Username to use</td>
+</tr>
+<tr>
+<td>-P</td>
+<td>Password list</td>
+</tr>
+<tr>
+<td>-t</td>
+<td>Number of threads</td>
+</tr>
+<tr>
+<td>-V</td>
+<td>Print every attempt</td>
+</tr>
+<tr>
+<td>http-post-form</td>
+<td>Use http-post</td>
+</tr>
+</tbody>
+</table>
+<pre><code>hydra -l molly -P /usr/share/wordlists/users/10000_common_passwords $IP http-post-form &quot;/login:username=^USER^&amp;password=^PASS^:F=Your username or password is incorrect.&quot; -V
+</code></pre><p>In my oppinion the hardest thing to remember is the parameters given to the <code>http-post-form</code> service so lets look closer at the syntax for it.</p>
+<p><code>/login</code> is the path to the HTTP form</p>
+<p><code>username=^USER^&amp;password=^PASS^</code> corresponds to the form fields <code>username</code> and <code>password</code></p>
+<p><code>F=Your username or password is incorrect.</code> is the message that gets returned when authentication fails.</p>
+<h2 id="ssh">SSH</h2>
+<p>For <code>ssh</code> the syntax is much easier to remember. The options that I used for this task:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-l</td>
+<td>Username to use</td>
+</tr>
+<tr>
+<td>-P</td>
+<td>Password list</td>
+</tr>
+<tr>
+<td>-t</td>
+<td>Number of threads</td>
+</tr>
+<tr>
+<td>-V</td>
+<td>Print every attempt</td>
+</tr>
+<tr>
+<td>ssh</td>
+<td>Use ssh service</td>
+</tr>
+</tbody>
+</table>
+<pre><code>hydra -l molly -P /usr/share/wordlists/rockyou.txt $IP -t 10 ssh -V
+</code></pre>]]></content><category scheme="https://davisfreimanis.github.io/categories/writeups/" term="Writeups" label="Writeups"/><category scheme="https://davisfreimanis.github.io/tags/tryhackme/" term="tryhackme" label="tryhackme"/><category scheme="https://davisfreimanis.github.io/tags/cracking/" term="cracking" label="cracking"/><category scheme="https://davisfreimanis.github.io/tags/tool/" term="tool" label="tool"/></entry><entry><title type="text">Willow</title><link rel="alternate" type="text/html" href="https://davisfreimanis.github.io/posts/hacking/writeups/willow/"/><id>https://davisfreimanis.github.io/posts/hacking/writeups/willow/</id><updated>2020-05-21T05:14:58+00:00</updated><published>2020-05-14T07:45:19+02:00</published><author><name>Davis Freimanis</name><uri>https://davisfreimanis.github.io/</uri></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">This was a very fun room on Tryhackme that required a wide variety of skills ranging from cryptography to steganography.
 Enumeration As always we start with enumeration of the open ports by running nmap -sV -sC -vv | tee nmap.txt. This gave us the following output.</summary><content type="html"><![CDATA[<p><img src="/images/willow/willow.png" alt="Willow"></p>
-<p>This was a very fun room that required a wide variety of skills ranging from cryptography to steganography.</p>
+<p>This was a very fun room on <a href="https://tryhackme.com/room/willow">Tryhackme</a> that required a wide variety of skills ranging from cryptography to steganography.</p>
 <h2 id="enumeration">Enumeration</h2>
 <p>As always we start with enumeration of the open ports by running <code>nmap -sV -sC -vv | tee nmap.txt</code>. This gave us the following output.</p>
 <p><img src="/images/willow/nmap.png" alt="nmap output"></p>
@@ -73,8 +146,8 @@ root: &lt;REDACTED&gt;
 </code></pre><p>Let&rsquo;s check if there is anything hidden in the <code>user.jpg</code> file that we got for the user flag. Using <code>steghide</code> we can extract information with:</p>
 <p><code>steghide extract -sf user.jpg</code></p>
 <p>After inputing the root password we get the root flag!</p>
-]]></content><category scheme="https://davisfreimanis.github.io/categories/writeups/" term="Writeups" label="Writeups"/><category scheme="https://davisfreimanis.github.io/tags/tryhackme/" term="tryhackme" label="tryhackme"/><category scheme="https://davisfreimanis.github.io/tags/nfs/" term="nfs" label="nfs"/><category scheme="https://davisfreimanis.github.io/tags/cracking/" term="cracking" label="cracking"/><category scheme="https://davisfreimanis.github.io/tags/steganography/" term="steganography" label="steganography"/><category scheme="https://davisfreimanis.github.io/tags/rsa/" term="rsa" label="rsa"/></entry><entry><title type="text">Agent Sudo</title><link rel="alternate" type="text/html" href="https://davisfreimanis.github.io/posts/hacking/writeups/agent-sudo/"/><id>https://davisfreimanis.github.io/posts/hacking/writeups/agent-sudo/</id><updated>2020-05-15T14:36:03+00:00</updated><published>2020-05-09T10:17:19+02:00</published><author><name>Davis Freimanis</name><uri>https://davisfreimanis.github.io/</uri></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">This room can be found at Tryhackme. It is a pretty simple and fun room that requires the knowlege of a few password cracking tools and privelege escalation.
-Enumerate Run nmap with nmap -sV -sC -vv $IP | tee nmap.txt and we see that we have three ports open: 21, 22 and 80.</summary><content type="html"><![CDATA[<p><img src="/images/agent-sudo.png" alt="asdf"></p>
+]]></content><category scheme="https://davisfreimanis.github.io/categories/writeups/" term="Writeups" label="Writeups"/><category scheme="https://davisfreimanis.github.io/tags/tryhackme/" term="tryhackme" label="tryhackme"/><category scheme="https://davisfreimanis.github.io/tags/nfs/" term="nfs" label="nfs"/><category scheme="https://davisfreimanis.github.io/tags/cracking/" term="cracking" label="cracking"/><category scheme="https://davisfreimanis.github.io/tags/steganography/" term="steganography" label="steganography"/><category scheme="https://davisfreimanis.github.io/tags/rsa/" term="rsa" label="rsa"/></entry><entry><title type="text">Agent Sudo</title><link rel="alternate" type="text/html" href="https://davisfreimanis.github.io/posts/hacking/writeups/agent-sudo/"/><id>https://davisfreimanis.github.io/posts/hacking/writeups/agent-sudo/</id><updated>2020-05-21T05:14:58+00:00</updated><published>2020-05-09T10:17:19+02:00</published><author><name>Davis Freimanis</name><uri>https://davisfreimanis.github.io/</uri></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">This room can be found at Tryhackme. It is a pretty simple and fun room that requires the knowlege of a few password cracking tools and privelege escalation.
+Enumerate Run nmap with nmap -sV -sC -vv $IP | tee nmap.txt and we see that we have three ports open: 21, 22 and 80.</summary><content type="html"><![CDATA[<p><img src="/images/agent-sudo/agent-sudo.png" alt="Agent sudo"></p>
 <p>This room can be found at <a href="https://tryhackme.com/room/agentsudoctf">Tryhackme</a>. It is a pretty simple and fun room that requires the knowlege of a few password cracking tools and privelege escalation.</p>
 <h2 id="enumerate">Enumerate</h2>
 <p>Run <code>nmap</code> with <code>nmap -sV -sC -vv $IP | tee nmap.txt</code> and we see that we have three ports open: 21, 22 and 80.</p>
@@ -184,7 +257,7 @@ Sudo version 1.8.21p2
 </code></pre></td></tr></table>
 </div>
 </div><p>This gives us <code>root</code> and we can find the root flag!</p>
-]]></content><category scheme="https://davisfreimanis.github.io/categories/writeups/" term="Writeups" label="Writeups"/><category scheme="https://davisfreimanis.github.io/tags/tryhackme/" term="tryhackme" label="tryhackme"/><category scheme="https://davisfreimanis.github.io/tags/sudo/" term="sudo" label="sudo"/><category scheme="https://davisfreimanis.github.io/tags/cracking/" term="cracking" label="cracking"/></entry><entry><title type="text">Deploying a Hugo Website Using Github Actions</title><link rel="alternate" type="text/html" href="https://davisfreimanis.github.io/posts/hugo-github-actions/"/><id>https://davisfreimanis.github.io/posts/hugo-github-actions/</id><updated>2020-05-15T14:36:03+00:00</updated><published>2020-05-05T15:04:12+02:00</published><author><name>Davis Freimanis</name><uri>https://davisfreimanis.github.io/</uri></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">This blog uses Hugo to serve static pages. To make deploying posts easy, I am using Github Actions for automatic deployment. This post will present how it works.
+]]></content><category scheme="https://davisfreimanis.github.io/categories/writeups/" term="Writeups" label="Writeups"/><category scheme="https://davisfreimanis.github.io/tags/tryhackme/" term="tryhackme" label="tryhackme"/><category scheme="https://davisfreimanis.github.io/tags/sudo/" term="sudo" label="sudo"/><category scheme="https://davisfreimanis.github.io/tags/cracking/" term="cracking" label="cracking"/></entry><entry><title type="text">Deploying a Hugo Website Using Github Actions</title><link rel="alternate" type="text/html" href="https://davisfreimanis.github.io/posts/hugo-github-actions/"/><id>https://davisfreimanis.github.io/posts/hugo-github-actions/</id><updated>2020-05-21T05:14:58+00:00</updated><published>2020-05-05T15:04:12+02:00</published><author><name>Davis Freimanis</name><uri>https://davisfreimanis.github.io/</uri></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">This blog uses Hugo to serve static pages. To make deploying posts easy, I am using Github Actions for automatic deployment. This post will present how it works.
 Github Actions My Github repository contains two branches. Everything that exists in the master branch is automatically published using Github Pages.</summary><content type="html"><![CDATA[<p>This <a href="https://github.com/davisfreimanis/davisfreimanis.github.io">blog</a> uses Hugo to serve static pages. To make deploying posts easy, I am using Github Actions for automatic deployment. This post will present how it works.</p>
 <h2 id="github-actions">Github Actions</h2>
 <p>My Github repository contains two branches. Everything that exists in the <code>master</code> branch is automatically published using Github Pages. To separate source code with optimized Hugo pages, I&rsquo;m adding content and modifying the style of the blog in a separate branch <code>source</code>.</p>
